@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/globallink.blade.php') }}">
+    <link rel="stylesheet" href="{{ asset('assets/csss/globallink.blade.php') }}">
+    <link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
+    
+   
+
 </head>
 <body>
-  @include('reusecomp.navbar')
+
+  
+
+
+
   <nav class="bg-transparent fixed min-w-full">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">

@@ -1,0 +1,14 @@
+.logo{
+    object-fit: contain;
+}
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.main_view{
+    background: -webkit-linear-gradient(rgba(18, 18, 18, 0.487), rgba(0, 0, 0, 0.369)), url("https://images.pexels.com/photos/7345444/pexels-photo-7345444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-size: cover;
+    min-height: 700px;
+    width: 100%;
+}
