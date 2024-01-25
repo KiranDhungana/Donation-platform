@@ -1,100 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<link rel="stylesheet" href="{{ asset('assets/csss/globallink.blade.php') }}">
+<link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
-    <link rel="stylesheet" href="{{ asset('assets/csss/globallink.blade.php') }}">
-    <link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
+<nav class="bg-transparent fixed min-w-full">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 
-    
-    <nav class="bg-white  bord$userCredentialer-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EV Parking</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-          </li>
-          <li>
-            <a href="/contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-          <li>
-          <a  href="/postspace" class="text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" style="background:grey;">
-  Add Parking
-  <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-  </svg>
-  </a>
-          </li>
-        
-         
-            @if (Auth::check())
-       <li>
-              <!-- <a href="/profile" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a> -->
-              
-  
-    
-  <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
-  <span class="sr-only">Open user menu</span>
-  <img class="w-8 h-8 rounded-full" src="https://img.freepik.com/premium-vector/social-avatar-stories-gradient-frame_41737-3.jpg" alt="user photo">
-  </button>
-  
-  <!-- Dropdown menu -->
-  <div id="dropdownAvatar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-      <div class="px-4 pt-3 text-sm text-gray-900 dark:text-white">
-          <a href="/profile/{{Auth::user()->id}}/{{Auth::user()->fname}}" style="color:blue;">
-          <div>{{Str::title(Auth::user()->fname) }} {{ Str::title(Auth::user()->lname)}}</div>
-        {{-- <div class="font-medium truncate">name@flowbite.com</div> --}}
-          </a>
-        
-      </div>
-      <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
-        
-        <li>
-          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact Support</a>
-        </li>
-        <li>
-          <a href="/setting/{{Auth::user()->id}}/{{Auth::user()->fname}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-        </li>
-      </ul>
-      <div class="py-2">
-        <a href="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+              <button type="button"
+                  class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  aria-controls="mobile-menu" aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+              </button>
+          </div>
+
+          <div class="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between ">
+              <div class="flex flex-shrink-0 items-center">
+                  <img class="h-10 w-10 rounded-full logo" src="{{ asset('assets/Images/logo.png') }}" alt="Raise for good"">
+            </div>
+            <div class=" hidden sm:ml-6 sm:block">
+                  <div class="flex space-x-4">
+                      <a href="#" class=" text-blue rounded-md px-3 py-2 text-sm font-medium"
+                          aria-current="page">Homepage</a>
+                      <a href="#"
+                          class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">Campaign</a>
+                      <a href="#"
+                          class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">About</a>
+                      <a href="#"
+                          class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                  </div>
+              </div>
+
+              <div class="flex justify-center align-center">
+                  <a href="#" class="bg-yellow text-white rounded-md px-3 py-2 text-sm font-medium"
+                      aria-current="page" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">Login</a>
+
+
+              </div>
+          </div>
+
       </div>
   </div>
-  
-  
-  
-  
-  
-  
-            </li>
-  @else
-    <li>
-              <a href="/login" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
-            </li>
-     <li>
-              <a href="/register" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Signup</a>
-            </li>
-      
-  @endif
-        </ul>
+
+
+  <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page">Dashboard</a>
+          <a href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+          <a href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+          <a href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
       </div>
-    </div>
-  </nav>
- 
+  </div>
+</nav>
