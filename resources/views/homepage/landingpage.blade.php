@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="{{ asset('assets/csss/globallink.blade.php') }}">
+    <link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
     
    
 
@@ -12,7 +13,7 @@
 
 <body>
 
-  @include('reusecomp.navbar')
+  
 
 
 
