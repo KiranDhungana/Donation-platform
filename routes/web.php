@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\loginsignup;
+use App\Http\Controllers\Post;
+use App\Http\Controllers\Postcontroller;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -139,3 +141,7 @@ Route::get("/profile/{id}/{name}", [UserController::class, 'userprofile'])->name
 Route::get("/posts/{pid}/{district}/{name}", [UserController::class, 'viewuserpost'])->name('viewuserpost')->middleware('auth');
 
 Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile');
+
+
+
+// ADDING POST ROUTING
