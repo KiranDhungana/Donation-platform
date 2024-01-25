@@ -1,7 +1,10 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="{{ asset('assets/csss/globallink.blade.php') }}">
+    <link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
 
+    
     <nav class="bg-white  bord$userCredentialer-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">

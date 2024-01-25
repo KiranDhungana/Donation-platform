@@ -1,0 +1,38 @@
+.logo{
+    object-fit: contain;
+}
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.main_view{
+    background: -webkit-linear-gradient(rgba(10, 9, 9, 0.487), rgba(0, 0, 0, 0.369)), url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-charity-sale-charity-poster-background-image_165549.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+.bg-blue{
+    background-color: #659DBD;
+}
+.bg-yellow{
+    background-color: #8D8741;
+}
+.text-blue{
+    color: #659DBD;
+}
+.text-yellow{
+    color: #8D8741;
+}
+
+.container_heading{
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.gallery_wrapper img{
+    max-height: 300px;
+    max-width: 300px;
+    object-fit: cover;
+}
