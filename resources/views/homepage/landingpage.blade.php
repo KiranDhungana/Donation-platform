@@ -74,7 +74,7 @@
                 <!-- Modal header -->
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        Sign in 
+                        Sign in
                     </h3>
                     <button type="button"
                         class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -132,8 +132,162 @@
         </div>
     </div>
 
+    <div class="homepage_clubs bg-yellow py-8">
+        <h1 class="container_heading py-3">Social Clubs</h1>
+        <div class="card_container flex justify-around">
 
 
+            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+                <a href="#">
+                    <img class="rounded-t-lg"
+                        src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white text-white">Noteworthy
+                            technology acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white">Here are the biggest enterprise
+                        technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        View Profile
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+                <a href="#">
+                    <img class="rounded-t-lg"
+                        src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white text-white">Noteworthy
+                            technology acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white">Here are the biggest enterprise
+                        technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        View Profile
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+                <a href="#">
+                    <img class="rounded-t-lg"
+                        src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-white text-white">Noteworthy
+                            technology acquisitions 2021</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-white">Here are the biggest enterprise
+                        technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    <a href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        View Profile
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="homepage_testimonial">
+        <div id="fullWidthTabContent" class="">
+            <div class="p-4 bg-blue">
+                <div class="flex justify-around py-8">
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl text-white font-extrabold">50+</dt>
+                        <dd class="text-gray-500 text-white">Campaigns</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl text-white font-extrabold">$200+</dt>
+                        <dd class="text-gray-500 text-white">Fund Raised</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl text-white font-extrabold">100+</dt>
+                        <dd class="text-gray-500 text-white">Registered Social CLubs</dd>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <dt class="mb-2 text-3xl text-white font-extrabold">1000+</dt>
+                        <dd class="text-gray-500 text-white">Donors</dd>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer_container">
+
+
+        <footer class="bg-gray-700">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="" class="flex items-center">
+                            <img src="{{ asset('assets/Images/logo.png') }}" class="h-8 me-3" />
+                            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Raise For
+                                Good</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="#" class="hover:underline">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-center">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                            href="" class="hover:underline">Raise For Good</a>. All Rights Reserved.
+                    </span>
+                
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
 
 </html>

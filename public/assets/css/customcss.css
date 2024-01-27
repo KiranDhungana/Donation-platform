@@ -36,3 +36,8 @@ a,li{
     max-width: 300px;
     object-fit: cover;
 }
+nav{
+        backdrop-filter: blur(19.25px);
+        background-color: #ffffff80;
+    
+}
