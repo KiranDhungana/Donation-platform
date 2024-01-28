@@ -34,7 +34,7 @@
 
                 <div class="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between ">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="h-10 w-10 rounded-full logo" src="Images/logo.png" alt="Raise for good"">
+                        <img class="h-10 w-10 rounded-full logo" src={{asset('assets/images/logo.png')}} alt="Raise for good"">
                   </div>
                   <div class=" hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
