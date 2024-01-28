@@ -106,6 +106,11 @@ Route::get('/superadmin/dashboard', function () {
     $data = user::all();
     return view('superadmin.homepage')->with('user', $data);
 })->name('login')->middleware('super-admin-check');
+Route::get('/post-to-approve', function () {
+    $data = user::all();
+    return view('superadmin.homepage')->with('user', $data);
+})->name('login')->middleware('super-admin-check');
+
 
 // delete user 
 Route::post("/delete/{id}/{name}", [UserController::class, 'deleteuser'])->name('deleteuser');

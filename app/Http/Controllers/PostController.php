@@ -11,7 +11,15 @@ class PostController extends Controller
 
     public function like()
     {
-        dd(Post::find(1)->like);
+
+        // $find = (Post::find(1));
+        $data = Post::with('like')->get();
+        foreach ($data as $i) {
+            echo ($i['description']);
+            echo ($i['like']->likes);
+        }
+
+
     }
 
 }

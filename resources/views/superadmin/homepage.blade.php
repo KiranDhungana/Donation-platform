@@ -801,7 +801,7 @@
           </li>
           <li>
             <a
-              href="/superadmin/postmanagement"
+              href="#"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
             <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -850,23 +850,23 @@
             <ul id="dropdown-pages" class="hidden py-2 space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="/post-to-approve"
                   class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >Settings</a
+                  >Post to Approve</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >Kanban</a
+                  >Active Post</a
                 >
               </li>
               <li>
                 <a
                   href="#"
                   class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                  >Calendar</a
+                  >Expired Post</a
                 >
               </li>
             </ul>
@@ -1336,11 +1336,15 @@
         </div>
       </div>
     </aside>
+      <?php
+   
+   $url = url()->current();
+        ?>
     <main style="background-color:white ; color :black " class="p-4 md:ml-64 h-auto pt-20">
       <div class="all-user">
-        
-
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg my-5">
+      
+  @if (Str::contains($url, "superadmin/dashboard"))
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg my-5">
   <h1 class="flex items-center text-4xl font-extrabold py-2" style="color:green;">Users</h1>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -1357,11 +1361,12 @@
                 <th scope="col" class="px-6 py-3">
                     Verified State
                 </th>
+               
                 <th scope="col" class="px-6 py-3">
-                    Gender
+                    Phone-Number
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Address
+                    Action
                 </th>
             </tr>
         </thead>
@@ -1371,7 +1376,7 @@
       @endphp
 
           @foreach ($user as $i)
-          @if ($i->email=='earninfo06@gmail.com')
+          @if ($i->email=='kirandhungana570@gmail.com')
               @continue
           @else
                  <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -1379,7 +1384,7 @@
                 {{$j}}
             </th>
             <td class="px-6 py-4">
-              {{$i->fname}} {{$i->lname}}
+              {{$i->fname}}{{$i->mname}} {{$i->lname}}
             </td>
               <td  class="px-6 py-4">
                 {{$i->email}}
@@ -1393,13 +1398,11 @@
                  @endif
             </td>
             <td class="px-6 py-4">
-              @if ($i->is_verified==1)
-              <img class="h-[15px]" src="https://p7.hiclipart.com/preview/286/771/782/check-mark-computer-icons-clip-art-blue-checkmark.jpg" alt="">
-             @else
-              
-              <img class="h-[15px]" src="https://toppng.com/uploads/preview/red-cross-mark-download-png-red-cross-check-mark-11562934675swbmqcbecx.png" alt="">
-             @endif
+             {{
+              $i->pnumber
+             }}
             </td>
+           
             <td class="px-6 py-4">
                 {{-- <a href="/delete/{{$i->fname}}/{{$i->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a> --}}
           <form method="POST" action="/delete/{{$i->fname}}/{{$i->id}}">
@@ -1407,7 +1410,7 @@
     <input type="hidden" name="id" >
     {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
     <button type="submit">Delete</button>
-</form>
+    </form>
               </td>
         </tr>
           @endif
@@ -1424,6 +1427,95 @@
         </tbody>
     </table>
 </div>
+        @elseif(Str::contains($url, "/post-to-approve"))
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg my-5">
+          <h1 class="flex items-center text-4xl font-extrabold py-2" style="color:green;">Users</h1>
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                       <th scope="col" class="px-6 py-3">
+                            S.NO
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Username
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Email
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Verified State
+                        </th>
+                       
+                        <th scope="col" class="px-6 py-3">
+                            Phone-Number
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                  @php
+                  $j = 1;
+              @endphp
+        
+                  @foreach ($user as $i)
+                  @if ($i->email=='kirandhungana570@gmail.com')
+                      @continue
+                  @else
+                         <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        {{$j}}
+                    </th>
+                    <td class="px-6 py-4">
+                      {{$i->fname}}{{$i->mname}} {{$i->lname}}
+                    </td>
+                      <td  class="px-6 py-4">
+                        {{$i->email}}
+                    </td>
+                    <td class="px-6 py-4">
+                         @if ($i->is_verified==1)
+                             <img class="h-[15px]" src="https://p7.hiclipart.com/preview/286/771/782/check-mark-computer-icons-clip-art-blue-checkmark.jpg" alt="">
+                         @else
+                             
+                             <img class="h-[15px]" src="https://toppng.com/uploads/preview/red-cross-mark-download-png-red-cross-check-mark-11562934675swbmqcbecx.png" alt="">
+                         @endif
+                    </td>
+                    <td class="px-6 py-4">
+                     {{
+                      $i->pnumber
+                     }}
+                    </td>
+                   
+                    <td class="px-6 py-4">
+                        {{-- <a href="/delete/{{$i->fname}}/{{$i->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a> --}}
+                  <form method="POST" action="/delete/{{$i->fname}}/{{$i->id}}">
+                    @csrf
+            <input type="hidden" name="id" >
+            {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+            <button type="submit">Delete</button>
+            </form>
+                      </td>
+                </tr>
+                  @endif
+                
+               
+                 @php
+                  $j = $j+1;
+              @endphp
+                  @endforeach
+                  
+                 
+                   
+                    
+                </tbody>
+            </table>
+        </div>
+        @endif
+            
+        {{-- @endif --}}
+        
+
 
 
 

@@ -13,9 +13,9 @@ class Post extends Model
     protected $fillable = [
         'id'
     ];
-    public function comments(): HasMany
+    public function Like()
     {
-        return $this->hasMany(Like::class);
+        return $this->hasOne(Like::class, 'id');
     }
 
 }
