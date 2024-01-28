@@ -39,6 +39,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/signups', function () {
+    return view('loginsignup/signup');
+});
+
+
 
 Route::get('/login', [UserController::class, 'loadLogin']);
 
