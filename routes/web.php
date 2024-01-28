@@ -67,9 +67,18 @@ Route::get('/superadmin', function () {
     return view('superadmin');
 });
 
+Route::get('/campaign-form', function () {
+    return view('postform');
+});
+
 Route::get('/home', function () {
     return view('homepage.landingpage');
 });
+
+Route::get('/campaigns', function () {
+    return view('campaignPost');
+});
+
 
 // Auth::route();
 

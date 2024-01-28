@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('assets/csss/customcss.css') }}">
 
 
-<nav class="bg-transparent fixed min-w-full">
+<nav class="bg-transparent fixed min-w-full z-[99]">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -48,8 +48,6 @@
                     <a href="#" class="bg-yellow text-white rounded-md px-3 py-2 text-sm font-medium"
                         aria-current="page" data-modal-target="authentication-modal"
                         data-modal-toggle="authentication-modal">Login</a>
-
-
                 </div>
             </div>
 
