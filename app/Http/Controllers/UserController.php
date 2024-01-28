@@ -31,31 +31,29 @@ class UserController extends Controller
 
     public function studentRegister(Request $request)
     {
-        $gen = 1;
-        if ($request->input('gender') == "male") {
-            $gen = 1;
-        } else {
-            $gen = 0;
-        }
+        // $gen = 1;
+        // if ($request->input('gender') == "male") {
+        //     $gen = 1;
+        // } else {
+        //     $gen = 0;
+        // }
 
         $request->validate([
 
             'email' => 'string|email|required|max:100|unique:users',
-            'password' => 'string|required|confirmed|min:6',
-            // 'pnumber' => 'unique:users'
+            // 'password' => 'string|required|confirmed|min:6',
+            'pnumber' => 'unique:users'
         ]);
 
         $user = new User;
 
-        $user->fname = $request->fname;
+        $user->fname = $request->firstname;
+        $user->mname = $request->middlename;
+        $user->lname = $request->lastname;
         $user->email = $request->email;
-        $user->lname = $request->lname;
-        // $user->pnumber = $request->pnumber;
-        // $user->address = $request->address;
-        // $user->address = $request->address;
-        // $user->dob = $request->dob;
-        // $user->gender = $gen;
-        $user->password = Hash::make($request->password);
+        // $user->lname = $request->lname;
+        $user->pnumber = $request->phonenumber;
+
         $user->password = Hash::make($request->password);
         $user->save();
 
