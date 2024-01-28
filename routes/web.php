@@ -165,3 +165,9 @@ Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile'
 
 
 // ADDING POST ROUTING
+
+
+// routuing 
+Route::get('/psetting', function () {
+    return view('userpages.profilesetting');
+});
