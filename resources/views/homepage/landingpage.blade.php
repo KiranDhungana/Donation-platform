@@ -7,51 +7,7 @@
     <title>Home</title>
     @include('globallink')
     <link rel="stylesheet" href="{{ asset('assets/css/customcss.css') }}">
-<<<<<<< HEAD
-    </head>
-<body>
- <nav class="bg-transparent fixed min-w-full">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-
-                    <button type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
-
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-
-                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div class="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between ">
-                    <div class="flex flex-shrink-0 items-center">
-                        <img class="h-10 w-10 rounded-full logo" src={{asset('assets/images/logo.png')}} alt="Raise for good"">
-                  </div>
-                  <div class=" hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-4">
-                            <a href="#" class=" text-blue rounded-md px-3 py-2 text-sm font-medium"
-                                aria-current="page">Homepage</a>
-                            <a href="#"
-                                class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">Campaign</a>
-                            <a href="#"
-                                class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">About</a>
-                            <a href="#"
-                                class="text-gray-300  hover:text-blue rounded-md px-3 py-2 text-sm font-medium">Contact</a>
-                        </div>
-                    </div>
-=======
 </head>
->>>>>>> bf1c1a9c01c62e0357ea96248afe7e99e402b2fa
 
 <body>
     @include('reusecomp/navbar')
@@ -68,7 +24,7 @@
 
         <div class="main_view_btns flex w-1/2 justify-center my-3">
             <a href="" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Donate</a>
-            <a href="" class="bg-yellow text-white rounded-md px-4 py-2 text-xl ">SignUp</a>
+            <a href="/signups" class="bg-yellow text-white rounded-md px-4 py-2 text-xl ">SignUp</a>
 
         </div>
     </div>
@@ -110,7 +66,7 @@
 
 
     <!-- Main modal -->
-    <div id="authentication-modal" tabindex="-1" aria-hidden="true"
+    {{-- <div id="authentication-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <!-- Modal content -->
@@ -133,7 +89,8 @@
                 </div>
                 <!-- Modal body -->
                 <div class="p-4 md:p-5">
-                    <form class="space-y-4" action="#">
+                    <form method="post" class="space-y-4" action="{{ route('userLogin') }}">
+                        @csrf
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                                 email</label>
@@ -167,16 +124,18 @@
                             class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
                             to your account</button>
                         <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                            Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create
+                            Not registered? <a href="/signups" class="text-blue-700 hover:underline dark:text-blue-500">Create
                                 account</a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="homepage_clubs bg-yellow py-8">
+          
+        
         <h1 class="container_heading py-3">Social Clubs</h1>
         <div class="card_container flex justify-around">
 

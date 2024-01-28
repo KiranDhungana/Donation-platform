@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Session;
 // Route::get('/test', [UserController::class, 'test']);
 
 Route::get('/register', [UserController::class, 'loadRegister']);
-Route::post('/register', [UserController::class, 'studentRegister'])->name('studentRegister');
+Route::post('/singups', [UserController::class, 'studentRegister'])->name('studentRegister');
 // Route::get('/', [UserController::class, 'loadLogin']);
 Route::get('/', function () {
     return view('homepage.landingpage');
@@ -137,6 +137,7 @@ Route::get('/superadmin/postmanagement', function () {
 
 Route::get("/postspace", [UserController::class, 'postspace'])->name('postspace')->middleware('auth');
 Route::post("/postspace", [UserController::class, 'postspacetodb'])->name('postspacetodb')->middleware('auth');
+Route::get("/like", [Postcontroller::class, 'like'])->name('like');
 
 
 // profile routing 
