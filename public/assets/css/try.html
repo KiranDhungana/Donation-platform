@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <style>
+        .postDetail_container {
+            background-color: #234E70;
+            width: 100%;
+            min-height: 100vh;
+
+        }
+
+        .postdetail_wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="postDetail_container flex flex-col">
+        <div class="postdetail_wrapper">
+
+            <div>
+                <h1 class="text-3xl text-[#d3d2b5] my-3 text-center">Cancer Patient</h1>
+            </div>
+
+
+            <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-[450px]">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://assets-cdn.kathmandupost.com/uploads/source/news/2023/third-party/HKCJajarkot4-1699061762.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="https://assets-cdn.kathmandupost.com/uploads/source/news/2023/third-party/HKCJajarkot4-1699061762.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://assets-cdn.kathmandupost.com/uploads/source/news/2023/third-party/HKCJajarkot4-1699061762.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="https://assets-cdn.kathmandupost.com/uploads/source/news/2023/third-party/HKCJajarkot4-1699061762.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                       
+                        <iframe class="w-full h-full"
+                            src="https://www.youtube.com/embed/d3sfcA2-QuU?si=-RK6zAAQTbNlOL_E"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+
+
+            </div>
+            <div class="mt-3 text-[#d3d2b5]">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi at harum exercitationem consequuntur
+                    reprehenderit, provident pariatur nulla, autem dolorum sint, amet magni vero cumque ratione? Eius,
+                    praesentium magnam voluptatem similique sint et, unde reprehenderit sunt aut cupiditate eligendi
+                    deleniti neque dolore nam est sit inventore animi consequatur quod ratione maxime aliquid excepturi.
+                    Odit officia nobis ad perferendis deserunt earum autem dolorum totam, velit ipsum atque
+                    consequuntur. Unde dolorem voluptas libero inventore maiores velit laudantium, eligendi delectus
+                    reprehenderit? Incidunt assumenda aperiam esse et ratione sunt quasi odio enim perspiciatis deserunt
+                    repellat molestiae nisi consequatur distinctio non magni iusto, rem, ut officiis. Aliquam rerum
+                    dolorem numquam atque, in delectus quis debitis pariatur dolorum iste fugiat illo accusamus
+                    veritatis nisi sequi laboriosam eveniet. .</p>
+            </div>
+
+            <div class="mt-4">
+                <a href="roshan.pdf" class="text-[#d3d2b5] underline" download>View Document</a>
+            </div>
+
+            <div class="mt-3 ">
+                <button type="button"
+                    class="text-[#234E70] bg-[#d3d2b5] font-medium rounded text-sm px-3 py-1.5 text-center me-2 mb-2">Donate</button>
+            </div>
+        </div>
+
+</body>
+
+</html>

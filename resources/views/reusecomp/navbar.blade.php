@@ -12,8 +12,9 @@
      
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
-      
+      <button type="button" class="text-white  
+      font-medium rounded-lg text-sm px-4 py-2 text-center" style="background: #234E70;" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">Login</button>
+      @if(Auth::user())
 <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm  rounded-full md:me-0 " type="button" style="margin-left:1rem;outline:none">
 <span class="sr-only">Open user menu</span>
 <img class="w-8 h-8 rounded-full " src="https://img.freepik.com/premium-photo/cartoon-game-avatar-logo-gaming-brand_902820-465.jpg" alt="user photo">
@@ -23,9 +24,9 @@
       <div>{{Auth::user()->fname}}{{ Auth::user()->mname }} {{ Auth::user()->lname}}</div>
       <div class="font-medium truncate">{{Auth::user()->email}}</div>
     </div>
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+    <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownUserAvatarButton">
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile</a>
+        <a href="#" class="block px-4 py-2 hover:text-blue-600">Profile</a>
       </li>
       <li>
         <a href="/setting/{{Auth::user()->id}}/{{Auth::user()->fname}}" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
@@ -33,7 +34,7 @@
    
     </ul>
     <div class="py-2">
-      <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+      <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 bg-blue dark:text-gray-200 dark:hover:text-white">Sign out</a>
     </div>
 </div>
 @else
@@ -54,16 +55,16 @@
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
       <li>
-        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+        <a href="#" class="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Campaigns</a>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">Campaigns</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">About</a>
       </li>
       <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">Contact</a>
       </li>
     </ul>
   </div>
