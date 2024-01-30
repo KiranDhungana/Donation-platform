@@ -9,32 +9,15 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img src="{{ asset('assets/Images/logo.png') }}" class="h-8" alt="Flowbite Logo">
-<<<<<<< HEAD
-     
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-=======
 
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-<<<<<<< HEAD
->>>>>>> 03f5f520cef3f12504f70b6611fa7fe283ccf3f7
       <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
 
 <!-- Dropdown menu -->
 @if (Auth::user())
           
 <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm  rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button" style="margin-left:1rem">
-<<<<<<< HEAD
-=======
-=======
-      <button type="button" class="text-white  
-      font-medium rounded-lg text-sm px-4 py-2 text-center" style="background: #234E70;"
-        data-modal-target="authentication-modal" data-modal-toggle="authentication-modal">Login</button>
-      @if(Auth::user())
-<button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar" class="flex text-sm  rounded-full md:me-0 " type="button" style="margin-left:1rem;outline:none">
->>>>>>> ebd25b0231aa59432fe9a3ad999dd13d225ce427
->>>>>>> 03f5f520cef3f12504f70b6611fa7fe283ccf3f7
 <span class="sr-only">Open user menu</span>
 <img class="w-8 h-8 rounded-full " src="https://img.freepik.com/premium-photo/cartoon-game-avatar-logo-gaming-brand_902820-465.jpg" alt="user photo">
 </button>
@@ -72,13 +55,12 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M1 1h15M1 7h15M1 13h15" />
         </svg>
-<<<<<<< HEAD
     </button>
   </div>
   <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
       <li>
-        <a href="./" class="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
+        <a href="#" class="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
       </li>
       <li>
         <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">Campaigns</a>
@@ -91,27 +73,5 @@
       </li>
     </ul>
   </div>
-=======
-      </button>
-    </div>
-    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-      <ul
-        class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
-        <li>
-          <a href="#" class="block py-2 px-3 text-white rounded md:p-0" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="#"
-            class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">Campaigns</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-white dark:border-gray-700">Contact</a>
-        </li>
-      </ul>
-    </div>
->>>>>>> 03f5f520cef3f12504f70b6611fa7fe283ccf3f7
   </div>
 </nav>
