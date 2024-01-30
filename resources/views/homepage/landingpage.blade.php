@@ -23,37 +23,37 @@
             exce</p>
 
         <div class="main_view_btns flex w-1/2 justify-center my-3">
-            <a href="" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Donate</a>
-            <a href="/signups" class="bg-yellow text-white rounded-md px-4 py-2 text-xl ">SignUp</a>
+            <a href="" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
+            <a href="/signups" class="bg-yellow text-blue rounded-md px-4 py-2 text-xl ">Organizations</a>
 
         </div>
     </div>
 
-    <div class="homepage_campaign bg-blue py-8">
-        <h1 class="container_heading py-3">Trending Campaign</h1>
+    <div class="homepage_campaign bg-yellow py-8">
+        <h1 class="container_heading_blue py-3">Trending Campaign</h1>
         <div class="campaign_gallery flex justify-center">
             <div class="gallery_box m-3">
-                <img class="hover:opacity-50"
+                <img class="hover:opacity-50 rounded-2xl h-[97%]"
                     src="https://www.fredhutch.org/en/news/center-news/2020/05/what-happens-when-cancer-patients-get-covid-19-/_jcr_content/root/responsivegrid/textimage/image.coreimg.jpeg/1638427334811/im6col-200528-cancer-covid19.jpeg"
                     alt="">
-                <p class="text-white text-center">Cancer Patient</p>
+                <p class="text-blue font-bold text-center">Cancer Patient</p>
             </div>
             <div class="gallery_wrapper flex flex-wrap w-1/2">
-                <div class="gallery_box w-fit  mt-3 mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50">
-                    <p class="text-white text-center">Earthquake Victim</p>
+                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-fit  mt-3 mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50">
-                    <p class="text-white text-center">Earthquake Victim</p>
+                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-fit  mt-3 mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50">
-                    <p class="text-white text-center">Earthquake Victim</p>
+                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-fit  mt-3 mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50">
-                    <p class="text-white text-center">Earthquake Victim</p>
+                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
 
 
@@ -124,7 +124,8 @@
                             class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login
                             to your account</button>
                         <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                            Not registered? <a href="/signups" class="text-blue-700 hover:underline dark:text-blue-500">Create
+                            Not registered? <a href="/signups"
+                                class="text-blue-700 hover:underline dark:text-blue-500">Create
                                 account</a>
                         </div>
                     </form>
@@ -133,14 +134,14 @@
         </div>
     </div> --}}
 
-    <div class="homepage_clubs bg-yellow py-8">
-          
-        
-        <h1 class="container_heading py-3">Social Clubs</h1>
-        <div class="card_container flex justify-around">
+    <div class="homepage_clubs bg-blue py-12">
 
 
-            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+        <h1 class="container_heading_yellow py-3">Social Clubs</h1>
+        <div class="card_container flex justify-around pb-8">
+
+
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -153,7 +154,7 @@
                     <p class="mb-3 font-normal text-white">Here are the biggest enterprise
                         technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue bg-yellow rounded-lg">
                         View Profile
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -163,7 +164,7 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -176,7 +177,7 @@
                     <p class="mb-3 font-normal text-white">Here are the biggest enterprise
                         technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue bg-yellow rounded-lg">
                         View Profile
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -186,7 +187,7 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm  border border-gray-200 rounded-lg shadow bg-blue border-none">
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -199,7 +200,7 @@
                     <p class="mb-3 font-normal text-white">Here are the biggest enterprise
                         technology acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded-lg hover:bg-blue-800 ">
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blue bg-yellow rounded-lg ">
                         View Profile
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -214,25 +215,25 @@
         </div>
     </div>
 
-    <div class="homepage_testimonial">
+    <div class="homepage_testimonial bg-yellow py-8">
         <div id="fullWidthTabContent" class="">
-            <div class="p-4 bg-blue">
+            <div class="p-4">
                 <div class="flex justify-around py-8">
                     <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl text-white font-extrabold">50+</dt>
-                        <dd class="text-gray-500 text-white">Campaigns</dd>
+                        <dt class="mb-2 text-3xl text-blue font-extrabold">50+</dt>
+                        <dd class="text-gray-500 text-blue">Campaigns</dd>
                     </div>
                     <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl text-white font-extrabold">$200+</dt>
-                        <dd class="text-gray-500 text-white">Fund Raised</dd>
+                        <dt class="mb-2 text-3xl text-blue font-extrabold">$200+</dt>
+                        <dd class="text-gray-500 text-blue">Fund Raised</dd>
                     </div>
                     <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl text-white font-extrabold">100+</dt>
-                        <dd class="text-gray-500 text-white">Registered Social CLubs</dd>
+                        <dt class="mb-2 text-3xl text-blue font-extrabold">100+</dt>
+                        <dd class="text-gray-500 text-blue">Registered Social CLubs</dd>
                     </div>
                     <div class="flex flex-col items-center justify-center">
-                        <dt class="mb-2 text-3xl text-white font-extrabold">1000+</dt>
-                        <dd class="text-gray-500 text-white">Donors</dd>
+                        <dt class="mb-2 text-3xl text-blue font-extrabold">1000+</dt>
+                        <dd class="text-gray-500 text-blue">Donors</dd>
                     </div>
 
                 </div>
@@ -244,21 +245,21 @@
     <div class="footer_container">
 
 
-        <footer class="bg-gray-700">
+        <footer class="bg-yellow">
             <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                 <div class="md:flex md:justify-between">
                     <div class="mb-6 md:mb-0">
                         <a href="" class="flex items-center">
                             <img src="{{ asset('assets/Images/logo.png') }}" class="h-8 me-3" />
-                            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Raise For
+                            <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue">Raise For
                                 Good</span>
                         </a>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-blue">Follow us
                             </h2>
-                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <ul class="text-blue font-medium">
                                 <li class="mb-4">
                                     <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                                 </li>
@@ -268,8 +269,8 @@
                             </ul>
                         </div>
                         <div>
-                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                            <h2 class="mb-6 text-sm font-semibold  uppercase text-blue">Legal</h2>
+                            <ul class="text-blue font-medium">
                                 <li class="mb-4">
                                     <a href="#" class="hover:underline">Privacy Policy</a>
                                 </li>
@@ -280,22 +281,22 @@
                         </div>
                     </div>
                 </div>
-                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-[#234E70] lg:my-8" />
                 <div class="sm:flex sm:items-center sm:justify-center">
-                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
-                            href="" class="hover:underline">Raise For Good</a>. All Rights Reserved.
+                    <span class="text-sm text-blue sm:text-center ">© 2024 <a href=""
+                            class="hover:underline">Raise For Good</a>. All Rights Reserved.
                     </span>
-                
+
                 </div>
             </div>
         </footer>
 
 
-        
 
 
 
-  
+
+
 
 
     </div>

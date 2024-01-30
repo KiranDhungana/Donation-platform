@@ -56,83 +56,97 @@
             <div class="post_container flex flex-wrap justify-center">
 
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
                 <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-full md:w-48 md:rounded-none md:rounded-s-lg"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
                         src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
                         alt="">
                     <div class="flex flex-col justify-between p-4 leading-normal">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
-
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
                         <button type="button"
                             class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
                     </div>
                 </a>
+                <a href="#"
+                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
+                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
+                        alt="">
+                    <div class="flex flex-col justify-between p-4 leading-normal">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
+                            technology acquisitions 2021</h5>
+                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
+                        <button type="button"
+                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
+                    </div>
+                </a>
+           
 
 
 
