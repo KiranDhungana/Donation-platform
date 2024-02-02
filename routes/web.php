@@ -161,7 +161,7 @@ Route::get("/like", [Postcontroller::class, 'like'])->name('like');
 Route::get("/setting/{id}/{name}", [UserController::class, 'userprofilesetting'])->name('userprofilesetting')->middleware('auth');
 Route::get("/profile/{id}/{name}", [UserController::class, 'userprofile'])->name('userprofile')->middleware('auth');
 
-Route::get("/posts/{pid}/{district}/{name}", [UserController::class, 'viewuserpost'])->name('viewuserpost')->middleware('auth');
+// Route::get("/posts/{pid}/{district}/{name}", [UserController::class, 'viewuserpost'])->name('viewuserpost')->middleware('auth');
 
 Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile');
 
@@ -177,8 +177,4 @@ Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('
 // routuing 
 Route::get('/psetting', function () {
     return view('userpages.profilesetting');
-});
-
-Route::get('/userprofile', function () {
-    return view('profile');
 });
