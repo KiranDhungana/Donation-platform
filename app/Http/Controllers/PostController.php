@@ -81,7 +81,7 @@ class PostController extends Controller
     public function viewpostdetail($id)
     {
         $postinfo = Post::find($id);
-        return view('homepages.viewcampain')->with('campaindata', $postinfo);
+        return view('campaignpage.campaignview')->with('campaindata', $postinfo);
 
     }
 }

@@ -71,10 +71,10 @@
       <ul
         class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
         <li>
-          <a href="./" class="block py-2 px-3  rounded md:p-0" aria-current="page">Home</a>
+          <a href="/" class="block py-2 px-3  rounded md:p-0" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#"
+          <a href="/view-campaigns"
             class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
         </li>
         <li>

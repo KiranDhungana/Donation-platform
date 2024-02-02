@@ -169,7 +169,7 @@ Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile'
 
 // ADDING POST ROUTING
 Route::Post("/post-help", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
-Route::get("/view-posts", [Postcontroller::class, 'viewpost'])->name('viewpost')->middleware('auth');
+Route::get("/view-campaigns", [Postcontroller::class, 'viewpost'])->name('viewpost')->middleware('auth');
 Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('viewpostdetail')->middleware('auth');
 
 
