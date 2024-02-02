@@ -173,3 +173,10 @@ Route::Post("/post-help", [Postcontroller::class, 'helpform'])->name('helpform')
 Route::get('/psetting', function () {
     return view('userpages.profilesetting');
 });
+
+Route::get('/campaignDetail', function () {
+    return view('campaignDetailPage');
+});
+Route::get('/forgotPswd', function () {
+    return view('forgotPassword');
+});
