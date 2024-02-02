@@ -67,5 +67,14 @@ class PostController extends Controller
 
 
     }
-
+    public function viewpost()
+    {
+        $data = Post::with('like')->get();
+        // foreach ($data as $i) {
+        //     dd($i['relation']);
+        //     dd($i['like']->likes);
+        // }
+        $post = Post::all();
+        return view('homepage.campaignPost')->with('post', $post)->with('data', $data);
+    }
 }
