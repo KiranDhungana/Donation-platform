@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\loginsignup;
-use App\Http\Controllers\Post;
+// use App\Http\Controllers\Post;
 use App\Http\Controllers\Postcontroller;
 use App\Models\User;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -113,11 +114,13 @@ Route::post('/setnewpassword', [UserController::class, 'setnewpasswordpost'])->n
 
 Route::get('/superadmin/dashboard', function () {
     $data = user::all();
-    return view('superadmin.homepage')->with('user', $data);
+    $postdata = Post::all();
+    return view('superadmin.homepage')->with('user', $data)->with('postdata', $postdata);
 })->name('login')->middleware('super-admin-check');
 Route::get('/post-to-approve', function () {
     $data = user::all();
-    return view('superadmin.homepage')->with('user', $data);
+    $postdata = Post::all();
+    return view('superadmin.homepage')->with('user', $data)->with('postdata', $postdata);
 })->name('login')->middleware('super-admin-check');
 
 
@@ -167,6 +170,7 @@ Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile'
 // ADDING POST ROUTING
 Route::Post("/post-help", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
 Route::get("/view-posts", [Postcontroller::class, 'viewpost'])->name('viewpost')->middleware('auth');
+Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('viewpostdetail')->middleware('auth');
 
 
 

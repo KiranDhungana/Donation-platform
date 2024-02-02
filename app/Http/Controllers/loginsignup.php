@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
@@ -27,7 +28,8 @@ class loginsignup extends Controller
         // dd($userData->role);
         if (Auth::attempt($userCredential) && $userData->role == 1 && $userData->is_verified == 1) {
             $data = user::all();
-            return redirect('/superadmin/dashboard')->with("user", $data);
+            $postdata = Post::all();
+            return redirect('/superadmin/dashboard')->with("user", $data)->with("postdata", $postdata);
 
             // return view('superadmin.homepage');
         } else if ($userData && $userData->is_verified == 0) {
