@@ -16,15 +16,16 @@
    
 
 
-    <div class="post_form_container pt-[5rem] bg-yellow flex flex-col h-[100vh]">
-        <form id="regForm" action="/action_page.php">
+    <div class="post_form_container pt-[5rem] bg-blue-900 flex flex-col h-[100vh]">
+        <form id="regForm" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data">
+            @csrf
             <h1 class="text-2xl text-white">Fill the form with correct details</h1>
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
 
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="floating_first_name" id="floating_first_name"
+                        <input type="text" name="fname" id="floating_first_name"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_first_name"
@@ -32,7 +33,7 @@
                             Needy First name</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="middlename" id="middlename"
+                        <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="mname" id="middlename"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="middlename"
@@ -44,7 +45,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="floating_last_name" id="floating_last_name"
+                        <input type="text" name="lname" id="lname"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_last_name"
@@ -60,10 +61,9 @@
                             with Needy</label>
                     </div>
                 </div>
-
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone"
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phonenumber" id="floating_phone"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_phone"
@@ -86,7 +86,7 @@
                     <div class="provience my-5">
                         <label for="prov" class="text-white m-2">Select Provience:</label>
     
-                        <select id="prov" class="bg-gray-800 text-white p-1 w-full">
+                        <select id="prov" name="province" class="bg-gray-800 text-white p-1 w-full">
                             <option value="Lumbini">Lumbini</option>
                             <option value="Bagmati">Bagmati</option>
                             <option value="Karnali">Karnali</option>
@@ -97,7 +97,7 @@
                     <div class="district my-5">
                         <label for="dis" class="text-white m-2 ">Select District:</label>
     
-                        <select id="dis" class="bg-gray-800 text-white p-1 w-full">
+                        <select id="dis" name="district" class="bg-gray-800 text-white p-1 w-full">
                             <option value="Rupandehi">Rupandehi</option>
                             <option value="Kathmandu">Kathmandu</option>
                             <option value="Lalitput">Lalitput</option>
@@ -108,7 +108,7 @@
                     <div class="municipality my-5">
                         <label for="mun" class="text-white m-2 ">Select Municipality:</label>
     
-                        <select id="mun" class="bg-gray-800 text-white p-1 w-full">
+                        <select id="mun" name="municipality" class="bg-gray-800 text-white p-1 w-full">
                             <option value="Rupandehi">Rupandehi</option>
                             <option value="Kathmandu">Kathmandu</option>
                             <option value="Lalitput">Lalitput</option>
@@ -120,9 +120,9 @@
                     <div class="tagret my-5">
                         <label for="tgt" class="text-white m-2 ">Select Target Amount:</label>
                         <div class=" justify-between">
-                            <input type="text" class="w-1/2  bg-gray-900 text-white" placeholder="Target Amount" id="trg_amt">
+                            <input type="text" name="amountw" class="w-1/2  bg-gray-900 text-white" placeholder="Target Amount" id="trg_amt">
 
-                            <input type="range" min="5" max="100000" id="tgt" class="w-1/2  bg-gray-900"/>
+                            <input type="range" name="amounta" min="5" max="100000" id="tgt" class="w-1/2  bg-gray-900"/>
                         </div>
                     </div>
 
@@ -136,16 +136,17 @@
             <div class="tab">
                 <div class="citizenship_container my-5 flex justify-around">
                     <div class="w-1/2">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
                             Citizenship</label>
                         <input
-                            class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
-                            id="file_input" type="file">
+                         class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
+                             type="file" name="citizenship[]" multiple>
                     </div>
                     <div class="w-1/2 ml-3">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
                             Official Document</label>
                         <input
+                        type="file" name="officialdocs[]"
                             class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
                             id="file_input" type="file">
                     </div>
@@ -156,18 +157,21 @@
                 </div>
                 <div class="images_container my-5">
     
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="multiple_files">Upload
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
                         Photos</label>
                     <input
+                    type="file" name="photos[]"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-900 text-white dark:placeholder-gray-400"
-                        id="multiple_files" type="file" multiple>
+                        
+                        type="file" multiple>
     
                 </div>
                 <div class="video_container my-5">
     
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="multiple_files">Upload
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
                         Videos</label>
                     <input
+                    name="video"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-blur-900 dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400"
                         id="multiple_files" type="file" multiple>
     
