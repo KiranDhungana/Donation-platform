@@ -12,10 +12,18 @@
 
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      @if(!Auth::user())
       <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button"
+<<<<<<< HEAD
         class="mx-3 text-white bg-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
       <a href="campaign-form" class="border px-3 py-2 border-gray-800 rounded post_btn"><i class="fa-solid fa-plus mr-2"></i> Add
         Post</a>
+=======
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+@else
+
+@endif
+>>>>>>> 5b22ec0a54e4b47dc17241d8c622600837ff5a2a
       <!-- Dropdown menu -->
       @if (Auth::user())
 
@@ -33,9 +41,9 @@
           <div>{{Auth::user()->fname}}{{ Auth::user()->mname }} {{ Auth::user()->lname}}</div>
           <div class="font-medium truncate">{{Auth::user()->email}}</div>
         </div>
-        <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdownUserAvatarButton">
+        <ul class="py-2 text-sm " aria-labelledby="dropdownUserAvatarButton">
           <li>
-            <a href="#" class="block px-4 py-2 hover:text-blue-600">Profile</a>
+            <a href="/profile/{{Auth::user()->id}}/{{Auth::user()->fname}}" class="block px-4 py-2 hover:text-blue-600">Profile</a>
           </li>
           <li>
             <a href="/setting/{{Auth::user()->id}}/{{Auth::user()->fname}}"
@@ -45,14 +53,13 @@
         </ul>
         <div class="py-2">
           <a href="/logout"
-            class="block px-4 py-2 text-sm text-gray-700 bg-blue dark:text-gray-200 dark:hover:text-white">Sign out</a>
+            class="block px-4 py-2 text-sm  bg-blue dark:text-gray-200 dark:hover:text-white">Sign out</a>
         </div>
       </div>
       @else
       <div>
       </div>
-
-      @endif
+@endif
 
 
 
@@ -70,16 +77,18 @@
       <ul
         class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0  ">
         <li>
-          <a href="#" class="block py-2 px-3 text-blue rounded md:p-0" aria-current="page">Home</a>
+          <a href="/" class="block py-2 px-3  rounded md:p-0" aria-current="page">Home</a>
         </li>
         <li>
           <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
+          <a href="/view-campaigns"
+            class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">About</a>
+          <a href="#" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">About</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">Contact</a>
+          <a href="#" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Contact</a>
         </li>
       </ul>
     </div>

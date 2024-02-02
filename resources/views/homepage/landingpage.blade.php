@@ -23,7 +23,7 @@
             exce</p>
 
         <div class="main_view_btns flex w-1/2 justify-center my-3">
-            <a href="" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
+            <a href="/view-campaigns" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
             <a href="/signups" class="bg-yellow text-blue rounded-md px-4 py-2 text-xl ">Organizations</a>
 
         </div>
