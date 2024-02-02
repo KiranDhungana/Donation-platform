@@ -178,3 +178,7 @@ Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('
 Route::get('/psetting', function () {
     return view('userpages.profilesetting');
 });
+
+Route::get('/userprofile', function () {
+    return view('profile');
+});
