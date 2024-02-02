@@ -11,18 +11,21 @@
 </head>
 
 <body>
-    @include('reusecomp/navbar')
-    <div class="postpage_container p-[5rem] bg-blue">
-        <div class="search_sidebar">
-            <div class="search_bar ">
-    
+    <div class="page_container bg-blue ">
+
+
+        <div class="search_bar_top w-[80%] mx-auto pt-[5rem]">
+            @include('reusecomp/navbar')
+            <div class="search_bar">
+
                 <form class="flex items-center">
                     <label for="voice-search" class="sr-only">Search</label>
                     <div class="relative w-full">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
                                     d="M11.15 5.6h.01m3.337 1.913h.01m-6.979 0h.01M5.541 11h.01M15 15h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 2.043 11.89 9.1 9.1 0 0 0 7.2 19.1a8.62 8.62 0 0 0 3.769.9A2.013 2.013 0 0 0 13 18v-.857A2.034 2.034 0 0 1 15 15Z" />
                             </svg>
                         </div>
@@ -32,7 +35,8 @@
                         <button type="button" class="absolute inset-y-0 end-0 flex items-center pe-3">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
                                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
                                     d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z" />
                             </svg>
                         </button>
@@ -46,113 +50,241 @@
                         </svg>Search
                     </button>
                 </form>
-    
-            </div>
-        </div>
-        <div class="postpage_body flex justify-between align-center mt-8 w-full">
-            
-          
-
-            <div class="post_container flex flex-wrap justify-center">
-
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-                <a href="#"
-                    class="flex flex-col items-center m-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-[200px] md:w-full md:rounded-none md:rounded-s-lg"
-                        src="https://alliancemagazine-1d0ab.kxcdn.com/wp-content/uploads/2023/03/caglar-oskay-mmLtohu4qmE-unsplash-scaled.jpg"
-                        alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                            technology acquisitions 2021</h5>
-                <p class="text-white m-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima?</p>
-                        <button type="button"
-                            class="focus:outline-none w-1/2 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Donate</button>
-                    </div>
-                </a>
-           
-
-
 
             </div>
         </div>
+        <div class="postpage_containe flex flex-col">
+
+            <div class="postpage_body flex w-[80%] mx-auto">
+                <div class="search_sidebar w-[25%]  p-3 mr-5">
+                    <div class="search_type border-b border-gray-500 py-2">
+                        <div class="saarch_heading">
+                            <p class="text-xl text-white font-bold my-2">Types</p>
+                        </div>
+                        <div class="search_items flex flex-col ">
+                            <a href="" class="text-white text-sm my-1">Disaster</a>
+                            <a href="" class="text-white text-sm my-1">Disease</a>
+                            <a href="" class="text-white text-sm my-1">Startup</a>
+                            <a href="" class="text-white text-sm my-1">Problem</a>
+
+                        </div>
+                    </div>
+                    <div class="search_type border-b border-gray-500 py-2">
+                        <div class="saarch_heading">
+                            <p class="text-xl text-white font-bold my-2">Category</p>
+                        </div>
+                        <div class="search_items flex flex-col ">
+                            <a href="" class="text-white text-sm my-1">Disaster</a>
+                            <a href="" class="text-white text-sm my-1">Disease</a>
+                            <a href="" class="text-white text-sm my-1">Startup</a>
+                            <a href="" class="text-white text-sm my-1">Problem</a>
+
+                        </div>
+                    </div>
+                    <div class="search_type border-b border-gray-500 py-2">
+                        <div class="saarch_heading">
+                            <p class="text-xl text-white font-bold my-2">Highest</p>
+                        </div>
+                        <div class="search_items flex flex-col ">
+                            <a href="" class="text-white text-sm my-1">Dontaion</a>
+                            <a href="" class="text-white text-sm my-1">Views</a>
+                            <a href="" class="text-white text-sm my-1">Likes</a>
+                            <a href="" class="text-white text-sm my-1">Money</a>
+
+                        </div>
+                    </div>
+                    <div class="search_type border-b border-gray-500 py-2">
+                        <div class="saarch_heading">
+                            <p class="text-xl text-white font-bold my-2">Location</p>
+                        </div>
+                        <div class="search_items flex flex-col ">
+                            <a href="" class="text-white text-sm my-1">Butwal</a>
+                            <a href="" class="text-white text-sm my-1">Inhurwa</a>
+                            <a href="" class="text-white text-sm my-1">Khaireni</a>
+                            <a href="" class="text-white text-sm my-1">Kathmandu</a>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="post_container w-full flex flex-col">
+
+
+                    <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center">
+
+                        <div class="campaign_card m-5">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg"
+                                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                        enterprise technology acquisitions of 2021 so far, in reverse chronological
+                                        order.
+                                    </p>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Details
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <div class="views border-t py-2 mt-2 border-gray-500">
+                                        <div class="total_views w-1/2 flex">
+                                            <i class="fa-regular fa-eye mr-3"
+                                                style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">33</span></i>
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">23</span></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign_card m-5">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg"
+                                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                        enterprise technology acquisitions of 2021 so far, in reverse chronological
+                                        order.
+                                    </p>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Details
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <div class="views border-t py-2 mt-2 border-gray-500">
+                                        <div class="total_views w-1/2 flex">
+                                            <i class="fa-regular fa-eye mr-3"
+                                                style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">33</span></i>
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">23</span></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign_card m-5">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg"
+                                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                        enterprise technology acquisitions of 2021 so far, in reverse chronological
+                                        order.
+                                    </p>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Details
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <div class="views border-t py-2 mt-2 border-gray-500">
+                                        <div class="total_views w-1/2 flex">
+                                            <i class="fa-regular fa-eye mr-3"
+                                                style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">33</span></i>
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">23</span></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="campaign_card m-5">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg"
+                                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                        enterprise technology acquisitions of 2021 so far, in reverse chronological
+                                        order.
+                                    </p>
+                                    <a href="#"
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Details
+                                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                        </svg>
+                                    </a>
+                                    <div class="views border-t py-2 mt-2 border-gray-500">
+                                        <div class="total_views w-1/2 flex">
+                                            <i class="fa-regular fa-eye mr-3"
+                                                style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">33</span></i>
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                                    class="text-sm ml-1">23</span></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
 </body>
 
 </html>
