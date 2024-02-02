@@ -11,6 +11,7 @@
 </head>
 <body>
   <div id="maindiv" class="antialiased bg-gray-50 dark:bg-gray-900">
+    
     <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
       <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
@@ -1458,45 +1459,41 @@
                   @php
                   $j = 1;
               @endphp
+              
         
-                  @foreach ($user as $i)
-                  @if ($i->email=='kirandhungana570@gmail.com')
-                      @continue
-                  @else
-                         <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
+                  @foreach ($postdata as $postdata)
+                  @if ($postdata->approvedstatus==0)
+                  <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        {{$j}}
+                        {{$postdata['description']}}
                     </th>
                     <td class="px-6 py-4">
-                      {{$i->fname}}{{$i->mname}} {{$i->lname}}
+                        {{$postdata['pnumber']}}
+                    
                     </td>
-                      <td  class="px-6 py-4">
-                        {{$i->email}}
-                    </td>
-                    <td class="px-6 py-4">
-                         @if ($i->is_verified==1)
-                             <img class="h-[15px]" src="https://p7.hiclipart.com/preview/286/771/782/check-mark-computer-icons-clip-art-blue-checkmark.jpg" alt="">
-                         @else
-                             
-                             <img class="h-[15px]" src="https://toppng.com/uploads/preview/red-cross-mark-download-png-red-cross-check-mark-11562934675swbmqcbecx.png" alt="">
-                         @endif
+                        {{$postdata['targetamount']}}
+                    
                     </td>
                     <td class="px-6 py-4">
-                     {{
-                      $i->pnumber
-                     }}
+                       
+                    </td>
+                    <td class="px-6 py-4">
+                 
                     </td>
                    
                     <td class="px-6 py-4">
                         {{-- <a href="/delete/{{$i->fname}}/{{$i->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a> --}}
-                  <form method="POST" action="/delete/{{$i->fname}}/{{$i->id}}">
+            {{-- <form method="POST" action="/delete/{{$i->fname}}/{{$i->id}}">
                     @csrf
             <input type="hidden" name="id" >
             {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
-            <button type="submit">Delete</button>
-            </form>
+            {{-- <button type="submit">Delete</button> --}}
+            {{-- </form> --}} 
                       </td>
                 </tr>
+                  @else
+                  @continue
+                        
                   @endif
                 
                

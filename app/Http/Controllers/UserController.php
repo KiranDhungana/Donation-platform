@@ -65,7 +65,8 @@ class UserController extends Controller
         if (Auth::user()) {
             if (Auth::user()->role == 1) {
                 $data = User::all();
-                return redirect('/superadmin/dashboard')->with("user", $data);
+                $postdata = Post::all();
+                return redirect('/superadmin/dashboard')->with("user", $data)->with("postdata", $postdata);
             } else {
                 return redirect('/');
             }
