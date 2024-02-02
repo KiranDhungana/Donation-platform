@@ -13,8 +13,9 @@
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
-
+        class="mx-3 text-white bg-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+      <a href="campaign-form" class="border px-3 py-2 border-gray-800 rounded post_btn"><i class="fa-solid fa-plus mr-2"></i> Add
+        Post</a>
       <!-- Dropdown menu -->
       @if (Auth::user())
 
@@ -72,8 +73,7 @@
           <a href="#" class="block py-2 px-3 text-blue rounded md:p-0" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#"
-            class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
         </li>
         <li>
           <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">About</a>

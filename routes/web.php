@@ -185,3 +185,7 @@ Route::get('/campaignDetail', function () {
 Route::get('/forgotPswd', function () {
     return view('forgotPassword');
 });
+
+Route::get('/userprofile', function () {
+    return view('profile');
+});
