@@ -86,10 +86,14 @@
                     <div class="provience my-5">
                         <label for="prov" class="text-white m-2">Select Provience:</label>
     
-                        <select id="prov" name="province" class="bg-gray-800 text-white p-1 w-full">
-                            <option value="Lumbini">Lumbini</option>
-                            <option value="Bagmati">Bagmati</option>
-                            <option value="Karnali">Karnali</option>
+                        <select id="province" name="province" class="bg-gray-800 text-white p-1 w-full" onchange="updateDistricts()">
+                        <option value="" selected disabled>Select Province</option>
+                        <option value="Province No. 1">Province No. 1</option>
+                        <option value="Madhesh">Madhesh</option>
+                        <option value="Bagmati">Bagmati</option>
+                        <option value="Gandaki">Gandaki</option>
+                        <option value="Lumbini">Lumbini</option>
+                        <option value="Karnali">Karnali</option>
     
                         </select>
                     </div>
@@ -97,15 +101,11 @@
                     <div class="district my-5">
                         <label for="dis" class="text-white m-2 ">Select District:</label>
     
-                        <select id="dis" name="district" class="bg-gray-800 text-white p-1 w-full">
-                            <option value="Rupandehi">Rupandehi</option>
-                            <option value="Kathmandu">Kathmandu</option>
-                            <option value="Lalitput">Lalitput</option>
-                            <option value="Bhaktapur">Bhaktapur</option>
-    
+                        <select id="district" name="district" class="bg-gray-800 text-white p-1 w-full">
+                        <option value="" selected disabled>Select District</option>
                         </select>
                     </div>
-                    <div class="municipality my-5">
+                    <!-- <div class="municipality my-5">
                         <label for="mun" class="text-white m-2 ">Select Municipality:</label>
     
                         <select id="mun" name="municipality" class="bg-gray-800 text-white p-1 w-full">
@@ -115,7 +115,7 @@
                             <option value="Bhaktapur">Bhaktapur</option>
     
                         </select>
-                    </div>
+                    </div> -->
 
                     <div class="tagret my-5">
                         <label for="tgt" class="text-white m-2 ">Select Target Amount:</label>
@@ -290,7 +290,37 @@
     }
 </script>
 
+<script>
 
+function updateDistricts() {
+  fetch('./data,json')
+    .then(response => response.json())
+    .then(data => {
+      const provinceData = data;
+
+      // Get references to the dropdowns
+      const provinceDropdown = document.getElementById("province");
+      const districtDropdown = document.getElementById("district");
+
+      // Clear existing options in the district dropdown
+      districtDropdown.innerHTML = '<option value="" selected disabled>Select District</option>';
+
+      const selectedProvince = provinceDropdown.value;
+      const districts = provinceData[selectedProvince];
+
+      // Populate districts in the district dropdown
+      for (const district in districts) {
+        const option = document.createElement("option");
+        option.value = district;
+        option.text = district;
+        districtDropdown.appendChild(option);
+      }
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
+
+</script>
 
 
 
