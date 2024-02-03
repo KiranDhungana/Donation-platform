@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Like extends Model
 {
+    public $timestamps = false;
     use HasFactory;
     // // public function post()
     // // {

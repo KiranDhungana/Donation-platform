@@ -114,7 +114,7 @@
 
 
                     <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center">
-@foreach ($data as $item)
+@foreach ($post as $item)
     <div class="campaign_card m-5">
                             <div
                                 class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -151,7 +151,7 @@
                                                 style="font-size: 12px; color: white;"><span
                                                     class="text-sm ml-1">33</span></i>
                                             <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
-                                                    class="text-sm ml-1">{{ $item['like']->likes?? 'ok'}}</span></i>
+                                                    class="text-sm ml-1"></span></i>
                                         </div>
                                     </div>
 
