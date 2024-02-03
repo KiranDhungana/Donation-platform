@@ -183,5 +183,8 @@ Route::get('/campaignDetail', function () {
     return view('campaignDetailPage');
 });
 Route::get('/forgotPswd', function () {
-    return view('forgotPassword');
+    return view('forgetPassword');
+});
+Route::get('/profileSettings', function () {
+    return view('profileChange');
 });
