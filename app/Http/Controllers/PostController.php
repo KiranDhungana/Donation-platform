@@ -92,23 +92,50 @@ class PostController extends Controller
         $likedData = $req->json()->all();
         $liked = $req->input('liked');
         $postid = $req->input('postid');
+        $userid = Auth::user()->id;
         // $post = Post::find($postid);
         // $post = DB::table('likes')->where('postid', $postid)->first();
-        $updatelike = Like::where('postid', $postid)->first();
-        // $post = Post::where('postid', $postid)->get();
-        // $post
-        if ($liked == 'true') {
-            $updatelike->likes = $updatelike->likes + 1;
+        $checkexist = Like::where('postid', $postid)->where('uid', $userid)->exists();
+        if ($checkexist) {
+            $updatelike = Like::where('postid', $postid)->where('uid', $userid)->first();
+            if ($liked == 'true') {
+                $updatelike->likes = 1;
+                // $updatelike->uid = $userid;
+                $updatelike->save();
 
-        } else if ($liked == 'false') {
-            $updatelike->likes = $updatelike->likes - 1;
+
+            } else if ($liked == 'false') {
+                $updatelike->likes = 0;
+                // $updatelike->uid = $userid;
+                $updatelike->save();
+            } else {
+                // $updatelike->likes = $updatelike->likes ;
+
+            }
         } else {
-            // $updatelike->likes = $updatelike->likes ;
+            $post = new Like();
+            $post->uid = $userid;
+            $post->postid = $postid;
+            if ($liked == 'true') {
+                $post->likes = 1;
+                // $updatelike->uid = $userid;
+                $post->save();
+
+
+            } else if ($liked == 'false') {
+                $post->likes = 0;
+                // $post->uid = $userid;
+                $post->save();
+            } else {
+                // $updatelike->likes = $updatelike->likes ;
+
+            }
 
         }
 
 
-        $updatelike->save();
+
+
         $userid = $req->input('userid');
 
 
@@ -117,12 +144,13 @@ class PostController extends Controller
         // Log::info('Liked Data:', $likedData);
 
         // Respond with a success message
-        return response()->json([$liked, $postid, $userid, $updatelike->likes]);
+        return response()->json([$liked, $postid, $userid]);
     }
 
     public function getlikes($id)
     {
-        $postlikes = Like::where('postid', $id)->first();
+        $userid = Auth::user()->id;
+        $postlikes = Like::where('postid', $id)->where('likes', 1)->count();
 
         return response()->json([$postlikes]);
     }

@@ -230,6 +230,22 @@
                      _token: '{{ csrf_token() }}'
                 },
                 success: function(data) {
+                      $.ajax({
+            url: '/getlikes/{{$campaindata->id}}',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+           var myDiv = document.getElementById('likediv');
+                
+                newdata =JSON.stringify(data);
+                console.log(newdata);
+                myDiv.textContent = data;
+               
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
                     console.log(data);
                 },
                 error: function(data, textStatus, errorThrown) {
@@ -252,6 +268,22 @@
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(data) {
+    var myDiv = document.getElementById('likediv');
+                      $.ajax({
+            url: '/getlikes/{{$campaindata->id}}',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                
+                newdata =JSON.stringify(data);
+                console.log(newdata);
+                myDiv.textContent = data;
+               
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
                     console.log(data);
                 },
                 error: function(data, textStatus, errorThrown) {
@@ -275,7 +307,7 @@ $(document).ready(function () {
                 
                 newdata =JSON.stringify(data);
                 console.log(newdata);
-                myDiv.textContent = data[0].likes;
+                myDiv.textContent = data
                
             },
             error: function (error) {
