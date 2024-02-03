@@ -8,12 +8,13 @@
     @include('globallink')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/customcss.css') }}">
+    <script src="{{ asset('assets/js/fetchProvience.js') }}"></script>
 
 </head>
 
 <body>
     @include('reusecomp/navbar')
-   
+
 
 
     <div class="post_form_container pt-[5rem] bg-blue-900 flex flex-col h-[100vh]">
@@ -22,7 +23,14 @@
             <h1 class="text-2xl text-white">Fill the form with correct details</h1>
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
-
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="text" name="title" id="post_title"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="post_title"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Title</label>
+                </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="fname" id="floating_first_name"
@@ -35,13 +43,11 @@
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="mname" id="middlename"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " required />
+                            placeholder=" "/>
                         <label for="middlename"
                             class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                             Needy middle name</label>
                     </div>
-
-
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
@@ -71,10 +77,10 @@
                             number (123-456-7890)</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
-                        <textarea name="description" id="description" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Description" rows="1"></textarea>
-                        <!-- <label for="description"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Description
-                            </label> -->
+                        <textarea name="description" id="description"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder="Description" rows="1" required></textarea>
+
                     </div>
                 </div>
             </div>
@@ -85,27 +91,28 @@
 
                     <div class="provience my-5">
                         <label for="prov" class="text-white m-2">Select Provience:</label>
-    
-                        <select id="prov" name="province" class="bg-gray-800 text-white p-1 w-full">
-                            <option value="Lumbini">Lumbini</option>
+
+                        <select id="province" name="province" class="bg-gray-800 text-white p-1 w-full"
+                            onchange="updateDistricts()">
+                            <option value="" selected disabled>Select Province</option>
+                            <option value="Province No. 1">Province No. 1</option>
+                            <option value="Madhesh">Madhesh</option>
                             <option value="Bagmati">Bagmati</option>
+                            <option value="Gandaki">Gandaki</option>
+                            <option value="Lumbini">Lumbini</option>
                             <option value="Karnali">Karnali</option>
-    
+
                         </select>
                     </div>
-    
+
                     <div class="district my-5">
                         <label for="dis" class="text-white m-2 ">Select District:</label>
-    
-                        <select id="dis" name="district" class="bg-gray-800 text-white p-1 w-full">
-                            <option value="Rupandehi">Rupandehi</option>
-                            <option value="Kathmandu">Kathmandu</option>
-                            <option value="Lalitput">Lalitput</option>
-                            <option value="Bhaktapur">Bhaktapur</option>
-    
+
+                        <select id="district" name="district" class="bg-gray-800 text-white p-1 w-full">
+                            <option value="" selected disabled>Select District</option>
                         </select>
                     </div>
-                    <div class="municipality my-5">
+                    <!-- <div class="municipality my-5">
                         <label for="mun" class="text-white m-2 ">Select Municipality:</label>
     
                         <select id="mun" name="municipality" class="bg-gray-800 text-white p-1 w-full">
@@ -115,66 +122,64 @@
                             <option value="Bhaktapur">Bhaktapur</option>
     
                         </select>
-                    </div>
+                    </div> -->
 
                     <div class="tagret my-5">
                         <label for="tgt" class="text-white m-2 ">Select Target Amount:</label>
                         <div class=" justify-between">
-                            <input type="text" name="amountw" class="w-1/2  bg-gray-900 text-white" placeholder="Target Amount" id="trg_amt">
+                            <input type="text" name="amountw" class="w-1/2  bg-gray-900 text-white"
+                                placeholder="Target Amount" id="trg_amt">
 
-                            <input type="range" name="amounta" min="5" max="100000" id="tgt" class="w-1/2  bg-gray-900"/>
+                            <input type="range" name="amounta" min="5" max="100000" id="tgt"
+                                class="w-1/2  bg-gray-900" />
                         </div>
                     </div>
 
-    
-                  
-    
-    
+
+
+
+
                 </div>
             </div>
 
             <div class="tab">
                 <div class="citizenship_container my-5 flex justify-around">
                     <div class="w-1/2">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
                             Citizenship</label>
                         <input
-                         class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
-                             type="file" name="citizenship[]" multiple>
+                            class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
+                            type="file" name="citizenship[]" multiple>
                     </div>
                     <div class="w-1/2 ml-3">
                         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
                             Official Document</label>
-                        <input
-                        type="file" name="officialdocs[]"
+                        <input type="file" name="officialdocs[]"
                             class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
                             id="file_input" type="file">
                     </div>
-    
-    
-    
-    
+
+
+
+
                 </div>
                 <div class="images_container my-5">
-    
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
+
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
                         Photos</label>
-                    <input
-                    type="file" name="photos[]"
+                    <input type="file" name="photos[]"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-900 text-white dark:placeholder-gray-400"
-                        
                         type="file" multiple>
-    
+
                 </div>
                 <div class="video_container my-5">
-    
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
+
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
                         Videos</label>
-                    <input
-                    name="video"
+                    <input name="video"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-blur-900 dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400"
                         id="multiple_files" type="file" multiple>
-    
+
                 </div>
             </div>
             <div style="overflow:auto;">
@@ -189,17 +194,24 @@
                 <span class="step"></span>
                 <span class="step"></span>
                 <span class="step"></span>
-           
+
             </div>
         </form>
     </div>
 
     </div>
 </body>
+
+<script>
+
+
+</script>
+
+
 <script>
     var slider = document.getElementById("tgt");
     var output = document.getElementById("trg_amt");
-    
+
     output.innerText = slider.value;
 
     slider.oninput = function () {
@@ -289,8 +301,6 @@
         x[n].className += " active";
     }
 </script>
-
-
 
 
 

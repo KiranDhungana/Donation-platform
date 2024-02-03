@@ -77,7 +77,9 @@ nav .post_btn:hover{
 }
 
 
-
+.post_form_container .invalid{
+  border-bottom: 2px solid rgb(231, 102, 102);
+}
   
  
   
