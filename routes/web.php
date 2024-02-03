@@ -68,7 +68,7 @@ Route::get('/superadmin', function () {
     return view('superadmin');
 });
 
-Route::get('/campaign-form', function () {
+Route::get('/post-campaign', function () {
     return view('postform');
 });
 
@@ -152,9 +152,9 @@ Route::get('/superadmin/postmanagement', function () {
 
 // post add routing 
 
-Route::get("/postspace", [UserController::class, 'postspace'])->name('postspace')->middleware('auth');
-Route::post("/postspace", [UserController::class, 'postspacetodb'])->name('postspacetodb')->middleware('auth');
-Route::get("/like", [Postcontroller::class, 'like'])->name('like');
+// Route::get("/postspace", [UserController::class, 'postspace'])->name('postspace')->middleware('auth');
+// Route::post("/postspace", [UserController::class, 'postspacetodb'])->name('postspacetodb')->middleware('auth');
+// Route::get("/like", [Postcontroller::class, 'like'])->name('like');
 
 
 // profile routing 
@@ -168,8 +168,8 @@ Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile'
 
 
 // ADDING POST ROUTING
-Route::Post("/post-help", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
-Route::get("/view-campaigns", [Postcontroller::class, 'viewpost'])->name('viewpost')->middleware('auth');
+Route::Post("/post-campaign", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
+Route::get("/view-campaigns", [Postcontroller::class, 'viewpost'])->name('viewpost');
 Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('viewpostdetail')->middleware('auth');
 
 

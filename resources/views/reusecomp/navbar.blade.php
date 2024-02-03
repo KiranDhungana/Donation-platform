@@ -11,7 +11,7 @@
       <img src="{{ asset('assets/Images/logo.png') }}" class="h-8" alt="Flowbite Logo">
 
     </a>
-    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+    <div class="flex flex-row gap-[5px] md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       @if(!Auth::user())
       <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" type="button"
         class="mx-3 text-white bg-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
@@ -19,6 +19,8 @@
         Post</a>
       <!-- Dropdown menu -->
       @if (Auth::user())
+      <a  href="/post-campaign" 
+        class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Post Campaign</a>
 
       <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar"
         class="flex text-sm  rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -73,7 +75,6 @@
           <a href="/" class="block py-2 px-3  rounded md:p-0" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
           <a href="/view-campaigns"
             class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
         </li>
