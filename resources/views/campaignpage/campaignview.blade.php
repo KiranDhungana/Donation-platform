@@ -199,7 +199,7 @@
         function toggleLike() {
             const likeButton = document.getElementById('likeButton');
 
-            // Simulate toggling between liked and unliked states
+          
             isLiked = !isLiked;
             
 
@@ -264,9 +264,9 @@
 $(document).ready(function () {
     var myDiv = document.getElementById('likediv');
 
-// Add text content to the div
 
-        // Make AJAX request to fetch data
+
+        
         $.ajax({
             url: '/getlikes/{{$campaindata->id}}',
             type: 'GET',
@@ -276,8 +276,7 @@ $(document).ready(function () {
                 newdata =JSON.stringify(data);
                 console.log(newdata);
                 myDiv.textContent = data[0].likes;
-                // Update the UI with the fetched data
-                // displayData(data.id);
+               
             },
             error: function (error) {
                 console.error(error);
