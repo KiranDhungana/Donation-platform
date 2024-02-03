@@ -3,72 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Signup</title>
+    <title>Forgot password</title>
+    @include('globallink')
+    <link rel="stylesheet" href="{{ asset('assets/css/customcss.css') }}">
+ 
 </head>
 <body>
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<!--
-  This example requires updating your template:
+@include('reusecomp/navbar')
+@include('reusecomp/loginmodal')
+    <div class="postbg flex flex-col justify-center  items-center pt-[5rem]">
 
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
-<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-    <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
-    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Reset Password</h2>
-  </div>
-
-  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form class="space-y-6" action="/forgetpassword" method="POST">
-      @csrf
-        <div>
-          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
-          <div class="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          </div>
-        </div>
-      {{-- <div>
-        <label for="pswd" class="block text-sm font-medium leading-6 text-gray-900">New Password</label>
-        <div class="mt-2">
-          <input id="pswd" name="password" type="text" autocomplete="pswd" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-        </div>
-      </div> --}}
-
-      {{-- <div>
-        <div class="flex items-center justify-between">
-          <label for="comfirm_pswd" class="block text-sm font-medium leading-6 text-gray-900">Confirm New Password</label>
-        </div>
-        <div class="mt-2">
-          <input id="comfirm_pswd" name="password_confirmation" type="comfirm_pswd" autocomplete="current-comfirm_pswd" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo sm:text-sm sm:leading-6">
-        </div>
-      </div> --}}
-
-      <div>
-        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo">Update Password</button>
-      </div>
-    </form>
-
-   
-  </div>
-</div>
+<div class="border-2 border-rounded w-[32%] py-[3rem] px-[2rem] "> 
 
 
+    <div>
+        
+        <h1 class="text-3xl text-[#234E70] text-center ">Forgot Password?</h1>
+    </div>
+    <form class="w-full mx-auto"  action="/forgetpassword" method="POST" >
+        @csrf
+        <div class="mb-5">
+            <label for="email" class="block mb-2 text-sm font-medium text-[#234E70]">Email</label>
+            <input type="email" id="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your Email" required>
+            </div>
+           
+            <div class="flex items-start mb-1">
+                
+                
+            </div>
+
+            <div class="text-center">
+
+                <input type="submit" class="text-white bg-[#234E70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</input>
+            </div>
+            <div class="pt-2 text-center">
+
+                <button data-modal-target="authentication-modal" type="button" class="text-[#234E70] underline">Go back to Sign in</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    
 </body>
 </html>

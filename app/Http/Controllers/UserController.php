@@ -86,7 +86,6 @@ class UserController extends Controller
         $email = $req->email;
 
         $emailExists = User::where('email', $email)->exists() && User::where('is_verified', 1)->exists();
-
         if ($emailExists) {
             $user = User::where('email', $email)
                 ->where('is_verified', 1)
@@ -293,14 +292,15 @@ class UserController extends Controller
 
     }
 
-    // public function userprofile($id)
-    // {
-    //     $user = User::find($id);
-    //     $post = Post::where('uid', '=', $id)->get();
+    public function userprofile($id)
+    {
+        $user = User::find($id);
+        $post = Post::where('uid', '=', $id)->get();
 
 
-    //     return view('userpages.userprofile')->with('profileinfo', $user)->with('userpost', $post);
-    // }
+
+        return view('profile')->with('profileinfo', $user)->with('userpost', $post);
+    }
 
     // mail sender 
     public function mailsend(Request $req)

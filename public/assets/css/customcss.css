@@ -68,11 +68,18 @@ nav{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+nav .post_btn{
+  margin-left:2rem;
+}
+nav .post_btn:hover{
+  background-color: #13476f;
+  color: #d3d2b5;
+}
 
 
-
-
-
+.post_form_container .invalid{
+  border-bottom: 2px solid rgb(231, 102, 102);
+}
   
  
   

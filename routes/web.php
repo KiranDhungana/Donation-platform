@@ -68,7 +68,7 @@ Route::get('/superadmin', function () {
     return view('superadmin');
 });
 
-Route::get('/campaign-form', function () {
+Route::get('/post-campaign', function () {
     return view('postform');
 });
 
@@ -152,39 +152,32 @@ Route::get('/superadmin/postmanagement', function () {
 
 // post add routing 
 
-Route::get("/postspace", [UserController::class, 'postspace'])->name('postspace')->middleware('auth');
-Route::post("/postspace", [UserController::class, 'postspacetodb'])->name('postspacetodb')->middleware('auth');
-Route::get("/like", [Postcontroller::class, 'like'])->name('like');
+// Route::get("/postspace", [UserController::class, 'postspace'])->name('postspace')->middleware('auth');
+// Route::post("/postspace", [UserController::class, 'postspacetodb'])->name('postspacetodb')->middleware('auth');
+// Route::get("/like", [Postcontroller::class, 'like'])->name('like');
 
 
 // profile routing 
 Route::get("/setting/{id}/{name}", [UserController::class, 'userprofilesetting'])->name('userprofilesetting')->middleware('auth');
 Route::get("/profile/{id}/{name}", [UserController::class, 'userprofile'])->name('userprofile')->middleware('auth');
 
-Route::get("/posts/{pid}/{district}/{name}", [UserController::class, 'viewuserpost'])->name('viewuserpost')->middleware('auth');
+// Route::get("/posts/{pid}/{district}/{name}", [UserController::class, 'viewuserpost'])->name('viewuserpost')->middleware('auth');
 
 Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile');
 
 
 
 // ADDING POST ROUTING
-Route::Post("/post-help", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
-Route::get("/view-posts", [Postcontroller::class, 'viewpost'])->name('viewpost')->middleware('auth');
+Route::Post("/post-campaign", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
+Route::get("/view-campaigns", [Postcontroller::class, 'viewpost'])->name('viewpost');
 Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('viewpostdetail')->middleware('auth');
+// AJAX 
+Route::post("/like", [PostController::class, 'like'])->name('like');
+Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike');
 
 
 
 // routuing 
 Route::get('/psetting', function () {
     return view('userpages.profilesetting');
-});
-
-Route::get('/campaignDetail', function () {
-    return view('campaignDetailPage');
-});
-Route::get('/forgotPswd', function () {
-    return view('forgetPassword');
-});
-Route::get('/profileSettings', function () {
-    return view('profileChange');
 });

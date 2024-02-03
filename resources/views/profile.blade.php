@@ -20,13 +20,13 @@
 
                 <img class="w-20 h-20 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500 mb-2 "
                     src="https://www.w3schools.com/howto/img_avatar.png" alt="Profile avatar">
-                <h1 class="my-1 text-xl">Roshan Pokhrel</h1>
-                <p class="my-1 text-sm">9862722281</p>
-                <small class="my-1">Member Since: 2024-01-31</small>
-                <div>
+                <h1 class="my-1 text-xl">{{ucfirst($profileinfo->fname)}}{{ucfirst($profileinfo->mname)}}{{ucfirst($profileinfo->lname)}}</h1>
+                <p class="my-1 text-sm">{{$profileinfo->pnumber}}</p>
+                <small class="my-1">Member Since: {{$profileinfo->email_verified_at->format('Y-m-d')}}</small>
+                {{-- <div>
                     <p class="my-1 text-sm"><i class="fa-solid fa-location-dot mr-2"></i>Butwal</p>
 
-                </div>
+                </div> --}}
 
             </div>
             <div class="profile_post w-[65%]">
@@ -38,19 +38,19 @@
                         <li class="me-2" role="presentation">
                             <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
                                 data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
-                                aria-selected="false">Profile</button>
+                                aria-selected="false">Active Post</button>
                         </li>
                         <li class="me-2" role="presentation">
                             <button
                                 class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                 id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
-                                aria-controls="dashboard" aria-selected="false">Dashboard</button>
+                                aria-controls="dashboard" aria-selected="false">Submitted Post</button>
                         </li>
                         <li class="me-2" role="presentation">
                             <button
                                 class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                 id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
-                                aria-controls="settings" aria-selected="false">Settings</button>
+                                aria-controls="settings" aria-selected="false">new</button>
                         </li>
                         <li role="presentation">
                             <button
@@ -62,8 +62,9 @@
                 </div>
                 <div id="default-tab-content">
                     <div class="hidden p-4 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
-                        <a href="#"
+                @foreach ($userpost as $i)
+                    @if ($i['approvedstatus']==1)
+                         <a href="#"
                             class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QtaKMX_5hfLnj5l7Kiykjhla3G44iYYJkw&usqp=CAU"
@@ -72,31 +73,31 @@
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                     Noteworthy technology acquisitions 2021</h5>
                             </div>
-                        </a>
-                        <a href="#"
-                            class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QtaKMX_5hfLnj5l7Kiykjhla3G44iYYJkw&usqp=CAU"
-                                alt="">
-                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
-                            </div>
-                        </a>
+                        </a> 
+                    @endif
+             @endforeach
+                       
 
                     </div>
                     <div class="hidden p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        @foreach ($userpost as $i)
+                        @if ($i['approvedstatus']!=1)
                         <a href="#"
-                            class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QtaKMX_5hfLnj5l7Kiykjhla3G44iYYJkw&usqp=CAU"
-                                alt="">
-                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
-                            </div>
-                        </a>
+                        class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QtaKMX_5hfLnj5l7Kiykjhla3G44iYYJkw&usqp=CAU"
+                            alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy technology acquisitions 2021</h5>
+                        </div>
+                    </a>
+                        @endif
+                 @endforeach
+                        
                     </div>
+                  
+                  
                     <div class="hidden p-4 rounded-lg" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                         <a href="#"
                             class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -134,6 +135,7 @@
 
                     </div>
                 </div>
+                
 
             </div>
         </div>
