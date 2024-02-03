@@ -135,7 +135,7 @@
                         <button id="likeButton" class="like-btn" data-post-id="{{ $campaindata->id }}" onclick="toggleLike()">Like</button>
 
                     </div>
-                    <div class="mt-2 text-[#13476f]">456 likes</div>
+                    <div id="likediv" class="mt-2 text-[#13476f]">456 likes</div>
                     <!-- <i class="fa-regular fa-heart"></i> blank heart -->
                 </div>
 
@@ -260,6 +260,31 @@
                 },
             });
         }
+        
+$(document).ready(function () {
+    var myDiv = document.getElementById('likediv');
+
+// Add text content to the div
+
+        // Make AJAX request to fetch data
+        $.ajax({
+            url: '/getlikes/{{$campaindata->id}}',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                
+                newdata =JSON.stringify(data);
+                console.log(newdata);
+                myDiv.textContent = data[0].likes;
+                // Update the UI with the fetched data
+                // displayData(data.id);
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
+    })
+        
     </script>
 </body>
 

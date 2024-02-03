@@ -119,4 +119,11 @@ class PostController extends Controller
         // Respond with a success message
         return response()->json([$liked, $postid, $userid, $updatelike->likes]);
     }
+
+    public function getlikes($id)
+    {
+        $postlikes = Like::where('postid', $id)->first();
+
+        return response()->json([$postlikes]);
+    }
 }

@@ -171,7 +171,9 @@ Route::Post("/contact", [UserController::class, 'mailsend'])->name('userprofile'
 Route::Post("/post-campaign", [Postcontroller::class, 'helpform'])->name('helpform')->middleware('auth');
 Route::get("/view-campaigns", [Postcontroller::class, 'viewpost'])->name('viewpost');
 Route::get("/view-post/{id}", [PostController::class, 'viewpostdetail'])->name('viewpostdetail')->middleware('auth');
+// AJAX 
 Route::post("/like", [PostController::class, 'like'])->name('like');
+Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike');
 
 
 
