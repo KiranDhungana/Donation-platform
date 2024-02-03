@@ -194,6 +194,33 @@
     </div>
     </div>
     <script>
+ var likedstatys ='Like' 
+        $(document).ready(function () {
+    var myDiv = document.getElementById('likediv');
+ $.ajax({
+            url: '/getlikes/{{$campaindata->id}}',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                
+                newdata =JSON.stringify(data);
+                if(data=='true'){
+                    console.log(data)
+                    likedstatys='Liked'
+                    likeButton.innerHTML = 'Liked';
+                }else{
+                    likedstatys='Liked'
+                    likeButton.innerHTML = 'Like';
+                }
+                console.log(newdata);
+                myDiv.textContent = data[0]
+               
+            },
+            error: function (error) {
+                console.error(error);
+            }
+        });
+    })
         let isLiked = false;
 
         function toggleLike() {
@@ -239,7 +266,7 @@
                 
                 newdata =JSON.stringify(data);
                 console.log(newdata);
-                myDiv.textContent = data;
+                myDiv.textContent = data[0];
                
             },
             error: function (error) {
@@ -268,7 +295,7 @@
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(data) {
-    var myDiv = document.getElementById('likediv');
+               var myDiv = document.getElementById('likediv');
                       $.ajax({
             url: '/getlikes/{{$campaindata->id}}',
             type: 'GET',
@@ -277,7 +304,7 @@
                 
                 newdata =JSON.stringify(data);
                 console.log(newdata);
-                myDiv.textContent = data;
+                myDiv.textContent = data[0];
                
             },
             error: function (error) {
@@ -293,28 +320,7 @@
             });
         }
         
-$(document).ready(function () {
-    var myDiv = document.getElementById('likediv');
 
-
-
-        
-        $.ajax({
-            url: '/getlikes/{{$campaindata->id}}',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                
-                newdata =JSON.stringify(data);
-                console.log(newdata);
-                myDiv.textContent = data
-               
-            },
-            error: function (error) {
-                console.error(error);
-            }
-        });
-    })
         
     </script>
 </body>

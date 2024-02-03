@@ -150,8 +150,12 @@ class PostController extends Controller
     public function getlikes($id)
     {
         $userid = Auth::user()->id;
+        if (Like::where('postid', $id)->where('uid', $userid)->exists()) {
+            $liked = Like::where('postid', $id)->where('likes', 1)->get();
+        }
+        // $likedstatus =
         $postlikes = Like::where('postid', $id)->where('likes', 1)->count();
 
-        return response()->json([$postlikes]);
+        return response()->json([$postlikes, $liked]);
     }
 }
