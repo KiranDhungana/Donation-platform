@@ -36,4 +36,16 @@ class PostController extends Controller
 
 
     }
+    // public function like(Request $req)
+    // {
+
+    //     $likedData = $req->json()->all();
+
+    //     // Here, you can process the liked data, save it to a database, etc.
+    //     // For demonstration purposes, let's just log the data.
+    //     // Log::info('Liked Data:', $likedData);
+
+    //     // Respond with a success message
+    //     return response()->json(['message' => 'Like received successfully']);
+    // }
 }
