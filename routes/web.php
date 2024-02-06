@@ -145,6 +145,11 @@ Route::get('/profile1', function () {
 Route::get('/addlocation', function () {
     return view('addlocation');
 });
+
+Route::get('/viewDocs', function () {
+    return view('viewDocs');
+});
+
 // super admin routing 
 Route::get("/documents/{id}", [Superadmin::class, 'viewdocuments'])->name('viewdocuments')->middleware('super-admin-check');
 
@@ -181,5 +186,5 @@ Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike
 
 // routuing 
 Route::get('/psetting', function () {
-    return view('userpages.profilesetting');
+    return view('UserSettings');
 });

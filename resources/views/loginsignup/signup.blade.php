@@ -108,7 +108,7 @@
                                 </div>
                             </div>
                             <button type="submit"
-                                class="w-full bg-yellow text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                                class="w-full bg-yellow text-blue font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                                 style="background:#d3d2b5">Create
                                 an account</button>
                             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
@@ -133,6 +133,15 @@
             @endforeach
             @endif
 
+    </script>
+
+    <script>
+            var fisrtDiv = document.getElementsByTagName('div')
+            var loginBtn = document.getElementById('login')
+            loginBtn.addEventListener('click',()=>{
+                console.log("guhbjk")
+                document.getElementByTagName('body').addClass('blur')
+            })
     </script>
 
 </body>
