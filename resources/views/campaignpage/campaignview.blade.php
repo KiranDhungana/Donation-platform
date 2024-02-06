@@ -135,7 +135,7 @@
                         <button id="likeButton" class="like-btn" data-post-id="{{ $campaindata->id }}" onclick="toggleLike()">Like</button>
 
                     </div>
-                    <div id="likediv" class="mt-2 text-[#13476f]"></div>
+                    <div id="likediv" class="mt-2 text-[#13476f]">0</div>
                     <!-- <i class="fa-regular fa-heart"></i> blank heart -->
                 </div>
 
@@ -154,7 +154,7 @@
                 <div class="flex felx-col place-content-between px-3 pb-1 text-white ">
 
                     <div class="">Raised </div>
-                    <div class="">Donation</div>
+                    <div>Donation</div>
                     <div class="">Goal</div>
                 </div>
             </div>
@@ -165,8 +165,8 @@
             </div>
 
             <div class="mt-3 mx-3 ">
-                <button type="button"
-                    class="text-white bg-[#13476f] font-medium rounded text-sm px-3 py-1.5 text-center me-2 mb-2">Donate</button>
+                <a href="/pay"
+                    class="text-white bg-[#13476f] font-medium rounded text-sm px-3 py-1.5 text-center me-2 mb-2">Donate</a>
             </div>
             <div></div>
             <div class="px-3 ">
@@ -206,7 +206,7 @@
             success: function (data) {
                 newdata =JSON.stringify(data);
                 
-userlikestatus = (data?.[1]?.[0]?.likes)??0
+           userlikestatus = (data?.[1]?.[0]?.likes)??0
 console.log(userlikestatus);
 totallikes =console.log(data[0]);
     // console.log(newdata);

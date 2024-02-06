@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 use Illuminate\Http\Request;
 
 class Superadmin extends Controller
@@ -9,7 +11,8 @@ class Superadmin extends Controller
 
     public function viewdocuments($id)
     {
-        dd($id);
+        $postdata = Post::find($id)->get();
+        dd($postdata);
     }
 
 }

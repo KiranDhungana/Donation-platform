@@ -183,3 +183,9 @@ Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike
 Route::get('/psetting', function () {
     return view('userpages.profilesetting');
 });
+
+
+// esewa 
+Route::get('/pay', function () {
+    return view('paymoney');
+});
