@@ -145,6 +145,11 @@ Route::get('/profile1', function () {
 Route::get('/addlocation', function () {
     return view('addlocation');
 });
+
+Route::get('/viewDocs', function () {
+    return view('viewDocs');
+});
+
 // super admin routing 
 Route::get("/documents/{id}", [Superadmin::class, 'viewdocuments'])->name('viewdocuments')->middleware('super-admin-check');
 
@@ -181,6 +186,7 @@ Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike
 
 // routuing 
 Route::get('/psetting', function () {
+<<<<<<< HEAD
     return view('userpages.profilesetting');
 });
 
@@ -188,4 +194,7 @@ Route::get('/psetting', function () {
 // esewa 
 Route::get('/pay', function () {
     return view('paymoney');
+=======
+    return view('UserSettings');
+>>>>>>> 77d9d7f0bf677aa07634d5fdfc2f058bbe0bd949
 });
