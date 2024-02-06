@@ -3,6 +3,7 @@
 use App\Http\Controllers\loginsignup;
 // use App\Http\Controllers\Post;
 use App\Http\Controllers\Postcontroller;
+use App\Http\Controllers\Superadmin;
 use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
@@ -144,7 +145,8 @@ Route::get('/profile1', function () {
 Route::get('/addlocation', function () {
     return view('addlocation');
 });
-
+// super admin routing 
+Route::get("/documents/{id}", [Superadmin::class, 'viewdocuments'])->name('viewdocuments')->middleware('super-admin-check');
 
 Route::get('/superadmin/postmanagement', function () {
     return view('superadmin.postmanagement');

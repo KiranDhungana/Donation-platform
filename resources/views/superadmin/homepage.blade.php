@@ -1438,20 +1438,20 @@
                             S.NO
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Username
+                            Title
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Email
+                            Description
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Verified State
+                            Phone Number 
                         </th>
                        
                         <th scope="col" class="px-6 py-3">
-                            Phone-Number
+                            Target-Amount
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Action
+                            Documents
                         </th>
                     </tr>
                 </thead>
@@ -1465,30 +1465,32 @@
                   @if ($postdata->approvedstatus==0)
                   <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        {{$postdata['description']}}
+                        {{$j}}
                     </th>
                     <td class="px-6 py-4">
-                        {{$postdata['pnumber']}}
+                        {{$postdata['title']}}
                     
                     </td>
-                        {{$postdata['targetamount']}}
+                    <td>
+
+                        {{$postdata['description']}}
                     
                     </td>
                     <td class="px-6 py-4">
+                        {{$postdata['pnumber']}}
                        
                     </td>
                     <td class="px-6 py-4">
+                        {{$postdata['targetamount']}}
                  
                     </td>
                    
                     <td class="px-6 py-4">
-                        {{-- <a href="/delete/{{$i->fname}}/{{$i->id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</a> --}}
-            {{-- <form method="POST" action="/delete/{{$i->fname}}/{{$i->id}}">
-                    @csrf
-            <input type="hidden" name="id" >
-            {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
-            {{-- <button type="submit">Delete</button> --}}
-            {{-- </form> --}} 
+                      <a href="/documents/{{$postdata['id']}}" >
+                        View Documents
+                      </a>
+                
+          
                       </td>
                 </tr>
                   @else

@@ -135,7 +135,7 @@
                         <button id="likeButton" class="like-btn" data-post-id="{{ $campaindata->id }}" onclick="toggleLike()">Like</button>
 
                     </div>
-                    <div id="likediv" class="mt-2 text-[#13476f]">456 likes</div>
+                    <div id="likediv" class="mt-2 text-[#13476f]"></div>
                     <!-- <i class="fa-regular fa-heart"></i> blank heart -->
                 </div>
 
@@ -194,26 +194,32 @@
     </div>
     </div>
     <script>
- var likedstatys ='Like' 
+        var userlikestatus;
+   var isLiked;
+       
         $(document).ready(function () {
-    var myDiv = document.getElementById('likediv');
+        var myDiv = document.getElementById('likediv');
  $.ajax({
             url: '/getlikes/{{$campaindata->id}}',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                
                 newdata =JSON.stringify(data);
-                if(data=='true'){
-                    console.log(data)
-                    likedstatys='Liked'
-                    likeButton.innerHTML = 'Liked';
-                }else{
-                    likedstatys='Liked'
-                    likeButton.innerHTML = 'Like';
-                }
-                console.log(newdata);
-                myDiv.textContent = data[0]
+                
+userlikestatus = (data?.[1]?.[0]?.likes)??0
+console.log(userlikestatus);
+totallikes =console.log(data[0]);
+    // console.log(newdata);
+                myDiv.textContent = data[0];
+                 if(userlikestatus==1){
+
+         isLiked = true;
+        console.log("userliked");
+    }else{
+         isLiked = false;
+
+    }
+    
                
             },
             error: function (error) {
@@ -221,20 +227,27 @@
             }
         });
     })
-        let isLiked = false;
+
+   
 
         function toggleLike() {
+            
             const likeButton = document.getElementById('likeButton');
-
-          
+           console.log("okay");
+            console.log(isLiked);
             isLiked = !isLiked;
+            console.log(isLiked);
             
 
             if (isLiked) {
+                //  debugger
                 likeButton.classList.add('liked');
                 likeButton.innerHTML = 'Liked';
                 sendLikeToDatabase();
             } else {
+                //  debugger
+                
+                
                 likeButton.classList.remove('liked');
                 likeButton.innerHTML = 'Like';
                 senddisliketodb();
