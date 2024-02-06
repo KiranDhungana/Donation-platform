@@ -1453,6 +1453,9 @@
                         <th scope="col" class="px-6 py-3">
                             Documents
                         </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1490,6 +1493,14 @@
                         View Documents
                       </a>
                 
+          
+                      </td>
+                        <td class="px-6 py-4">
+                      <form action="/approve/{{$postdata['id']}}" method="POST">
+                        @csrf
+                       
+                        <button type="submit">Approve</button>
+                        </form>    
           
                       </td>
                 </tr>

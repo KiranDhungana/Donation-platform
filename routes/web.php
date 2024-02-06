@@ -80,7 +80,9 @@ Route::get('/home', function () {
 Route::get('/campaigns', function () {
     return view('campaignPost');
 });
-
+Route::get('/pay', function () {
+    return view('paymoney');
+});
 
 // Auth::route();
 
@@ -156,6 +158,8 @@ Route::get("/documents/{id}", [Superadmin::class, 'viewdocuments'])->name('viewd
 Route::get('/superadmin/postmanagement', function () {
     return view('superadmin.postmanagement');
 });
+Route::Post("/approve/{id}", [Superadmin::class, 'approveform'])->name('approveform')->middleware('super-admin-check');
+
 
 // post add routing 
 
@@ -186,15 +190,5 @@ Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike
 
 // routuing 
 Route::get('/psetting', function () {
-<<<<<<< HEAD
-    return view('userpages.profilesetting');
-});
-
-
-// esewa 
-Route::get('/pay', function () {
-    return view('paymoney');
-=======
     return view('UserSettings');
->>>>>>> 77d9d7f0bf677aa07634d5fdfc2f058bbe0bd949
 });

@@ -31,6 +31,8 @@ class PostController extends Controller
         $uid = Auth::user()->id;
         $Post = new Post();
         $citizenNames = [];
+        $officialdoc = [];
+        $photos = [];
         if ($req->file('citizenship'))
             foreach ($req->file('citizenship') as $img) {
 
@@ -38,7 +40,26 @@ class PostController extends Controller
                 $img->storeAs('public/citizenships', $imgname);
                 $citizenNames[] = $imgname;
             }
-        $uplo_file = json_encode($citizenNames);
+        $citizenship = json_encode($citizenNames);
+        if ($req->file('officialdocs'))
+            foreach ($req->file('officialdocs') as $img) {
+
+                $imgname = time() . '.' . $img->getClientOriginalName();
+                $img->storeAs('public/officialdocs', $imgname);
+                $officialdoc[] = $imgname;
+            }
+        $officialdocs = json_encode($officialdoc);
+        if ($req->file('photos'))
+            foreach ($req->file('photos') as $img) {
+
+                $imgname = time() . '.' . $img->getClientOriginalName();
+                $img->storeAs('public/photos', $imgname);
+                $photos[] = $imgname;
+            }
+        $photos = json_encode($photos);
+
+
+
         $des = $req->description;
         $fname = $req->fname;
         $lname = $req->lname;
@@ -56,7 +77,9 @@ class PostController extends Controller
         $Post->lname = $lname;
         $Post->relation = $rel;
         $Post->pnumber = $pn;
-        $Post->citizenship = $uplo_file;
+        $Post->citizenship = $citizenship;
+        $Post->photos = $photos;
+        $Post->officialdocs = $officialdocs;
 
         $Post->targetamount = $tar;
         $Post->save();
