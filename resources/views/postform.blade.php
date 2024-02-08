@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
     <link rel="stylesheet" href="{{ asset('assets/css/customcss.css') }}">
     <script src="{{ asset('assets/js/fetchProvience.js') }}"></script>
+    <script src="{{ asset('assets/js/validateForm.js') }}"></script>
 
 </head>
 
@@ -17,8 +18,8 @@
 
 
 
-    <div class="post_form_container pt-[5rem] bg-blue-900 flex flex-col h-[100vh]">
-        <form id="regForm" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data">
+    <div class="post_form_container pt-[5rem] bg-blue flex flex-col h-[100vh]">
+        <form id="campaign_form" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data" class="mt-5 w-4/5 mx-auto">
             @csrf
             <h1 class="text-2xl text-white">Fill the form with correct details</h1>
             <!-- One "tab" for each step in the form: -->
@@ -145,9 +146,9 @@
             <div class="tab">
                 <div class="citizenship_container my-5 flex justify-around">
                     <div class="w-1/2">
-                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Upload
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" >Upload
                             Citizenship</label>
-                        <input
+                        <input accept = "application/pdf"
                             class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
                             type="file" name="citizenship[]" multiple>
                     </div>
@@ -156,7 +157,7 @@
                             Official Document</label>
                         <input  type="file" name="officialdocs[]"
                             class="block w-full text-sm text-gray-900 border border-gray-500 rounded-lg cursor-pointer bg-gray-900 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
-                            id="file_input" >
+                            id="file_input" accept = "application/pdf">
                     </div>
 
 
@@ -169,7 +170,7 @@
                         Photos</label>
                     <input type="file" name="photos[]"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-900 text-white dark:placeholder-gray-400"
-                        type="file" multiple>
+                        type="file" accept="image/png, image/gif, image/jpeg" multiple>
 
                 </div>
                 <div class="video_container my-5">
@@ -178,7 +179,7 @@
                         Videos</label>
                     <input name="video"
                         class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-blur-900 dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400"
-                        id="multiple_files" type="file" multiple>
+                        id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*"  multiple>
 
                 </div>
             </div>
@@ -251,6 +252,7 @@
     }
 
     function nextPrev(n) {
+      
         // This function will figure out which tab to display
         var x = document.getElementsByClassName("tab");
         // Exit the function if any field in the current tab is invalid:
@@ -267,14 +269,13 @@
         }
         // Otherwise, display the correct tab:
         showTab(currentTab);
+
     }
 
     function validateForm() {
-        // This function deals with validation of the form fields
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
         y = x[currentTab].getElementsByTagName("input");
-        // A loop that checks every input field in the current tab:
         for (i = 0; i < y.length; i++) {
             // If a field is empty...
             if (y[i].value == "") {

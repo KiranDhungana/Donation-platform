@@ -22,6 +22,22 @@
             background-color: #4CAF50;
             color: white;
         }
+    
+  
+#donation_bar{
+    background-color: #13476f;
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid gray;
+    
+}
+#amount_filled{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+ 
+    height: 100%;
+    background-color: #d3d2b5;
+}
     </style>
 </head>
 
@@ -132,7 +148,8 @@
                 </div>
                 <div class="flex space-x-2 ">
                     <div class="mt-1">
-                        <button id="likeButton" class="like-btn" data-post-id="{{ $campaindata->id }}" onclick="toggleLike()">Like</button>
+                        <button id="likeButton" class="like-btn" data-post-id="{{ $campaindata->id }}"
+                            onclick="toggleLike()">Like</button>
 
                     </div>
                     <div id="likediv" class="mt-2 text-[#13476f]">0</div>
@@ -142,14 +159,19 @@
             </div>
 
         </div>
-        <div class="flexChild ">
+        <div class="flexChild sideBox">
+            <div class="donation_bar" id="donation_bar">
+                <div class="amount_filled" id="amount_filled"></div>
+                <!-- <input type="range" name="raisedamt" min="0" max="4699" id="slider_value" class="bg-gray-900" disabled/> -->
+
+            </div>
             <div class="bg-[#13476f]">
 
                 <div class="flex felx-col place-content-between text-white pt-2 px-3">
 
-                    <div class="font-bold">Rs.2400 </div>
+                    <div class="font-bold" >Rs. <span id="raised">2400</span> </div>
                     <div class="font-bold">23</div>
-                    <div class="font-bold">Rs.4699</div>
+                    <div class="font-bold">Rs. <span id="goal">4000</span> </div>
                 </div>
                 <div class="flex felx-col place-content-between px-3 pb-1 text-white ">
 
@@ -194,148 +216,166 @@
     </div>
     </div>
     <script>
-        var userlikestatus;
-   var isLiked;
-       
-        $(document).ready(function () {
-        var myDiv = document.getElementById('likediv');
- $.ajax({
-            url: '/getlikes/{{$campaindata->id}}',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                newdata =JSON.stringify(data);
-                
-           userlikestatus = (data?.[1]?.[0]?.likes)??0
-console.log(userlikestatus);
-totallikes =console.log(data[0]);
-    // console.log(newdata);
-                myDiv.textContent = data[0];
-                 if(userlikestatus==1){
+                    var userlikestatus;
+                    var isLiked;
 
-         isLiked = true;
-        console.log("userliked");
+                    $(document).ready(function () {
+        var myDiv = document.getElementById('likediv');
+                    $.ajax({
+                        url: '/getlikes/{{ $campaindata-> id}}',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        newdata = JSON.stringify(data);
+
+                    userlikestatus = (data?.[1]?.[0]?.likes)??0
+                    console.log(userlikestatus);
+                    totallikes =console.log(data[0]);
+                    // console.log(newdata);
+                    myDiv.textContent = data[0];
+                    if(userlikestatus==1){
+
+                        isLiked = true;
+                    console.log("userliked");
     }else{
-         isLiked = false;
+                        isLiked = false;
 
     }
     
                
             },
-            error: function (error) {
-                console.error(error);
+                    error: function (error) {
+                        console.error(error);
             }
         });
     })
 
-   
 
-        function toggleLike() {
+
+                    function toggleLike() {
             
             const likeButton = document.getElementById('likeButton');
-           console.log("okay");
-            console.log(isLiked);
-            isLiked = !isLiked;
-            console.log(isLiked);
-            
+                    console.log("okay");
+                    console.log(isLiked);
+                    isLiked = !isLiked;
+                    console.log(isLiked);
 
-            if (isLiked) {
-                //  debugger
-                likeButton.classList.add('liked');
-                likeButton.innerHTML = 'Liked';
-                sendLikeToDatabase();
+
+                    if (isLiked) {
+                        //  debugger
+                        likeButton.classList.add('liked');
+                    likeButton.innerHTML = 'Liked';
+                    sendLikeToDatabase();
             } else {
-                //  debugger
-                
-                
-                likeButton.classList.remove('liked');
-                likeButton.innerHTML = 'Like';
-                senddisliketodb();
+                        //  debugger
+
+
+                        likeButton.classList.remove('liked');
+                    likeButton.innerHTML = 'Like';
+                    senddisliketodb();
             }
         }
 
-        function senddisliketodb() {
-            //  var postId = $(this).data('post-id');
-             
-            $.ajax({
-                
-                type: "POST",
-                url: '/like',
-                  dataType: 'json',
-                
-                data: {
-                    liked: false,
-                    postid:'{{$campaindata->id}}',
-                    userid:'{{Auth::user()->id}}',
-                     _token: '{{ csrf_token() }}'
-                },
-                success: function(data) {
-                      $.ajax({
-            url: '/getlikes/{{$campaindata->id}}',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-           var myDiv = document.getElementById('likediv');
-                
-                newdata =JSON.stringify(data);
-                console.log(newdata);
-                myDiv.textContent = data[0];
-               
-            },
-            error: function (error) {
-                console.error(error);
-            }
-        });
-                    console.log(data);
-                },
-                error: function(data, textStatus, errorThrown) {
-                    console.log(data);
+                    function senddisliketodb() {
+                        //  var postId = $(this).data('post-id');
 
-                },
-            });
+                        $.ajax({
+
+                            type: "POST",
+                            url: '/like',
+                            dataType: 'json',
+
+                            data: {
+                                liked: false,
+                                postid: '{{$campaindata->id}}',
+                                userid: '{{Auth::user()->id}}',
+                                _token: '{{ csrf_token() }}'
+                            },
+                            success: function (data) {
+                                $.ajax({
+                                    url: '/getlikes/{{$campaindata->id}}',
+                                    type: 'GET',
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        var myDiv = document.getElementById('likediv');
+
+                                        newdata = JSON.stringify(data);
+                                        console.log(newdata);
+                                        myDiv.textContent = data[0];
+
+                                    },
+                                    error: function (error) {
+                                        console.error(error);
+                                    }
+                                });
+                                console.log(data);
+                            },
+                            error: function (data, textStatus, errorThrown) {
+                                console.log(data);
+
+                            },
+                        });
         }
 
-        function sendLikeToDatabase() {
-            //  var postId = $(this).data('post-id');
-             
-            $.ajax({
-                type: "POST",
-                url: '/like',
-                data: {
-                    liked: true,
-                    postid:'{{$campaindata->id}}',
-                    userid:'{{Auth::user()->id}}',
-                    _token: '{{ csrf_token() }}'
-                },
-                success: function(data) {
-               var myDiv = document.getElementById('likediv');
-                      $.ajax({
-            url: '/getlikes/{{$campaindata->id}}',
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                
-                newdata =JSON.stringify(data);
-                console.log(newdata);
-                myDiv.textContent = data[0];
-               
-            },
-            error: function (error) {
-                console.error(error);
-            }
-        });
-                    console.log(data);
-                },
-                error: function(data, textStatus, errorThrown) {
-                    console.log(data);
+                    function sendLikeToDatabase() {
+                        //  var postId = $(this).data('post-id');
 
-                },
-            });
+                        $.ajax({
+                            type: "POST",
+                            url: '/like',
+                            data: {
+                                liked: true,
+                                postid: '{{$campaindata->id}}',
+                                userid: '{{Auth::user()->id}}',
+                                _token: '{{ csrf_token() }}'
+                            },
+                            success: function (data) {
+                                var myDiv = document.getElementById('likediv');
+                                $.ajax({
+                                    url: '/getlikes/{{$campaindata->id}}',
+                                    type: 'GET',
+                                    dataType: 'json',
+                                    success: function (data) {
+
+                                        newdata = JSON.stringify(data);
+                                        console.log(newdata);
+                                        myDiv.textContent = data[0];
+
+                                    },
+                                    error: function (error) {
+                                        console.error(error);
+                                    }
+                                });
+                                console.log(data);
+                            },
+                            error: function (data, textStatus, errorThrown) {
+                                console.log(data);
+
+                            },
+                        });
         }
-        
 
-        
+
+
     </script>
+
+
+
+
+<script>
+                    
+    var amt = document.getElementById("amount_filled");
+    var raised = document.getElementById("raised").innerText;
+    var goal = document.getElementById("goal").innerText;
+    var width_value = (parseInt(raised)/parseInt(goal))*100;
+
+    amt.style.width =width_value + "%"
+    
+
+
+</script>
+
+
 </body>
 
 </html>
