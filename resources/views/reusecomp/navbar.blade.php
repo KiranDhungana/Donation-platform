@@ -24,7 +24,7 @@
         class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Post Campaign</a>
 
       <button id="dropdownUserAvatarButton" data-dropdown-toggle="dropdownAvatar"
-        class="flex text-sm  rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+        class="flex text-sm  rounded-full md:me-0"
         type="button" style="margin-left:1rem">
         <span class="sr-only">Open user menu</span>
         <img class="w-8 h-8 rounded-full "
@@ -39,17 +39,17 @@
         </div>
         <ul class="py-2 text-sm " aria-labelledby="dropdownUserAvatarButton">
           <li>
-            <a href="/profile/{{Auth::user()->id}}/{{Auth::user()->fname}}" class="block px-4 py-2 hover:text-blue-600">Profile</a>
+            <a href="/profile/{{Auth::user()->id}}/{{Auth::user()->fname}}" class="block px-4 py-2 text-yellow">Profile</a>
           </li>
           <li>
             <a href="/setting/{{Auth::user()->id}}/{{Auth::user()->fname}}"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-yellow">Settings</a>
           </li>
 
         </ul>
         <div class="py-2">
           <a href="/logout"
-            class="block px-4 py-2 text-sm  bg-blue dark:text-gray-200 dark:hover:text-white">Sign out</a>
+            class="block px-4 py-2 text-sm  bg-blue dark:text-gray-200  text-yellow">Sign out</a>
         </div>
       </div>
       @else
