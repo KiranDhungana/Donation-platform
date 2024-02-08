@@ -165,11 +165,12 @@
                 <!-- <input type="range" name="raisedamt" min="0" max="4699" id="slider_value" class="bg-gray-900" disabled/> -->
 
             </div>
+          
             <div class="bg-[#13476f]">
 
                 <div class="flex felx-col place-content-between text-white pt-2 px-3">
 
-                    <div class="font-bold" >Rs. <span id="raised">2400</span> </div>
+                    <div class="font-bold" >Rs. <span id="raised">{{$amount->amount ?? 0}} </span> </div>
                     <div class="font-bold">23</div>
                     <div class="font-bold">Rs. <span id="goal">4000</span> </div>
                 </div>

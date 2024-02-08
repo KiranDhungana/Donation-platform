@@ -102,7 +102,8 @@ class PostController extends Controller
     public function viewpostdetail($id)
     {
         $postinfo = Post::find($id);
-        return view('campaignpage.campaignview')->with('campaindata', $postinfo);
+        $payment = Payment::where('postid', $id)->get()->first();
+        return view('campaignpage.campaignview')->with('campaindata', $postinfo, )->with('amount', $payment);
 
     }
     public function like(Request $req)
@@ -204,6 +205,7 @@ class PostController extends Controller
             $payment->uid = $uid;
             $payment->postid = $postid;
             $payment->save();
+            return redirect('/view-post/' . $postid);
         } else {
             echo 'payment status is ' + $decodeddata['status'];
 
