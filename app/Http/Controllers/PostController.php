@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Payment;
 use App\Models\Like;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,19 +13,14 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
 
-    // public function like()
-    // {
+    public function gotopay($id)
+    {
 
-    //     // $find = (Post::find(1));
-    //     $data = Post::with('like')->get();
-    //     foreach ($data as $i) {
-    //         echo ($i['description']);
-    //         echo ($i['like']->likes);
-    //     }
+        return view('paymoney')->with('id', $id);
 
 
 
-    // }
+    }
     public function helpform(Request $req)
     {
         // dd($req);
@@ -180,5 +176,38 @@ class PostController extends Controller
         $postlikes = Like::where('postid', $id)->where('likes', 1)->count();
 
         return response()->json([$postlikes, $liked]);
+    }
+    public function payment(Request $req)
+    {
+        $paymentdata = ($req['data']);
+        $decodeddata = json_decode(base64_decode($paymentdata), true);
+        $exploded = explode('-', $decodeddata['transaction_uuid']);
+        // dd($decodeddata);
+        echo ($decodeddata['status']);
+        echo '<br>';
+        echo ($decodeddata['transaction_code']);
+        echo '<br>';
+        echo ($decodeddata['total_amount']);
+        echo '<br>';
+        echo ($decodeddata['transaction_uuid']);
+        // echo ($exploded);
+        $uidandpid = $decodeddata['transaction_uuid'];
+        $string = $uidandpid;
+        $secondHyphenPos = strpos($string, '-', strpos($string, '-') + 1);
+        $thirdHyphenPos = strpos($string, '-', $secondHyphenPos + 1);
+        $uid = substr($string, $secondHyphenPos + 1, $thirdHyphenPos - $secondHyphenPos - 1);
+        $postid = substr($string, $thirdHyphenPos + 1);
+
+        $payment = new Payment;
+        if ($decodeddata['status'] === "COMPLETE") {
+            $payment->amount = $decodeddata['total_amount'];
+            $payment->uid = $uid;
+            $payment->postid = $postid;
+            $payment->save();
+        } else {
+            echo 'payment status is ' + $decodeddata['status'];
+
+        }
+
     }
 }

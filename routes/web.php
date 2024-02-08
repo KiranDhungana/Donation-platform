@@ -80,9 +80,11 @@ Route::get('/home', function () {
 Route::get('/campaigns', function () {
     return view('campaignPost');
 });
-Route::get('/pay', function () {
-    return view('paymoney');
-});
+// Route::get('/pay/{id}', function () {
+
+//     return view('paymoney');
+// });
+Route::get('/pay/{id}', [Postcontroller::class, 'gotopay']);
 
 // Auth::route();
 
@@ -192,3 +194,5 @@ Route::get("/getlikes/{id}", [PostController::class, 'getlikes'])->name('getlike
 Route::get('/psetting', function () {
     return view('UserSettings');
 });
+
+Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment');

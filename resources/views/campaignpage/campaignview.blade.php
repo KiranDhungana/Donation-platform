@@ -164,8 +164,8 @@
 
             </div>
 
-            <div class="mt-3 mx-3 ">
-                <a href="/pay"
+                <div class="mt-3 mx-3 ">
+                    <a href="/pay/{{$campaindata->id}}"
                     class="text-white bg-[#13476f] font-medium rounded text-sm px-3 py-1.5 text-center me-2 mb-2">Donate</a>
             </div>
             <div></div>
