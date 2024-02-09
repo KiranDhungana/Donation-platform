@@ -50,7 +50,7 @@
                             <button
                                 class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                 id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
-                                aria-controls="settings" aria-selected="false">new</button>
+                                aria-controls="settings" aria-selected="false">Donation History</button>
                         </li>
                         <li role="presentation">
                             <button
@@ -99,16 +99,22 @@
                   
                   
                     <div class="hidden p-4 rounded-lg" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <a href="#"
-                            class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                                src="https://www.peopleinneed.net/image-cache/www_media_generated-page-translations_10559_image_dscf2869.jpg_1200x800-cover.jpg?ts=1691247856"
-                                alt="">
-                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
-                            </div>
-                        </a>
+                    @if(count($payhistory) != 0)
+                      @foreach ($payhistory as $i)
+                     
+                      
+                        You paid Rs. {{$i['amount'] }} on {{$i['paidtime']}} to  <span> <a href="#"> This </a>
+                            </span> Campaign .   
+                     
+                  
+                     
+               <br>
+               @endforeach
+@else
+    {{ "You dont have any donation History" }}
+@endif
+                      
+                      
                     </div>
                     <div class="hidden p-4 rounded-lg" id="contacts" role="tabpanel"
                         aria-labelledby="contacts-tab">

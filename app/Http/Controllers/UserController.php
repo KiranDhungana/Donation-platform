@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Payment;
 
 use App\Models\EmailVerification;
 use Illuminate\Support\Facades\Hash;
@@ -294,12 +295,13 @@ class UserController extends Controller
 
     public function userprofile($id)
     {
+        $paymenthistory = Payment::where('uid', $id)->get();
         $user = User::find($id);
         $post = Post::where('uid', '=', $id)->get();
 
 
 
-        return view('profile')->with('profileinfo', $user)->with('userpost', $post);
+        return view('profile')->with('profileinfo', $user)->with('userpost', $post)->with('payhistory', $paymenthistory);
     }
 
     // mail sender 

@@ -29,7 +29,7 @@ $product_code="EPAYTEST";
 
             <tr>
                 <td>Amount:</td>
-                <td> <input type="text" id="amount" name="amount" value="100" class="form" required=""> <br>
+                <td> <input type="text" id="amount" name="amount" value="10" class="form" required=""> <br>
                 </td>
             </tr>
 
@@ -42,7 +42,7 @@ $product_code="EPAYTEST";
 
             <tr>
                 <td>Total Amount:</td>
-                <td><input type="text" id="total_amount" name="total_amount" value="100" class="form" required="">
+                <td><input type="text" id="total_amount" name="total_amount" value="10" class="form" required="">
                 </td>
             </tr>
 

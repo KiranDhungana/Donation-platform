@@ -181,6 +181,7 @@ class PostController extends Controller
     public function payment(Request $req)
     {
         $paymentdata = ($req['data']);
+        // dd($paymentdata);
         $decodeddata = json_decode(base64_decode($paymentdata), true);
         $exploded = explode('-', $decodeddata['transaction_uuid']);
         // dd($decodeddata);
@@ -204,6 +205,9 @@ class PostController extends Controller
             $payment->amount = $decodeddata['total_amount'];
             $payment->uid = $uid;
             $payment->postid = $postid;
+            $payment->transictionid = $uidandpid;
+            $payment->paidtime = now();
+
             $payment->save();
             return redirect('/view-post/' . $postid);
         } else {

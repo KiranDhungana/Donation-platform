@@ -43,7 +43,8 @@ Route::get('/contact', function () {
 
 Route::get('/signups', function () {
     return view('loginsignup/signup');
-});
+})->name('signuppage');
+;
 
 
 
@@ -56,6 +57,7 @@ Route::get('/forgetpassword', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
 Route::get('/otp', function () {
     return view('otp');
 });
