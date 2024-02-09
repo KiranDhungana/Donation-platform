@@ -3,6 +3,7 @@
 use App\Http\Controllers\loginsignup;
 // use App\Http\Controllers\Post;
 use App\Http\Controllers\Postcontroller;
+use App\Http\Controllers\Search;
 use App\Http\Controllers\Superadmin;
 use App\Models\User;
 use App\Models\Post;
@@ -198,3 +199,7 @@ Route::get('/psetting', function () {
 });
 
 Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment');
+
+
+// Search implementation
+Route::get("/search", [Search::class, 'search'])->name('search');
