@@ -204,6 +204,11 @@ Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment
 // Search implementation
 Route::get("/search", [Search::class, 'search'])->name('search');
 
+<<<<<<< HEAD
 Route::get('/about', function () {
     return view('about');
 });
+=======
+
+Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage'])->name('ImageControlleruploadImage')->middleware('auth');
+>>>>>>> d4530c1aa2081e1a8710d4772598fa47ebd76598

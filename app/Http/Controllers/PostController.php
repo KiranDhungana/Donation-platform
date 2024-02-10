@@ -96,14 +96,22 @@ class PostController extends Controller
         //     dd($i['like']->likes);
         // }
         $post = Post::all();
-        return view('homepage.campaignPost')->with('post', $post);
+        $like = like::all();
+
+        return view('homepage.campaignPost')->with('post', $post)->with('like', $like);
     }
 
     public function viewpostdetail($id)
     {
         $postinfo = Post::find($id);
         $payment = Payment::where('postid', $id)->get()->first();
-        return view('campaignpage.campaignview')->with('campaindata', $postinfo, )->with('amount', $payment);
+        $totalpayemtn = Payment::where('postid', $id)->get();
+        $totalamount = 0;
+        foreach ($totalpayemtn as $pay) {
+            $totalamount = $pay['amount'] + $totalamount;
+
+        }
+        return view('campaignpage.campaignview')->with('campaindata', $postinfo, )->with('amount', $payment)->with('totalamount', $totalamount);
 
     }
     public function like(Request $req)
