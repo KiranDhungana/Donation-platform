@@ -289,7 +289,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('UserSettings')->with('userinfo', $user);
+        return view('userpages/UserSettings')->with('userinfo', $user);
 
     }
 
@@ -405,4 +405,22 @@ class UserController extends Controller
     //     // dd($req);
     //     return view('userpages/addlocation');
     // }
+
+    public function ImageControlleruploadImage(Request $request)
+    { {
+            if ($request->hasFile('image')) {
+
+                $file = $request->file('image');
+                $imageName = time() . '.' . $request->file('image')->getClientOriginalName();
+
+                $file->move('public/profilepic/', $imageName);
+
+
+
+                return response()->json(['message' => 'Image name saved successfully.']);
+            } else {
+                return response()->json(['error' => 'No file uploaded.'], 400);
+            }
+        }
+    }
 }

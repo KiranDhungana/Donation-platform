@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@
                                 <div
                                     class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
 
-                                    <input type="text" name="username" id="username" autocomplete="username"
+                                    <input disabled type="text" name="username" id="username" autocomplete="username" value="{{ucfirst($userinfo->fname)}}{{ucfirst($userinfo->lname)}}"
                                         class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                                         placeholder="Enter your username">
                                 </div>
@@ -47,7 +47,8 @@
                                         d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <button type="button"
+                                <input type="file" id="imageUpload" >
+                                <button  id="uploadButton"  type="button"
                                     class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-[#13476f] shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Change</button>
                             </div>
                         </div>
@@ -65,16 +66,17 @@
                             <label for="first-name" class="block text-sm font-medium leading-6 text-[#13476f]">First
                                 name</label>
                             <div class="mt-2">
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                <input disabled type="text" value="{{ucfirst($userinfo->fname)}}" name="first-name" id="first-name" autocomplete="given-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            </div>
+                            
+                                </div>
                         </div>
 
                         <div class="sm:col-span-2">
                             <label for="last-name" class="block text-sm font-medium leading-6 text-[#13476f]">Last
                                 name</label>
                             <div class="mt-2">
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                <input disabled value="{{ucfirst($userinfo->lname)}}" type="text" name="last-name" id="last-name" autocomplete="family-name"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
@@ -83,7 +85,7 @@
                             <label for="email" class="block text-sm font-medium leading-6 text-[#13476f]">Email
                                 address</label>
                             <div class="mt-2">
-                                <input id="email" name="email" type="email" autocomplete="email"
+                                <input disabled value="{{ucfirst($userinfo->email)}}" id="email" name="email" type="email" autocomplete="email"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
@@ -92,21 +94,21 @@
 
 
                         <div class="sm:col-span-2 sm:col-start-1">
-                            <label for="city" class="block text-sm font-medium leading-6 text-[#13476f]">City</label>
+                            <label for="city" class="block text-sm font-medium leading-6 text-[#13476f]">Phone-Number</label>
                             <div class="mt-2">
-                                <input type="text" name="city" id="city" autocomplete="address-level2"
+                                <input disabled value="{{ucfirst($userinfo->pnumber)}}" type="text" name="city" id="city" autocomplete="address-level2"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
                         </div>
 
-                        <div class="sm:col-span-2">
+                        {{-- <div class="sm:col-span-2">
                             <label for="region" class="block text-sm font-medium leading-6 text-[#13476f]">State /
                                 Province</label>
                             <div class="mt-2">
                                 <input type="text" name="region" id="region" autocomplete="address-level1"
                                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             </div>
-                        </div>
+                        </div> --}}
 
 
                     </div>
@@ -125,6 +127,39 @@
             </div>
         </form>
     </div>
+    <script>
+     document.getElementById('uploadButton').addEventListener('click', function() {
+    var fileInput = document.getElementById('imageUpload');
+    var file = fileInput.files[0];
+    var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Get CSRF token from meta tag
+
+    if (file) {
+        var formData = new FormData();
+        formData.append('image', file);
+     
+      
+        // Send AJAX request
+        $.ajax({
+             headers: {
+        'X-CSRF-TOKEN': csrfToken // Include CSRF token in headers
+    },
+            url: '/upload-image',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                console.log(response.message);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error:', error);
+            }
+        });
+    } else {
+        console.log('No file selected.');
+    }
+});
+    </script>
 
 </body>
 
