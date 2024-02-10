@@ -16,7 +16,7 @@
 </style>
 
 <body>
-    <div class="page_container bg-blue ">
+    <div class="page_container bg-yellow">
 
 
         <div class="search_bar_top w-[80%] mx-auto pt-[5rem]">
@@ -37,14 +37,7 @@
                         <input type="text" name="query" id="query"
                             class="bg-gray-50 z-[-99] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Search Mockups, Logos, Design Templates..." required>
-                        <button type="submit" class="absolute inset-y-0 end-0 flex items-center pe-3">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z" />
-                            </svg>
-                        </button>
+                       
                     </div>
                     <button type="submit"
                         class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -65,52 +58,52 @@
                 <div class="search_sidebar w-[25%]  p-3 mr-5">
                     <div class="search_type border-b border-gray-500 py-2">
                         <div class="saarch_heading">
-                            <p class="text-xl text-white font-bold my-2">Types</p>
+                            <p class="text-xl text-blue font-bold my-2">Types</p>
                         </div>
                         <div class="search_items flex flex-col ">
-                            <a href="" class="text-white text-sm my-1">Disaster</a>
-                            <a href="" class="text-white text-sm my-1">Disease</a>
-                            <a href="" class="text-white text-sm my-1">Startup</a>
-                            <a href="" class="text-white text-sm my-1">Problem</a>
+                            <a href="" class="text-blue text-sm my-1">Disaster</a>
+                            <a href="" class="text-blue text-sm my-1">Disease</a>
+                            <a href="" class="text-blue text-sm my-1">Startup</a>
+                            <a href="" class="text-blue text-sm my-1">Problem</a>
 
                         </div>
                     </div>
                     <div class="search_type border-b border-gray-500 py-2">
                         <div class="saarch_heading">
-                            <p class="text-xl text-white font-bold my-2">Category</p>
+                            <p class="text-xl text-blue font-bold my-2">Category</p>
                         </div>
                         <div class="search_items flex flex-col ">
-                            <a href="" class="text-white text-sm my-1">Disaster</a>
-                            <a href="" class="text-white text-sm my-1">Disease</a>
-                            <a href="" class="text-white text-sm my-1">Startup</a>
-                            <a href="" class="text-white text-sm my-1">Problem</a>
+                            <a href="" class="text-blue text-sm my-1">Disaster</a>
+                            <a href="" class="text-blue text-sm my-1">Disease</a>
+                            <a href="" class="text-blue text-sm my-1">Startup</a>
+                            <a href="" class="text-blue text-sm my-1">Problem</a>
 
                         </div>
                     </div>
                     <div class="search_type border-b border-gray-500 py-2">
                         <div class="saarch_heading">
-                            <p class="text-xl text-white font-bold my-2">Highest</p>
+                            <p class="text-xl text-blue font-bold my-2">Highest</p>
                         </div>
                         <div class="search_items flex flex-col ">
-                            <a href="" class="text-white text-sm my-1">Dontaion</a>
-                            <a href="" class="text-white text-sm my-1">Views</a>
-                            <a href="" class="text-white text-sm my-1">Likes</a>
-                            <a href="" class="text-white text-sm my-1">Money</a>
+                            <a href="" class="text-blue text-sm my-1">Dontaion</a>
+                            <a href="" class="text-blue text-sm my-1">Views</a>
+                            <a href="" class="text-blue text-sm my-1">Likes</a>
+                            <a href="" class="text-blue text-sm my-1">Money</a>
 
                         </div>
                     </div>
                     <div class="search_type border-b border-gray-500 py-2">
                         <div class="saarch_heading">
-                            <p class="text-xl text-white font-bold my-2">Location</p>
+                            <p class="text-xl text-blue font-bold my-2">Location</p>
                         </div>
                         <div class="search_items flex flex-col " id="filter_prov">
-                            <a href="" class="text-white text-sm my-1">Province No. 1</a>
-                            <a href="" class="text-white text-sm my-1">Madhesh</a>
-                            <a href="" class="text-white text-sm my-1">Bagmati</a>
-                            <a href="" class="text-white text-sm my-1">Gandaki</a>
-                            <a href="" class="text-white text-sm my-1">Lumbini</a>
-                            <a href="" class="text-white text-sm my-1">Karnali</a>
-                            <a href="" class="text-white text-sm my-1">Sudurpashchim</a>
+                            <a href="" class="text-blue text-sm my-1">Province No. 1</a>
+                            <a href="" class="text-blue text-sm my-1">Madhesh</a>
+                            <a href="" class="text-blue text-sm my-1">Bagmati</a>
+                            <a href="" class="text-blue text-sm my-1">Gandaki</a>
+                            <a href="" class="text-blue text-sm my-1">Lumbini</a>
+                            <a href="" class="text-blue text-sm my-1">Karnali</a>
+                            <a href="" class="text-blue text-sm my-1">Sudurpashchim</a>
 
                         </div>
                     </div>
@@ -137,26 +130,19 @@
                                 <div class="p-5">
                                     <a href="#">
                                         <h5
-                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            class="mb-2 text-2xl font-bold tracking-tight text-blue">
                                             Help Needed !
                                         </h5>
                                     </a>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-<<<<<<< HEAD
-                                    
-                                        {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end = '...') }}
-                                        
-                                       
-=======
+                                    <p class="mb-3 font-normal text-blue">
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 200, $end =
                                         '...') }}
 
 
->>>>>>> 3917c56ecb464dfa8623c5bfe17aa470715fb0ab
                                     </p>
                                     <a href="/view-post/{{$item['id']}}"
-                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                         Details
                                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -167,9 +153,9 @@
                                     <div class="views border-t py-2 mt-2 border-gray-500">
                                         <div class="total_views w-1/2 flex">
                                             <i class="fa-regular fa-eye mr-3"
-                                                style="font-size: 12px; color: white;"><span
+                                                style="font-size: 12px; color: [#13476f];"><span
                                                     class="text-sm ml-1">33</span></i>
-                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: [#13476f];"><span
                                                     class="text-sm ml-1"></span></i>
                                         </div>
                                     </div>

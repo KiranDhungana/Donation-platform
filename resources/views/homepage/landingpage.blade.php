@@ -13,17 +13,17 @@
     @include('reusecomp/navbar')
 
     <div class="main_view flex justify-center w-auto items-center flex-col">
-        <h1 class="main_heading text-white text-xl font-bold my-3 w-auto mx-auto text-center md:w-3/4 md:text-4xl">
-            Donating isn't just about making a difference;</h1>
+        <h1 class="main_heading text-yellow text-xl font-bold my-3 w-auto mx-auto text-center md:w-3/4 md:text-4xl">
+            Donation is not just about giving;</h1>
         <h1 class="main_heading text-blue text-xl font-bold  w-auto mx-auto text-center md:w-6/12 md:text-4xl">
-            It's about being the difference.</h1>
+            It's about making a difference.</h1>
 
-        <p class="main_heading text-white text-xl mx-auto text-center my-3 w-full md:w-1/2">Lorem ipsum dolor sit amet
+        <p class="main_heading text-yellow text-xl mx-auto text-center my-3 w-full md:w-1/2">Lorem ipsum dolor sit amet
             consectetur, adipisicing elit. Velit nam, quas placeat enim, omnis quisquam suscipit minima eveniet modi
             exce</p>
 
         <div class="main_view_btns flex w-1/2 justify-center my-3">
-            <a href="/view-campaigns" class="bg-blue text-white rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
+            <a href="/view-campaigns" class="bg-blue text-yellow rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
             <a href="/signups" class="bg-yellow text-blue rounded-md px-4 py-2 text-xl ">Organizations</a>
 
         </div>
@@ -260,10 +260,10 @@
                             </h2>
                             <ul class="text-blue font-medium">
                                 <li class="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                    <a href="" class="hover:underline ">Facebook</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                    <a href="" class="hover:underline">Twitter</a>
                                 </li>
                             </ul>
                         </div>

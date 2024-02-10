@@ -203,3 +203,7 @@ Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment
 
 // Search implementation
 Route::get("/search", [Search::class, 'search'])->name('search');
+
+Route::get('/about', function () {
+    return view('about');
+});
