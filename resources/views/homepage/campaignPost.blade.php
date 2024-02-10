@@ -198,6 +198,10 @@
 
                     $.each(response, function (index, item) {
                         console.log(response);
+                        desc = item.description
+                        var maxLength = 80;
+                        var truncatedText = desc.length > maxLength ? desc.substring(0, maxLength) + '...' : desc;
+                        console.log(truncatedText)
                         $('#searchResults').append(
 
                             `<div class="campaign_card m-5">
@@ -216,8 +220,12 @@
                                             </h5>
                                         </a>
                                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+<<<<<<< HEAD
                                         
                                             ${item.description}
+=======
+                                            ${truncatedText}
+>>>>>>> f9a20b95b6011c1b91dcf8ca178c019f269302c7
                                           
 
 
