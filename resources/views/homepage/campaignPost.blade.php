@@ -159,9 +159,12 @@
                                     </a>
                                     <div class="views border-t py-2 mt-2 border-gray-500">
                                         <div class="total_views w-1/2 flex">
-                                            <i class="fa-regular fa-eye mr-3"
-                                                style="font-size: 12px; color: white;"><span
-                                                    class="text-sm ml-1">33</span></i>
+                                           
+                                                <span
+                                                    class="text-sm ml-1">
+                                              33
+                                                
+                                                </span></i>
                                             <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
                                                     class="text-sm ml-1"></span></i>
                                         </div>
@@ -220,12 +223,7 @@
                                             </h5>
                                         </a>
                                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-<<<<<<< HEAD
-                                        
-                                            ${item.description}
-=======
                                             ${truncatedText}
->>>>>>> f9a20b95b6011c1b91dcf8ca178c019f269302c7
                                           
 
 

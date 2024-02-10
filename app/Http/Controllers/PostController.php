@@ -96,7 +96,9 @@ class PostController extends Controller
         //     dd($i['like']->likes);
         // }
         $post = Post::all();
-        return view('homepage.campaignPost')->with('post', $post);
+        $like = like::all();
+
+        return view('homepage.campaignPost')->with('post', $post)->with('like', $like);
     }
 
     public function viewpostdetail($id)
