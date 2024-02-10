@@ -59,7 +59,7 @@
                             <button
                                 class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                 id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
-                                aria-controls="contacts" aria-selected="false" disabled>Contacts</button>
+                                aria-controls="contacts" aria-selected="false">Contacts</button>
                         </li>
                     </ul>
                 </div>
@@ -105,20 +105,27 @@
                         @if(count($payhistory) != 0)
                         @foreach ($payhistory as $i)
 
-                        <div class="flex items-center p-4 mb-1 text-sm text-blue border rounded-lg bg-yellow history_box" role="alert">
-                          
-                            
+                        <div class="flex items-center p-4 mb-1 text-sm text-blue border rounded-lg bg-yellow history_box"
+                            role="alert">
+
+
                             <div>
                                 You paid Rs. {{$i['amount'] }} on {{$i['paidtime']}} to <span> <a href="#"> This </a>
                                 </span> Campaign .
-        
+
                             </div>
-                          </div>
-                       
+                        </div>
+
 
 
                         <br>
                         @endforeach
+                        <div class="total_donation " id="total_donation">
+                            <div class="flex items-center p-4 mb-1 text-sm text-yellow border rounded-lg bg-blue w-1/2 float-right"
+                                role="alert" >
+                                <p class="dnt_box">Total Donations = <span class="donation_number ml-2"></span></p>
+                            </div>
+                        </div>
                         @else
                         {{ "You dont have any donation History" }}
                         @endif
@@ -126,26 +133,63 @@
 
                     </div>
                     <div class="hidden p-4 rounded-lg" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                        <a href="#"
-                            class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                                src="https://www.peopleinneed.net/image-cache/www_media_generated-page-translations_10559_image_dscf2869.jpg_1200x800-cover.jpg?ts=1691247856"
-                                alt="">
-                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
-                            </div>
-                        </a>
-                        <a href="#"
-                            class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                                src="https://www.peopleinneed.net/image-cache/www_media_generated-page-translations_10559_image_dscf2869.jpg_1200x800-cover.jpg?ts=1691247856"
-                                alt="">
-                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
-                            </div>
-                        </a>
+                      
+
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Post
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Donor
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Amount
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Nandani
+                </th>
+                <td class="px-6 py-4">
+                    Earthquake Victim
+                </td>
+                <td class="px-6 py-4">
+                    Rs 50,000
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Cancer Patient
+                </th>
+                <td class="px-6 py-4">
+                    Anish Pandu
+                </td>
+                <td class="px-6 py-4">
+                    Rs. 10
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Kidney Patient
+                </th>
+                <td class="px-6 py-4">
+                    Kiran Gandu
+                </td>
+                <td class="px-6 py-4">
+                    Rs. 100
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                       
 
                     </div>
                 </div>
@@ -161,7 +205,11 @@
 
 </body>
 
-
+<script>
+    var container_div = document.getElementById('settings');
+var count = container_div.getElementsByTagName('div').length;
+    document.querySelector('.donation_number').innerText = count
+</script>
 
 
 

@@ -191,3 +191,10 @@ color: #13476f;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     /* border: 1px solid #13476f; */
    }
+   .unread{
+    /* width: 20px;
+    height: 20px;
+    background: #1c64f2;
+    border-radius: 50%; */
+    margin: auto;
+   }

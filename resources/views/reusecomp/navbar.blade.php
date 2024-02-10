@@ -109,65 +109,62 @@
 
 <!-- Dropdown menu -->
 <div id="dropdownNotification"
-  class="z-20 hidden w-full max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-700"
+  class="z-20 hidden w-full max-w-sm bg-gray-700 text-yellow divide-y divide-gray-100 rounded-lg shadow "
   aria-labelledby="dropdownNotificationButton">
-  <div
-    class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
+  <div class="block px-4 py-2 font-medium text-center text-yellow rounded-t-lg bg-gray-700">
     Notifications
   </div>
-  <div class="divide-y divide-gray-100 dark:divide-gray-700">
-    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
-   
+  <div class="divide-y divide-gray-100 dark:divide-gray-700" id="notification_box">
+    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
         <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">Jese Leos</span>: "Hey, what's up? All set for the
+            class="font-semibold text-gray-900 dark:text-white">1Jese Leos</span>: "Hey, what's up? All set for the
           presentation?"</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500">a few moments ago</div>
+        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
-    </a>
-    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
-  
+
+    </div>
+    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-            class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span> and <span
-            class="font-medium text-gray-900 dark:text-white">5 others</span> started following you.</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500">10 minutes ago</div>
+        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
+            class="font-semibold text-gray-900 dark:text-white">2Jese Leos</span>: "Hey, what's up? All set for the
+          presentation?"</div>
+        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
-    </a>
-    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
-      
+
+    </div>
+    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-            class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span> and <span
-            class="font-medium text-gray-900 dark:text-white">141 others</span> love your story. See it and view more
-          stories.</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500">44 minutes ago</div>
+        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
+            class="font-semibold text-gray-900 dark:text-white">3Jese Leos</span>: "Hey, what's up? All set for the
+          presentation?"</div>
+        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
-    </a>
-    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
-     
-      <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-            class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span> mentioned you in a comment:
-          <span class="font-medium text-blue-500" href="#">@bonnie.green</span> what do you say?</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500">1 hour ago</div>
-      </div>
-    </a>
-    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
-     
-      <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-            class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism -
-          learn how to implement the new design trend.</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500">3 hours ago</div>
-      </div>
-    </a>
+
+    </div>
+   
+   
+   
   </div>
-  <a href="#"
-    class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+  <a href="#" class="block py-2 text-sm font-medium text-center text-yellow rounded-b-lg bg-gray-700 clearAll">
     <div class="inline-flex items-center ">
-  
+
       Clear All
     </div>
   </a>
 </div>
+
+<script>
+  $('.clearAll').on('click',()=>{
+    $('#notification_box div').empty();
+
+  })
+
+
+document.querySelectorAll('#readed').forEach(item => {
+  item.addEventListener('click', event => {
+    event.target.closest('.noti').remove();
+  });
+});
+
+</script>
