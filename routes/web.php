@@ -203,3 +203,6 @@ Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment
 
 // Search implementation
 Route::get("/search", [Search::class, 'search'])->name('search');
+
+
+Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage'])->name('ImageControlleruploadImage')->middleware('auth');
