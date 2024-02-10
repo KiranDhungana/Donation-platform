@@ -289,7 +289,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('userpages.profilesetting')->with('userinfo', $user);
+        return view('UserSettings')->with('userinfo', $user);
 
     }
 
