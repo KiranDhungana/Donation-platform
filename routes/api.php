@@ -20,3 +20,6 @@ Route::post("addpost", [App\Http\Controllers\api\PostController::class, 'addpost
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post("addclub", [App\Http\Controllers\api\Clubcontroller::class, 'addclub'])->name('addclub');
