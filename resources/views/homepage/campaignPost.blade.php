@@ -134,11 +134,7 @@
                                             Help Needed !
                                         </h5>
                                     </a>
-<<<<<<< HEAD
                                     <p class="mb-3 font-normal text-blue">
-=======
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
->>>>>>> d4530c1aa2081e1a8710d4772598fa47ebd76598
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end =
                                         '...') }}
