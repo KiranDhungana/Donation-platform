@@ -134,11 +134,7 @@
                                             Help Needed !
                                         </h5>
                                     </a>
-<<<<<<< HEAD
-                                    <p class="mb-3 font-normal text-blue">
-=======
                                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
->>>>>>> d4530c1aa2081e1a8710d4772598fa47ebd76598
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end =
                                         '...') }}
@@ -156,12 +152,6 @@
                                     </a>
                                     <div class="views border-t py-2 mt-2 border-gray-500">
                                         <div class="total_views w-1/2 flex">
-<<<<<<< HEAD
-                                            <i class="fa-regular fa-eye mr-3"
-                                                style="font-size: 12px; color: [#13476f];"><span
-                                                    class="text-sm ml-1">33</span></i>
-                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: [#13476f];"><span
-=======
                                            
                                                 <span
                                                     class="text-sm ml-1">
@@ -169,7 +159,6 @@
                                                 
                                                 </span></i>
                                             <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
->>>>>>> d4530c1aa2081e1a8710d4772598fa47ebd76598
                                                     class="text-sm ml-1"></span></i>
                                         </div>
                                     </div>
