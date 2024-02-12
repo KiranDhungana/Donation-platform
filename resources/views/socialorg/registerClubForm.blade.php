@@ -15,11 +15,17 @@
 
 <body>
     @include('reusecomp/navbar')
+    @if(isset($clubadded))
+    <script>
+       toastr.success('Club added successfully');
 
+    </script>
+@else
+@endif
 
 
     <div class="post_form_container pt-[5rem] bg-yellow flex flex-col h-[100vh]">
-        <form id="campaign_form" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data"
+        <form id="campaign_form" method="POST"  action="/regsiter-socialorganization" enctype="multipart/form-data"
             class="mt-5 w-4/5 mx-auto">
             @csrf
             <h1 class="text-2xl text-blue my-4">Fill the form with correct details</h1>
@@ -36,11 +42,11 @@
 
                     <label for="countries" class="block mb-2 text-sm font-medium text-blue">Select
                         an option</label>
-                    <select id="countries"
+                    <select id="countries" name="catagory"
                         class="bg-yellow border border-gray-300 text-blue text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                         <option selected>Category</option>
-                        <option value="US">Young Club</option>
-                        <option value="CA">Social CLub</option>
+                        <option value="youth">Young Club</option>
+                        <option value="social">Social CLub</option>
 
                     </select>
 
@@ -49,22 +55,22 @@
                     <p class="text-sm text-blue">Accepted Items</p>
                     <div class="accepted  flex flex-wrap">
                         <div class="flex items-center ml-2">
-                            <input id="default-checkbox" type="checkbox" value=""
+                            <input name="item1" id="default-checkbox" type="checkbox" value="clothes"
                                 class="w-4 h-4 text-blue bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 ">
                             <label for="default-checkbox"
                                 class="ms-2 text-sm font-medium text-blue">Clothes</label>
                         </div>
                         <div class="flex items-center ml-2">
-                            <input id="checked-checkbox" type="checkbox" value=""
+                            <input  name="item2" id="checked-checkbox" type="checkbox" value="books"
                                 class="w-4 h-4 text-blue bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 ">
                             <label for="checked-checkbox"
                                 class="ms-2 text-sm font-medium text-blue">Books</label>
                         </div>
                         <div class="flex items-center ml-2">
-                            <input id="default-checkbox" type="checkbox" value=""
+                            <input name="item3" id="default-checkbox" type="checkbox" value="furniture"
                                 class="w-4 h-4 text-blue bg-gray-100 border-gray-300 rounded focus:ring-blue-500  focus:ring-2 ">
                             <label for="default-checkbox"
-                                class="ms-2 text-sm font-medium text-blue">Clothes</label>
+                                class="ms-2 text-sm font-medium text-blue">Furniture</label>
                         </div>
                         <div class="flex items-center ml-2">
                             <input id="checked-checkbox" type="checkbox" value=""
@@ -78,7 +84,8 @@
                     
                 </div>
             </div>
-
+ <input class="hidden" type="text"  value="" name="latitude" id="latitude">
+ <input  class="hidden" type="text" name="longitude" value="" id="longitude">
 
             <div class="relative z-0 w-full mb-5 group">
                 <textarea name="description" id="description"
@@ -149,6 +156,39 @@
     </div>
 
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           
+              const successCallback = (position) => {
+
+var lat   =document.getElementById("latitude");
+var long   =document.getElementById("longitude");
+lat.value =position.coords.latitude;
+long.value=position.coords.longitude;
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+};
+
+const errorCallback = (error) => {
+  console.log(error);
+};
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+    console.log('Document is ready!');
+});
+var $clubadded = {!! isset($clubadded) ? json_encode($clubadded) : '{}' !!};
+function isEmpty(obj) {
+    return Object.entries(obj).length === 0;
+}
+
+
+
+
+
+
+
+ 
+    </script>
 </body>
 
 
