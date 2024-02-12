@@ -34,7 +34,7 @@
 
             <div class="text-center">
 
-                <input type="submit" class="text-white bg-[#234E70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</input>
+                <input type="submit" class="text-white bg-[#234E70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"></input>
             </div>
             <div class="pt-2 text-center">
 
