@@ -23,6 +23,11 @@
       <a href="/post-campaign"
         class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Post
         Campaign</a>
+
+        <a href="/register-club"
+        class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register Organization
+        </a>
+
       <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
         class="relative inline-flex items-center text-sm font-medium text-center  focus:outline-none text-blue"
         type="button">
@@ -91,6 +96,10 @@
         <li>
           <a href="/view-campaigns"
             class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Campaigns</a>
+        </li>
+        <li>
+          <a href="/view-campaigns"
+            class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Social Organizations</a>
         </li>
         <li>
           <a href="#" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">About</a>
