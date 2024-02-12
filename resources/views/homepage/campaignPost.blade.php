@@ -36,7 +36,7 @@
                         </div>
                         <input type="text" name="query" id="query"
                             class="bg-gray-50 z-[-99] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Search Mockups, Logos, Design Templates..." required>
+                            placeholder="Search Campaigns" required>
                        
                     </div>
                     <button type="submit"
@@ -119,9 +119,9 @@
 
                     <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center">
                         @foreach ($post as $item)
-                        <div class="campaign_card m-5">
+                        <div class="campaign_card m-5  rounded-lg" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
                             <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                class="max-w-sm bg-white  rounded-lg shadow ">
                                 <a href="#">
                                     <img class="rounded-t-lg"
                                         src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"

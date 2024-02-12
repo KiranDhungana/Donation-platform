@@ -204,5 +204,16 @@ Route::get("/paymentsuccess", [PostController::class, 'payment'])->name('payment
 // Search implementation
 Route::get("/search", [Search::class, 'search'])->name('search');
 
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/register-club', function () {
+    return view('registerClubForm');
+});
+Route::get('/clubs', function () {
+    return view('clubs');
+});
+
 
 Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage'])->name('ImageControlleruploadImage')->middleware('auth');
