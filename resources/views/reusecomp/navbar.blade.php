@@ -105,7 +105,11 @@
           <a href="/about" class="block py-2 px-3  rounded  md:p-0 text-blue">About</a>
         </li>
         <li>
+<<<<<<< HEAD
+          <a href="/contact" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Contact</a>
+=======
           <a href="#" class="block py-2 px-3  rounded  md:p-0 text-blue">Contact</a>
+>>>>>>> ec663d701d0ed7e7ea9747312f88eab41458b0d3
         </li>
       </ul>
     </div>
@@ -127,8 +131,7 @@
     <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
         <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">1Jese Leos</span>: "Hey, what's up? All set for the
-          presentation?"</div>
+            class="font-semibold text-gray-900 dark:text-white">Ram</span>: "You have a new Notification"</div>
         <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
@@ -136,8 +139,8 @@
     <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
         <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">2Jese Leos</span>: "Hey, what's up? All set for the
-          presentation?"</div>
+            class="font-semibold text-gray-900 dark:text-white">Hari Ram</span>: "You have a new Notification
+        "</div>
         <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
@@ -145,8 +148,7 @@
     <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
       <div class="w-full ps-3">
         <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">3Jese Leos</span>: "Hey, what's up? All set for the
-          presentation?"</div>
+            class="font-semibold text-gray-900 dark:text-white">Samir</span>: "You have a new Notification"</div>
         <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
