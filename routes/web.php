@@ -4,6 +4,7 @@ use App\Http\Controllers\loginsignup;
 // use App\Http\Controllers\Post;
 use App\Http\Controllers\Postcontroller;
 use App\Http\Controllers\Search;
+use App\Http\Controllers\Socialorgization;
 use App\Http\Controllers\Superadmin;
 use App\Models\User;
 use App\Models\Post;
@@ -208,12 +209,15 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/register-club', function () {
-    return view('registerClubForm');
+Route::get('/register-socialorganization', function () {
+    return view('socialorg/registerClubForm');
 });
 Route::get('/clubs', function () {
     return view('clubs');
 });
 
-
+// profile pic chnage 
 Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage'])->name('ImageControlleruploadImage')->middleware('auth');
+
+// Socail organization roututing 
+Route::post("/regsiter-socialorganization", [Socialorgization::class, 'registerorg'])->name('registerorg')->middleware('auth');

@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @include('globallink')
     <title>Document</title>
 </head>
 <body>
@@ -15,10 +16,10 @@ $total_amount=100;
 $transaction_uuid=1145;
 $product_code="EPAYTEST";
 ?>
-{{$new}}
+
 
 <body>
-{{$id}}
+
 <form action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST" onsubmit="generateSignature()" target="_blank">
 
         <br><br><table style="display:block">
@@ -33,63 +34,63 @@ $product_code="EPAYTEST";
                 </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Tax Amount:</td>
-                <td><input type="text" id="tax_amount" name="tax_amount" value="0" class="form" required="">
+                <td><input hidden type="text" id="tax_amount" name="tax_amount" value="0" class="form" required="">
                 </td>
             </tr>
          
 
-            <tr>
+            <tr class="hidden" >
                 <td>Total Amount:</td>
-                <td><input type="text" id="total_amount" name="total_amount" value="10" class="form" required="">
+                <td><input hidden   type="text" id="total_amount" name="total_amount" value="10" class="form" required="">
                 </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Transaction UUID:</td>
-                <td><input type="text" id="transaction_uuid" name="transaction_uuid" value={{Auth::user()->id}} class="form" required=""> </td>
+                <td><input  hidden type="text" id="transaction_uuid" name="transaction_uuid" value={{Auth::user()->id}} class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Product Code:</td>
                 <td>
-                    <input type="text" id="product_code" name="product_code" value="EPAYTEST" class="form" required=""> </td>
+                    <input  hidden type="text" id="product_code" name="product_code" value="EPAYTEST" class="form" required=""> </td>
             </tr>
-                    <input hidden type="number" id="post_id" name="post_id" value={{$id}} class="form" required=""> </td>
+                    <input  hidden type="number" id="post_id" name="post_id" value={{$id}} class="form" required=""> </td>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Product Service Charge:</td>
-                <td><input type="text" id="product_service_charge" name="product_service_charge" value="0" class="form" required=""> </td>
+                <td><input  hidden type="text" id="product_service_charge" name="product_service_charge" value="0" class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Product Delivery Charge:</td>
-                <td><input type="text" id="product_delivery_charge" name="product_delivery_charge" value="0" class="form" required=""> </td>
+                <td><input  hidden type="text" id="product_delivery_charge" name="product_delivery_charge" value="0" class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Success URL:</td>
-                <td><input type="text" id="success_url" name="success_url" value="http://127.0.0.1:8000/paymentsuccess" class="form" required=""> </td>
+                <td><input  hidden type="text" id="success_url" name="success_url" value="http://127.0.0.1:8000/paymentsuccess" class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Failure URL:</td>
-                <td><input type="text" id="failure_url" name="failure_url" value="https://developer.esewa.com.np/failure" class="form" required=""> </td>
+                <td><input  hidden type="text" id="failure_url" name="failure_url" value="https://developer.esewa.com.np/failure" class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>signed Field Names:</td>
-                <td><input type="text" id="signed_field_names" name="signed_field_names" value="total_amount,transaction_uuid,product_code" class="form" required=""> </td>
+                <td><input  hidden type="text" id="signed_field_names" name="signed_field_names" value="total_amount,transaction_uuid,product_code" class="form" required=""> </td>
             </tr>
 
-            <tr>
+            <tr class="hidden" >
                 <td>Signature:</td>
-                <td><input type="text" id="signature" name="signature" value="" class="form" > </td>
+                <td><input  hidden type="text" id="signature" name="signature" value="" class="form" > </td>
             </tr>
-            <tr>
+            <tr class="hidden" >
                 <td>Secret Key:</td>
-                <td><input type="text" id="secret" name="secret" value="8gBm/:&amp;EnhH.1/q" class="form" required="">
+                <td><input  hidden type="text" id="secret" name="secret" value="8gBm/:&amp;EnhH.1/q" class="form" required="">
                 </td>
             </tr>
             

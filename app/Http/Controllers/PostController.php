@@ -192,7 +192,7 @@ class PostController extends Controller
         // dd($paymentdata);
         $decodeddata = json_decode(base64_decode($paymentdata), true);
         $exploded = explode('-', $decodeddata['transaction_uuid']);
-        // dd($decodeddata);
+
         echo ($decodeddata['status']);
         echo '<br>';
         echo ($decodeddata['transaction_code']);

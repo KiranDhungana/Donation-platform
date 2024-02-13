@@ -119,9 +119,9 @@
 
                     <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center">
                         @foreach ($post as $item)
-                        <div class="campaign_card m-5  rounded-lg" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                        <div class="campaign_card m-5">
                             <div
-                                class="max-w-sm bg-white  rounded-lg shadow ">
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                 <a href="#">
                                     <img class="rounded-t-lg"
                                         src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
@@ -134,7 +134,7 @@
                                             Help Needed !
                                         </h5>
                                     </a>
-                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                    <p class="mb-3 font-normal text-blue">
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end =
                                         '...') }}
@@ -152,13 +152,10 @@
                                     </a>
                                     <div class="views border-t py-2 mt-2 border-gray-500">
                                         <div class="total_views w-1/2 flex">
-                                           
-                                                <span
-                                                    class="text-sm ml-1">
-                                              33
-                                                
-                                                </span></i>
-                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
+                                            <i class="fa-regular fa-eye mr-3"
+                                                style="font-size: 12px; color: [#13476f];"><span
+                                                    class="text-sm ml-1">33</span></i>
+                                            <i class="fa-regular fa-heart" style="font-size: 12px; color: [#13476f];"><span
                                                     class="text-sm ml-1"></span></i>
                                         </div>
                                     </div>

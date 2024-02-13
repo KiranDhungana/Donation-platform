@@ -29,10 +29,10 @@ class Clubcontroller extends Controller
         // $Post->pnumber = $pn;
         // $Post->targetamount = $targ;
         // $Post->save();
-        return response()->json([
+        // return response()->json([
 
-            'data' => $req->all()
-        ], 200);
+        //     'data' => $req->all()
+        // ], 200);
 
 
 

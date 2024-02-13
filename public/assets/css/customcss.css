@@ -52,6 +52,7 @@
 nav{
         backdrop-filter: blur(19.25px);
         background-color: #ffffff80;
+        z-index: 99;
     
 }
 
@@ -191,3 +192,6 @@ color: #13476f;
 
     margin: auto;
    }
+   div#controls-carousel {
+    z-index:0;
+}

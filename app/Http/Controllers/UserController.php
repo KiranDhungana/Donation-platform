@@ -414,6 +414,12 @@ class UserController extends Controller
                 $imageName = time() . '.' . $request->file('image')->getClientOriginalName();
 
                 $file->move('public/profilepic/', $imageName);
+                $userid = Auth::user()->id;
+                $usertoupdate = user::find($userid);
+                $usertoupdate->profileimg = $imageName;
+                $usertoupdate->save();
+
+
 
 
 
