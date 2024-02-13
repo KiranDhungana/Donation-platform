@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    @include('reusecomp/navbar')
     <title>Contact Us</title>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" rel="stylesheet" />
     
 </head>
 
 <body>
-    <div class="contact-banner">
+    <div class="contact-banner pt-[60px]">
        
     <h1>Get In Touch</h1>
     <p>We'r here to serve as you live on mission.How can we help ?</p>

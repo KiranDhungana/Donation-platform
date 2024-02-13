@@ -33,6 +33,9 @@ Route::post('/singups', [UserController::class, 'studentRegister'])->name('stude
 Route::get('/', function () {
     return view('homepage.landingpage');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 Route::get('/logout', function () {
     Session::flush();

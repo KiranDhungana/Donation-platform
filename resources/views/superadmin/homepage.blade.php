@@ -625,18 +625,18 @@
             <div class="py-3 px-4">
               <span
                 class="block text-sm font-semibold text-gray-900 dark:text-white"
-                >Neil Sims</span
+                >Kiran Dhungana</span
               >
               <span
                 class="block text-sm text-gray-900 truncate dark:text-white"
-                >name@flowbite.com</span
+                >kirandhungana570@gmail.com</span
               >
             </div>
             <ul
               class="py-1 text-gray-700 dark:text-gray-300"
               aria-labelledby="dropdown"
             >
-              <li>
+              <li class="hidden">
                 <a
                   href="#"
                   class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
@@ -646,7 +646,7 @@
               <li>
                 <a
                   href="#"
-                  class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  class="block hidden py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
                   >Account settings</a
                 >
               </li>
@@ -655,7 +655,7 @@
               class="py-1 text-gray-700 dark:text-gray-300"
               aria-labelledby="dropdown"
             >
-              <li>
+              <li class="hidden" >
                 <a
                   href="#"
                   class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -674,7 +674,7 @@
                   My likes</a
                 >
               </li>
-              <li>
+              <li class="hidden">
                 <a
                   href="#"
                   class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -691,7 +691,7 @@
                   Collections</a
                 >
               </li>
-              <li>
+              <li class="hidden">
                 <a
                   href="#"
                   class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -872,7 +872,7 @@
               </li>
             </ul>
           </li>
-          <li>
+          <li class="hidden" >
             <button
               type="button"
               class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -933,7 +933,7 @@
               </li>
             </ul>
           </li>
-          <li>  
+          <li  class="hidden" >  
             <a
               href="#"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
@@ -961,7 +961,7 @@
               </span>
             </a>
           </li>
-          <li>
+          <li class="hidden" >
             <button
               type="button"
               class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -1026,7 +1026,7 @@
         <ul
           class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700"
         >
-          <li>
+          <li class="hidden" >
             <a
               href="#"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
@@ -1048,7 +1048,7 @@
               <span class="ml-3">Docs</span>
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a
               href="#"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
@@ -1067,7 +1067,7 @@
               <span class="ml-3">Components</span>
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a
               href="#"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"

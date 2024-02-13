@@ -107,8 +107,7 @@
                 <div class="pl-3 w-full">
                   <div class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400">
                     New message from
-                    <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span>: "Hey, what's up? All
-                    set for the presentation?"
+                    <span class="font-semibold text-gray-900 dark:text-white">Kiran </span>: "Submitted a new post"
                   </div>
                   <div class="text-xs font-medium text-primary-600 dark:text-primary-500">
                     a few moments ago
