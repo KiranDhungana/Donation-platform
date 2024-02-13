@@ -168,7 +168,7 @@
                     Cancer Patient
                 </th>
                 <td class="px-6 py-4">
-                    Anish Pandu
+                    Anish pandey
                 </td>
                 <td class="px-6 py-4">
                     Rs. 10
@@ -179,7 +179,7 @@
                     Kidney Patient
                 </th>
                 <td class="px-6 py-4">
-                    Kiran Gandu
+                    Kiran Dhungana
                 </td>
                 <td class="px-6 py-4">
                     Rs. 100
