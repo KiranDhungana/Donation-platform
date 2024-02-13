@@ -7,12 +7,8 @@
 *{
   font-family: 'Montserrat', sans-serif;
 }
-/* a,li{
-    text-decoration: none;
-    list-style-type: none;
-} */
+
 .main_view{
-    /* background: -webkit-linear-gradient(rgba(10, 9, 9, 0.487), rgba(0, 0, 0, 0.369)), url("https://plus.unsplash.com/premium_photo-1682310528700-dbe5a05d99c6?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
     background: -webkit-linear-gradient(rgba(10, 9, 9, 0.487), rgba(0, 0, 0, 0.369)), url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-charity-sale-charity-poster-background-image_165549.jpg");
     background-position: center;
     background-size: cover;
@@ -20,7 +16,7 @@
     width: 100%;
 }
 .bg-blue{
-    background-color: #234E70;
+    background-color: #234E70 !important;
 }
 .bg-yellow{
     background-color: #f4f4ee;

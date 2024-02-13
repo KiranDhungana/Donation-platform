@@ -35,14 +35,14 @@
                             </svg>
                         </div>
                         <input type="text" name="query" id="query"
-                            class="bg-gray-50 z-[-99] border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                            placeholder="Search Mockups, Logos, Design Templates..." required>
+                            class="z-[-99] border  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="Search Campaigns" required>
                        
                     </div>
-                    <button type="submit"
-                        class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <button type="submit" style="background:#234E70"
+                        class="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                         <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 20 20">
+                            viewBox="0 0 20 20" >
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>Search
@@ -199,7 +199,7 @@
 
                             `<div class="campaign_card m-5">
                                 <div
-                                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                                     <a href="#">
                                         <img class="rounded-t-lg"
                                             src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
@@ -208,18 +208,18 @@
                                     <div class="p-5">
                                         <a href="#">
                                             <h5
-                                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                                class="mb-2 text-2xl font-bold tracking-tight text-blue">
                                                 ${item.title}
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        <p class="mb-3 font-normal text-blue">
                                             ${truncatedText}
                                           
 
 
                                         </p>
                                         <a href="/view-post/${item.id}"
-                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                                             Details
                                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -230,7 +230,7 @@
                                         <div class="views border-t py-2 mt-2 border-gray-500">
                                             <div class="total_views w-1/2 flex">
                                                 <i class="fa-regular fa-eye mr-3"
-                                                    style="font-size: 12px; color: white;"><span
+                                                    style="font-size: 12px; color: #234E70;"><span
                                                         class="text-sm ml-1">33</span></i>
                                                 <i class="fa-regular fa-heart" style="font-size: 12px; color: white;"><span
                                                     class="text-sm ml-1"></span></i>
