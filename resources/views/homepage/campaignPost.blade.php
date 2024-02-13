@@ -121,7 +121,7 @@
                         @foreach ($post as $item)
                         <div class="campaign_card m-5">
                             <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
                                 <a href="#">
                                     <img class="rounded-t-lg"
                                         src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
