@@ -195,3 +195,7 @@ color: #13476f;
    div#controls-carousel {
     z-index:0;
 }
+
+.crousel_controller{
+  z-index: 99 !important;
+}
