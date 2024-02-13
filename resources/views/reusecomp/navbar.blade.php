@@ -105,11 +105,7 @@
           <a href="/about" class="block py-2 px-3  rounded  md:p-0 text-blue">About</a>
         </li>
         <li>
-<<<<<<< HEAD
           <a href="/contact" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Contact</a>
-=======
-          <a href="#" class="block py-2 px-3  rounded  md:p-0 text-blue">Contact</a>
->>>>>>> ec663d701d0ed7e7ea9747312f88eab41458b0d3
         </li>
       </ul>
     </div>
