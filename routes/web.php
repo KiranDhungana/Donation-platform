@@ -56,9 +56,9 @@ Route::get('/signups', function () {
 Route::get('/login', [UserController::class, 'loadLogin']);
 
 
-Route::get('/forgetpassword', function () {
-    return view('forgetpassword');
-});
+// Route::get('/forgetpassword', function () {
+//     return view('loginsignup/forgetpassword');
+// });
 Route::get('/signup', function () {
     return view('signup');
 });

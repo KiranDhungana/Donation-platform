@@ -137,15 +137,14 @@
     <script>
      document.getElementById('uploadButton').addEventListener('click', function() {
     var fileInput = document.getElementById('imageUpload');
+   
     var file = fileInput.files[0];
     var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Get CSRF token from meta tag
 
     if (file) {
         var formData = new FormData();
         formData.append('image', file);
-     
-      
-        // Send AJAX request
+       // Send AJAX request
         $.ajax({
              headers: {
         'X-CSRF-TOKEN': csrfToken // Include CSRF token in headers
@@ -157,7 +156,7 @@
             contentType: false,
             success: function(response) {
                 console.log(response.message);
-                Window location.reload()
+               
             },
             error: function(xhr, status, error) {
                 console.error('Error:', error);
