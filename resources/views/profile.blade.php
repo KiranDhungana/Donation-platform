@@ -59,7 +59,7 @@
                             <button
                                 class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                                 id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab"
-                                aria-controls="contacts" aria-selected="false">Contacts</button>
+                                aria-controls="contacts" aria-selected="false">Donation</button>
                         </li>
                     </ul>
                 </div>
