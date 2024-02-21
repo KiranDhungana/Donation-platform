@@ -11,11 +11,11 @@
 <body>
     <div class="parking_container">
 <div class="parking_card">
-     <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row py-5 px-5 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+     <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row py-5 px-5 hover:bg-gray-100">
     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://cdn.vox-cdn.com/thumbor/okY54qvEzKcEa2RpTNu84xArEFI=/0x0:5464x3640/1200x675/filters:focal(2295x1383:3169x2257)/cdn.vox-cdn.com/uploads/chorus_image/image/72262173/GettyImages_1354859135__1_.0.jpg" alt="">
     <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Parking Area in Khaireni</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Parking Area in Khaireni</h5>
+        <p class="mb-3 font-normal text-gray-700">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
         <div class="location_box">
         <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="800px" height="800px" viewBox="0 0 395.71 395.71"
@@ -34,7 +34,7 @@
         </a>
 </div>   
 <div class="parking_card">
-     <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row py-5 px-5 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+     <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row py-5 px-5 hover:bg-gray-100">
     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://cdn.vox-cdn.com/thumbor/okY54qvEzKcEa2RpTNu84xArEFI=/0x0:5464x3640/1200x675/filters:focal(2295x1383:3169x2257)/cdn.vox-cdn.com/uploads/chorus_image/image/72262173/GettyImages_1354859135__1_.0.jpg" alt="">
     <div class="flex flex-col justify-between p-4 leading-normal">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Parking Area in Khaireni</h5>

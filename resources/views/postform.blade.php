@@ -26,60 +26,60 @@
             <div class="tab">
                 <div class="relative z-0 w-full mb-5 group">
                     <input type="text" name="title" id="post_title"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " required />
                     <label for="post_title"
-                        class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                         Title</label>
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="fname" id="floating_first_name"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_first_name"
-                            class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                             Needy's First name</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="mname" id="middlename"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "/>
                         <label for="middlename"
-                            class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                             Needy's middle name</label>
                     </div>
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="lname" id="lname"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_last_name"
-                            class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Needy's
+                            class="peer-focus:font-medium absolute text-sm text-blue  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Needy's
                             Last name</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="relation" id="relation"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="relation"
-                            class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Relation
+                            class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Relation
                             with Needy</label>
                     </div>
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phonenumber" id="floating_phone"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_phone"
-                            class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
+                            class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
                             number (123-456-7890)</label>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <textarea name="description" id="description"
-                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder="Description" rows="5" required></textarea>
 
                     </div>
@@ -146,17 +146,17 @@
             <div class="tab">
                 <div class="citizenship_container my-5 flex justify-around">
                     <div class="w-1/2">
-                        <label class="block mb-2 text-sm font-medium text-blue dark:text-white" >Upload
+                        <label class="block mb-2 text-sm font-medium text-blue" >Upload
                             Citizenship</label>
                         <input accept = "application/pdf"
-                            class="block w-full text-sm text-blue border border-gray-500 rounded-lg cursor-pointer bg-white dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
+                            class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
                             type="file" name="citizenship[]" multiple>
                     </div>
                     <div class="w-1/2 ml-3">
-                        <label class="block mb-2 text-sm font-medium text-blue dark:text-blue">Upload
+                        <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Official Document</label>
                         <input  type="file" name="officialdocs[]"
-                            class="block w-full text-sm text-blue border border-gray-500 rounded-lg cursor-pointer bg-white dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
+                            class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
                             id="file_input" accept = "application/pdf">
                     </div>
 
@@ -166,19 +166,19 @@
                 </div>
                 <div class="images_container my-5">
 
-                    <label class="block mb-2 text-sm font-medium text-blue dark:text-white">Upload
+                    <label class="block mb-2 text-sm font-medium text-blue">Upload
                         Photos</label>
                     <input type="file" name="photos[]"
-                        class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white text-blue dark:placeholder-gray-400"
+                        class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white text-blue"
                         type="file" accept="image/png, image/gif, image/jpeg" multiple>
 
                 </div>
                 <div class="video_container my-5">
 
-                    <label class="block mb-2 text-sm font-medium text-blue dark:text-blue">Upload
+                    <label class="block mb-2 text-sm font-medium text-blue">Upload
                         Videos</label>
                     <input name="video"
-                        class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400"
+                        class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white  focus:outline-none"
                         id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*"  multiple>
 
                 </div>
@@ -186,9 +186,9 @@
             <div style="overflow:auto;">
                 <div style="float:right;">
                     <button type="button" id="prevBtn" onclick="nextPrev(-1)"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Previous</button>
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">Previous</button>
                     <button type="button" id="nextBtn" onclick="nextPrev(1)"
-                        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Next</button>
+                        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Next</button>
                 </div>
             </div>
             <div style="text-align:center;margin-top:40px;">
