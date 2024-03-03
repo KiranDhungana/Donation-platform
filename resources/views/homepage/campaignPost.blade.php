@@ -134,7 +134,7 @@
                                             Help Needed !
                                         </h5>
                                     </a>
-                                    <p class="mb-3 font-normal text-blue">
+                                    <p class="mb-3 font-normal text-blue min-h-[5rem]">
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end =
                                         '...') }}
@@ -212,7 +212,7 @@
                                                 ${item.title}
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-blue">
+                                        <p class="mb-3 font-normal text-blue min-h-[5rem]">
                                             ${truncatedText}
                                           
 

@@ -26,7 +26,7 @@
             <div class="tab">
                 <div class="relative z-0 w-full mb-5 group">
                     <input type="text" name="title" id="post_title"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " required />
                     <label for="post_title"
                         class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -35,7 +35,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="fname" id="floating_first_name"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_first_name"
                             class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="mname" id="middlename"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" "/>
                         <label for="middlename"
                             class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -53,7 +53,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="lname" id="lname"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_last_name"
                             class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Needy's
@@ -61,7 +61,7 @@
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="relation" id="relation"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="relation"
                             class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Relation
@@ -71,7 +71,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phonenumber" id="floating_phone"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_phone"
                             class="peer-focus:font-medium absolute text-sm text-blue dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
@@ -79,7 +79,7 @@
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <textarea name="description" id="description"
-                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block py-2.5 px-0 w-full text-sm text-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder="Description" rows="5" required></textarea>
 
                     </div>
@@ -229,14 +229,14 @@
 
 
 <script>
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
+    var currentTab = 0; 
+    showTab(currentTab);
 
     function showTab(n) {
-        // This function will display the specified tab of the form...
+       
         var x = document.getElementsByClassName("tab");
         x[n].style.display = "block";
-        //... and fix the Previous/Next buttons:
+       
         if (n == 0) {
             document.getElementById("prevBtn").style.display = "none";
         } else {
@@ -247,27 +247,27 @@
         } else {
             document.getElementById("nextBtn").innerHTML = "Next";
         }
-        //... and run a function that will display the correct step indicator:
+       
         fixStepIndicator(n)
     }
 
     function nextPrev(n) {
       
-        // This function will figure out which tab to display
+        
         var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
+        
         if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
+        
         x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
+        
         currentTab = currentTab + n;
-        // if you have reached the end of the form...
+        
         if (currentTab >= x.length) {
-            // ... the form gets submitted:
+           
             document.getElementById("regForm").submit();
             return false;
         }
-        // Otherwise, display the correct tab:
+        
         showTab(currentTab);
 
     }
@@ -277,28 +277,28 @@
         x = document.getElementsByClassName("tab");
         y = x[currentTab].getElementsByTagName("input");
         for (i = 0; i < y.length; i++) {
-            // If a field is empty...
+           
             if (y[i].value == "") {
-                // add an "invalid" class to the field:
+           
                 y[i].className += " invalid";
-                // and set the current valid status to false
+           
                 valid = false;
             }
         }
-        // If the valid status is true, mark the step as finished and valid:
+       
         if (valid) {
             document.getElementsByClassName("step")[currentTab].className += " finish";
         }
-        return valid; // return the valid status
+        return valid; 
     }
 
     function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
+       
         var i, x = document.getElementsByClassName("step");
         for (i = 0; i < x.length; i++) {
             x[i].className = x[i].className.replace(" active", "");
         }
-        //... and adds the "active" class on the current step:
+       
         x[n].className += " active";
     }
 </script>
