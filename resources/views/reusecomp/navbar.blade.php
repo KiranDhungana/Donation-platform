@@ -98,7 +98,7 @@
             class="block py-2 px-3  rounded  md:p-0 text-blue">Campaigns</a>
         </li>
         <li>
-          <a href="/view-campaigns"
+          <a href="/view-socialorgs"
             class="block py-2 px-3  rounded  md:p-0 text-blue">Social Organizations</a>
         </li>
         <li>

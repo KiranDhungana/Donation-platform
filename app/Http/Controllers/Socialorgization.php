@@ -52,4 +52,25 @@ class Socialorgization extends Controller
         return view('socialorg.registerClubForm')->with('clubadded', "Social Organization added successfully !");
 
     }
+    public function clubmanagment()
+    {
+        $clubs = socialorg::all();
+        return view('socialorg.socialorgapprove')->with('clubdata', $clubs);
+    }
+    public function approveorg($id)
+    {
+        $posttoapprove = socialorg::find($id);
+        // dd($posttoapprove);
+        $posttoapprove['approvedstatus'] = 1;
+        $posttoapprove->save();
+
+        return redirect('/superadmin/clubmanagment');
+    }
+    public function vieworgs()
+    {
+        $socialorgs = socialorg::all();
+        return view('socialorg.clubs')->with('socialorg', $socialorgs);
+
+    }
+
 }

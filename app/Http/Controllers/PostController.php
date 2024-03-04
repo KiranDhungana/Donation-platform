@@ -224,4 +224,55 @@ class PostController extends Controller
         }
 
     }
+    public function recomend($id)
+    {
+        $records = DB::table('likes')->where('uid', $id)->get();
+        $flood = 0;
+        $landslide = 0;
+        $cancer = 0;
+        $tb = 0;
+        $physicalinjuries = 0;
+        $fire = 0;
+        foreach ($records as $r) {
+            $post = Post::find($r->postid);
+            $flood = $post::where('catagory', 'flood')->count();
+            $landslide = $post::where('catagory', 'landslide')->count();
+            $cancer = $post::where('catagory', 'cancer')->count();
+            $tb = $post::where('catagory', 'tb')->count();
+            $physicalinjuries = $post::where('catagory', 'physicalinjuries')->count();
+            $fire = $post::where('catagory', 'fire')->count();
+
+
+
+        }
+        // dd($flood > $landslide > $cancer);
+        $values = ['flood' => $flood, 'landslide' => $landslide, 'cancer' => $cancer, 'tb' => $tb, 'physicalinjuries' => $physicalinjuries, 'fire' => $fire];
+        $maxValue = max($values); // Find the highest value
+        $maxVariable = array_search($maxValue, $values); // Find the variable name containing that value
+
+        $post = DB::table('posts')->where('catagory', $maxVariable)->get();
+        return view('recomended')->with('post', $post);
+        // if ($flood > $landslide > $cancer > $tb > $physicalinjuries > $fire) {
+        //     $posts = DB::table('posts')->where('catagory', 'flood')->get();
+        //     return view('recomended')->with('post', $posts);
+        // } elseif ($landslide > $flood > $cancer > $tb > $physicalinjuries > $fire) {
+        //     $posts = DB::table('posts')->where('catagory', 'landslide')->get();
+        //     return view('recomended')->with('post', $posts);
+        // } elseif ($cancer > $landslide > $flood > $tb > $physicalinjuries > $fire) {
+        //     $posts = DB::table('posts')->where('catagory', 'cancer')->get();
+        //     return view('recomended')->with('post', $posts);
+        // } elseif ($tb > $cancer > $landslide > $flood > $physicalinjuries > $fire) {
+        //     $posts = DB::table('posts')->where('catagory', 'tb')->get();
+        //     return view('recomended')->with('post', $posts);
+        // } elseif ($physicalinjuries > $tb > $cancer > $landslide > $flood > $fire) {
+        //     $posts = DB::table('posts')->where('catagory', 'physicalinjuries')->get();
+        //     return view('recomended')->with('post', $posts);
+
+        // } else {
+        //     $posts = DB::table('posts')->where('catagory', 'fire')->get();
+        //     return view('recomended')->with('post', $posts);
+        // }
+
+
+    }
 }
