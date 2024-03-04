@@ -87,6 +87,11 @@ Route::get('/home', function () {
 Route::get('/campaigns', function () {
     return view('campaignPost');
 });
+
+Route::get('/clubsDetails', function () {
+    return view('clubDetails');
+});
+
 // Route::get('/pay/{id}', function () {
 
 //     return view('paymoney');

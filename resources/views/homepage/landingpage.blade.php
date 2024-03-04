@@ -22,7 +22,7 @@
             consectetur, adipisicing elit. Velit nam, quas placeat enim, omnis quisquam suscipit minima eveniet modi
             exce</p>
 
-        <div class="main_view_btns flex w-1/2 justify-center my-3">
+        <div class="main_view_btns flex min-w-1/2 justify-center my-3">
             <a href="/view-campaigns" class="bg-blue text-yellow rounded-md px-4 py-2 text-xl  mx-8">Campaigns</a>
             <a href="/signups" class="bg-yellow text-blue rounded-md px-4 py-2 text-xl ">Organizations</a>
 
@@ -30,28 +30,28 @@
     </div>
 
     <div class="homepage_campaign bg-yellow py-8">
-        <h1 class="container_heading_blue py-3">Trending Campaign</h1>
+        <h1 class="container_heading_blue py-3 text-small md:text-large">Trending Campaign</h1>
         <div class="campaign_gallery flex justify-center">
-            <div class="gallery_box m-3">
+            <div class="gallery_box m-0 md:m-3">
                 <img class="hover:opacity-50 rounded-2xl h-[97%]"
                     src="https://www.fredhutch.org/en/news/center-news/2020/05/what-happens-when-cancer-patients-get-covid-19-/_jcr_content/root/responsivegrid/textimage/image.coreimg.jpeg/1638427334811/im6col-200528-cancer-covid19.jpeg"
                     alt="">
                 <p class="text-blue font-bold text-center">Cancer Patient</p>
             </div>
             <div class="gallery_wrapper flex flex-wrap w-1/2">
-                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                <div class="gallery_box w-[48%]  mt-3 md:mr-3">
                     <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
                     <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                <div class="gallery_box w-[48%]  mt-3 md:mr-3">
                     <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
                     <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                <div class="gallery_box w-[48%]  mt-3 md:mr-3">
                     <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
                     <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
-                <div class="gallery_box w-[48%]  mt-3 mr-3">
+                <div class="gallery_box w-[48%]  mt-3 md:mr-3">
                     <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
                     <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
@@ -68,14 +68,14 @@
     <!-- Main modal -->
    
 
-    <div class="homepage_clubs bg-blue py-12">
+    <div class="homepage_clubs bg-blue py-12 px-[1rem] md:px-0">
 
 
         <h1 class="container_heading_yellow py-3">Social Clubs</h1>
         <div class="card_container flex justify-around pb-8">
 
 
-            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage my-4 md:my-0">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -98,7 +98,7 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage my-4 md:my-0">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -121,7 +121,7 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage">
+            <div class="max-w-sm  border border-gray-200 rounded-lg bg-blue border-none campaign_box_homepage my-4 md:my-0">
                 <a href="#">
                     <img class="rounded-t-lg"
                         src="https://www.openglobalrights.org/userfiles/image/Burnett_Image2_03-10-21.jpg" alt="" />
@@ -152,20 +152,20 @@
     <div class="homepage_testimonial bg-yellow py-8">
         <div id="fullWidthTabContent" class="">
             <div class="p-4">
-                <div class="flex justify-around py-8">
-                    <div class="flex flex-col items-center justify-center">
+                <div class="flex justify-around py-8  testi_container">
+                    <div class="flex flex-col items-center justify-center testi_box">
                         <dt class="mb-2 text-3xl text-blue font-extrabold">50+</dt>
                         <dd class="text-gray-500 text-blue">Campaigns</dd>
                     </div>
-                    <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center justify-center testi_box">
                         <dt class="mb-2 text-3xl text-blue font-extrabold">$200+</dt>
                         <dd class="text-gray-500 text-blue">Fund Raised</dd>
                     </div>
-                    <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center justify-center testi_box">
                         <dt class="mb-2 text-3xl text-blue font-extrabold">100+</dt>
                         <dd class="text-gray-500 text-blue">Registered Social CLubs</dd>
                     </div>
-                    <div class="flex flex-col items-center justify-center">
+                    <div class="flex flex-col items-center justify-center testi_box">
                         <dt class="mb-2 text-3xl text-blue font-extrabold">1000+</dt>
                         <dd class="text-gray-500 text-blue">Donors</dd>
                     </div>

@@ -27,7 +27,7 @@
                     <label for="voice-search" class="sr-only">Search</label>
                     <div class="relative w-full">
                         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            <svg class="w-4 h-4 text-gray-500" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2"
@@ -54,7 +54,7 @@
         </div>
         <div class="postpage_containe flex flex-col">
 
-            <div class="postpage_body flex w-[80%] mx-auto">
+            <div class="postpage_body flex w-[95%] md:w-[80%] mx-auto">
                 <div class="search_sidebar w-[25%]  p-3 mr-5">
                     <div class="search_type border-b border-gray-500 py-2">
                         <div class="saarch_heading">
@@ -117,11 +117,11 @@
                 <div class="post_container w-full flex flex-col" id="default_data">
 
 
-                    <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center">
+                    <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center" id="campaigns">
                         @foreach ($post as $item)
                         <div class="campaign_card m-5">
                             <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                                 <a href="#">
                                     <img class="rounded-t-lg"
                                         src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
@@ -134,7 +134,7 @@
                                             Help Needed !
                                         </h5>
                                     </a>
-                                    <p class="mb-3 font-normal text-blue">
+                                    <p class="mb-3 font-normal text-blue min-h-[5rem]">
 
                                         {{ \Illuminate\Support\Str::limit($item['description'], $limit = 100, $end =
                                         '...') }}
@@ -142,7 +142,7 @@
 
                                     </p>
                                     <a href="/view-post/{{$item['id']}}"
-                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                                         Details
                                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -212,7 +212,7 @@
                                                 ${item.title}
                                             </h5>
                                         </a>
-                                        <p class="mb-3 font-normal text-blue">
+                                        <p class="mb-3 font-normal text-blue min-h-[5rem]">
                                             ${truncatedText}
                                           
 
@@ -251,6 +251,11 @@
     </script>
 
 
+<!-- get recommended data   -->
+<script>
+
+
+</script>
 
 </body>
 

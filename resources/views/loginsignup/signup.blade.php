@@ -17,11 +17,11 @@
         <section class="bg-yellow">
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto">
                 <div
-                    class="w-full bg-white rounded-lg shadow dark:border my-20 sm:w-1/2 xl:p-0 ">
+                    class="w-full bg-white rounded-lg shadow my-20 sm:w-1/2 xl:p-0 ">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1
                             class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-                            Create and account
+                            Create an account
                         </h1>
                         <form action="{{ route('studentRegister') }}" method="post" class="space-y-4 md:space-y-6"
                             action="#">
@@ -44,7 +44,7 @@
                                         placeholder="Middle Name">
                                 </div>
 
-                                <div class="w-1/2">
+                                <div class="w-1/2 ml-3">
                                     <label for="lastname"
                                         class="block mb-2 text-sm font-medium text-blue">Last
                                         Name</label>
@@ -113,7 +113,7 @@
                                 an account</button>
                             <p class="text-sm font-light text-blue">
                                 Already have an account? <a data-modal-toggle="authentication-modal" href="#"
-                                    class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login
+                                    class="font-medium text-primary-600 hover:underline">Login
                                     here</a>
                             </p>
                         </form>

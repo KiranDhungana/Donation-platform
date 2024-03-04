@@ -9,7 +9,7 @@ class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
                 Sign in
             </h3>
             <button type="button"
-                class="end-2.5 text-blue bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                class="end-2.5 text-blue bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
                 data-modal-hide="authentication-modal">
                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 14 14">
@@ -55,7 +55,7 @@ class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
                 <button type="submit"
                     class="w-full text-white bg-blue hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" style="backgorund:#234E70;">Login
                     to your account</button>
-                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                <div class="text-sm font-medium text-gray-500">
                     Not registered? <a href="/signups" class="text-blue hover:underline">Create
                         account</a>
                 </div>

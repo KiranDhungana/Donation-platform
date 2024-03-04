@@ -36,7 +36,7 @@
       <div>
         <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
         <div class="mt-2.5">
-          <input type="text" name="fname" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="fname" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         @error('fname')
                     <div id="emailHelp" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror
@@ -45,7 +45,7 @@
       <div>
         <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
         <div class="mt-2.5">
-          <input type="text" name="lname" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="lname" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           @error('title')
                     <div id="lname" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror
@@ -54,7 +54,7 @@
       <div class="sm:col-span-2">
         <label for="DOB" class="block text-sm font-semibold leading-6 text-gray-900">DOB</label>
         <div class="mt-2.5">
-          <input type="date" name="dob" id="DOB" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="date" name="dob" id="DOB" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
          @error('dob')
                     <div id="emailHelp" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror
@@ -81,7 +81,7 @@
       <div >
         <label for="Address" class="block text-sm font-semibold leading-6 text-gray-900">Address</label>
         <div class="mt-2.5">
-          <input type="text" name="address" id="Address" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="text" name="address" id="Address" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           @error('address')
                     <div id="emailHelp" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror
@@ -90,7 +90,7 @@
       <div >
         <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
         <div class="mt-2.5">
-          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
           @error('email')
                     <div id="emailHelp" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror
@@ -104,7 +104,7 @@
          
          
           </div>
-          <input type="tel" value="+977" name="pnumber" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2  text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"  required>
+          <input type="tel" value="+977" name="pnumber" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2  text-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"  required>
           @error('pnumber')
                     <div id="emailHelp" style="color:red" class="form-text">{{ $message }}</div>
                 @enderror

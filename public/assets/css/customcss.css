@@ -199,3 +199,61 @@ color: #13476f;
 .crousel_controller{
   z-index: 99 !important;
 }
+
+
+
+@media only screen and (max-width: 700px) {
+
+  /* responsive for landingpage  */
+  .homepage_campaign{
+    padding: 1rem !important;
+  }
+  .campaign_gallery{
+    flex-direction: column !important;
+  }
+  .gallery_wrapper,.gallery_box {
+    width: 100% !important;
+  }
+  .homepage_clubs .card_container{
+    flex-direction: column !important;
+  }
+  .testi_container{
+  flex-direction: column !important;
+  }
+  .testi_box{
+    height: 125px !important;
+  }
+  footer{
+    padding: 2rem 1rem;
+  }
+  .main_view_btns a{
+    padding: 0.5rem !important;
+  }
+  .campaign_gallery img{
+    object-fit:contain !important;
+    width:96% !important;
+}
+.container_heading_blue {
+  font-size: 24px ;
+}
+.main_view{
+  background-position: inherit;
+}
+.search_sidebar {
+  display: none;
+}
+
+
+/* campaign details page   */
+
+.postDetail_container{
+  width: 97%;
+}
+.flexChild.sideBox{
+  width: 97%;
+  height: auto;
+  padding-bottom: 1rem;
+
+}
+
+}
