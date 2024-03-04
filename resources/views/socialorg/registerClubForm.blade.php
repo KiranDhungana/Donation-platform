@@ -122,10 +122,10 @@
                 <div class="citizenship_container my-5 flex justify-around">
 
                     <div class="w-1/2 ml-3">
-                        <label class="block mb-2 text-sm font-medium text-blue dark:text-blue">Upload
+                        <label class="block mb-2 text-sm font-medium text-blue ">Upload
                             Official Document</label>
                         <input type="file" name="officialdocs[]"
-                            class="block w-full text-sm text-blue border border-gray-500 rounded-lg cursor-pointer bg-white dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400"
+                            class="block w-full text-sm text-blue border border-gray-500 rounded-lg cursor-pointer bg-white"
                             id="file_input" accept="application/pdf">
                     </div>
                     <div class="images_container w-1/2 ml-3">
@@ -133,7 +133,7 @@
                         <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Photos</label>
                         <input type="file" name="photos[]"
-                            class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white text-blue dark:placeholder-gray-400"
+                            class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white text-blue"
                             type="file" accept="image/png, image/gif, image/jpeg" multiple>
 
                     </div>
@@ -144,7 +144,7 @@
 
 
             </div>
-            <button type="submit" class="border bg-blue text-yellow p-4 rounded float-right"
+            <button type="submit" class="border bg-blue text-yellow px-4 py-2 rounded-lg float-right"
                 style="background-color: #13476f   ;">Register</button>
         </form>
     </div>

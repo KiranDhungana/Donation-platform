@@ -84,6 +84,7 @@ class UserController extends Controller
     }
     public function resetpassword(Request $req)
     {
+
         $email = $req->email;
 
         $emailExists = User::where('email', $email)->exists() && User::where('is_verified', 1)->exists();

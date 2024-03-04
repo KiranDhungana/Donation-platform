@@ -38,7 +38,7 @@
         </svg>
 
         <div
-          class="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5 dark:border-gray-900">
+          class="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5">
         </div>
       </button>
 
@@ -105,7 +105,7 @@
           <a href="/about" class="block py-2 px-3  rounded  md:p-0 text-blue">About</a>
         </li>
         <li>
-          <a href="/contact" class="block py-2 px-3  rounded  md:p-0 text-blue dark:border-gray-700">Contact</a>
+          <a href="/contact" class="block py-2 px-3  rounded  md:p-0 text-blue">Contact</a>
         </li>
       </ul>
     </div>
@@ -123,29 +123,29 @@
   <div class="block px-4 py-2 font-medium text-center text-yellow rounded-t-lg bg-gray-700">
     Notifications
   </div>
-  <div class="divide-y divide-gray-100 dark:divide-gray-700" id="notification_box">
-    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
+  <div class="divide-y divide-gray-100" id="notification_box">
+    <div class="flex px-4 py-3 hover:bg-gray-100">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">Ram</span>: "You have a new Notification"</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
+        <div class="text-gray-500 text-sm mb-1.5 ">New message from <span
+            class="font-semibold text-gray-900">Ram</span>: "You have a new Notification"</div>
+        <div class="text-xs text-blue-600 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
     </div>
-    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
+    <div class="flex px-4 py-3 hover:bg-gray-100 ">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">Hari Ram</span>: "You have a new Notification
+        <div class="text-gray-500 text-sm mb-1.5">New message from <span
+            class="font-semibold text-gray-900">Hari Ram</span>: "You have a new Notification
         "</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
+        <div class="text-xs text-blue-60 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
     </div>
-    <div class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 noti">
+    <div class="flex px-4 py-3 hover:bg-gray-100 ">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message from <span
-            class="font-semibold text-gray-900 dark:text-white">Samir</span>: "You have a new Notification"</div>
-        <div class="text-xs text-blue-600 dark:text-blue-500 cursor-pointer" id="readed">Mark as read</div>
+        <div class="text-gray-500 text-sm mb-1.5">New message from <span
+            class="font-semibold text-gray-900">Samir</span>: "You have a new Notification"</div>
+        <div class="text-xs text-blue-600 cursor-pointer" id="readed">Mark as read</div>
       </div>
 
     </div>

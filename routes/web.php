@@ -56,9 +56,9 @@ Route::get('/signups', function () {
 Route::get('/login', [UserController::class, 'loadLogin']);
 
 
-Route::get('/forgetpassword', function () {
-    return view('forgetpassword');
-});
+// Route::get('/forgetpassword', function () {
+//     return view('loginsignup/forgetpassword');
+// });
 Route::get('/signup', function () {
     return view('signup');
 });
@@ -87,6 +87,11 @@ Route::get('/home', function () {
 Route::get('/campaigns', function () {
     return view('campaignPost');
 });
+
+Route::get('/clubsDetails', function () {
+    return view('clubDetails');
+});
+
 // Route::get('/pay/{id}', function () {
 
 //     return view('paymoney');

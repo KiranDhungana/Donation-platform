@@ -24,7 +24,7 @@
         @csrf
         <div class="mb-5">
             <label for="email" class="block mb-2 text-sm font-medium text-[#234E70]">Email</label>
-            <input type="email" id="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your Email" required>
+            <input type="email" name="email" id="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter your Email" required>
             </div>
            
             <div class="flex items-start mb-1">
@@ -34,12 +34,9 @@
 
             <div class="text-center">
 
-                <input type="submit" class="text-white bg-[#234E70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"></input>
+                <input type="submit" class="text-white bg-[#234E70] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-3 py-2 text-center"> </input>
             </div>
-            <div class="pt-2 text-center">
-
-                <button data-modal-target="authentication-modal" type="button" class="text-[#234E70] underline">Go back to Sign in</button>
-            </div>
+          
         </form>
     </div>
     </div>
