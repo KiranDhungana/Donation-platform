@@ -61,7 +61,7 @@
                             <p class="text-xl text-blue font-bold my-2">Types</p>
                         </div>
                         <div class="search_items flex flex-col ">
-                            <a href="" class="text-blue text-sm my-1">Disaster</a>
+                            <a href="/recomended/{{Auth::id()}}" class="text-blue text-sm my-1">Recomended</a>
                             <a href="" class="text-blue text-sm my-1">Disease</a>
                             <a href="" class="text-blue text-sm my-1">Startup</a>
                             <a href="" class="text-blue text-sm my-1">Problem</a>

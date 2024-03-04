@@ -220,12 +220,14 @@ Route::get('/about', function () {
 Route::get('/register-socialorganization', function () {
     return view('socialorg/registerClubForm');
 });
-Route::get('/clubs', function () {
-    return view('clubs');
-});
+Route::get("/recomended/{id}", [Postcontroller::class, 'recomend'])->name('recomended')->middleware('auth');
+
+Route::get("/view-socialorgs", [Socialorgization::class, 'vieworgs'])->name('vieworgs');
 
 // profile pic chnage 
 Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage'])->name('ImageControlleruploadImage')->middleware('auth');
 
 // Socail organization roututing 
 Route::post("/regsiter-socialorganization", [Socialorgization::class, 'registerorg'])->name('registerorg')->middleware('auth');
+Route::get("/superadmin/clubmanagment", [Socialorgization::class, 'clubmanagment'])->name('clubmanagment')->middleware('super-admin-check');
+Route::Post("/approve-org/{id}", [Socialorgization::class, 'approveorg'])->name('approveorg')->middleware('super-admin-check');
