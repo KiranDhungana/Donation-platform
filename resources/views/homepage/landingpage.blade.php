@@ -34,7 +34,7 @@
         <div class="campaign_gallery flex justify-center">
             <div class="gallery_box m-0 md:m-3">
                 <img class="hover:opacity-50 rounded-2xl h-[97%]"
-                    src="https://www.fredhutch.org/en/news/center-news/2020/05/what-happens-when-cancer-patients-get-covid-19-/_jcr_content/root/responsivegrid/textimage/image.coreimg.jpeg/1638427334811/im6col-200528-cancer-covid19.jpeg"
+                    src="{{ asset('assets/images/kidney.jpg') }}"
                     alt="">
                 <p class="text-blue font-bold text-center">Cancer Patient</p>
             </div>
@@ -44,12 +44,12 @@
                     <p class="text-blue font-bold  text-center">Earthquake Victim</p>
                 </div>
                 <div class="gallery_box w-[48%]  mt-3 md:mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
-                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
+                    <img src="{{ asset('assets/images/flood.jpg') }}" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Flood Victim</p>
                 </div>
                 <div class="gallery_box w-[48%]  mt-3 md:mr-3">
-                    <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
-                    <p class="text-blue font-bold  text-center">Earthquake Victim</p>
+                    <img src="{{ asset('assets/images/cancer.jpg') }}" class="hover:opacity-50 rounded-2xl">
+                    <p class="text-blue font-bold  text-center">Kidney Victim</p>
                 </div>
                 <div class="gallery_box w-[48%]  mt-3 md:mr-3">
                     <img src="https://scx1.b-cdn.net/csz/news/800a/2016/survivalofqu.jpg" class="hover:opacity-50 rounded-2xl">
