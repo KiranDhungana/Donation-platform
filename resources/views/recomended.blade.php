@@ -9,8 +9,10 @@
 @include('reusecomp/navbar')
 <body>
      <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center mt-[50px]">
-                        @foreach ($post as $item)
-                        <div class="campaign_card m-5">
+                        @foreach ($allpost as $item)
+                        @foreach ($post as $i)
+                            @if ($item->id==$i)
+                                 <div class="campaign_card m-5">
                             <div
                                 class="max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
                                 <a href="#">
@@ -54,6 +56,15 @@
                                 </div>
                             </div>
                         </div>
+                            }
+                                
+                            @else
+                                
+                            @endif
+                        }
+                            
+                        @endforeach
+                       
                         @endforeach
 
 

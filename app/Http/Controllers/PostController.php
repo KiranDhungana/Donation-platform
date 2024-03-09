@@ -251,7 +251,7 @@ class PostController extends Controller
         $maxVariable = array_search($maxValue, $values); // Find the variable name containing that value
 
         $post = DB::table('posts')->where('catagory', $maxVariable)->get();
-        return view('recomended')->with('post', $post);
+        return view('recomended')->with('post', [1, 2, 3])->with("allpost", Post::all());
         // if ($flood > $landslide > $cancer > $tb > $physicalinjuries > $fire) {
         //     $posts = DB::table('posts')->where('catagory', 'flood')->get();
         //     return view('recomended')->with('post', $posts);
