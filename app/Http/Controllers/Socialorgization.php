@@ -99,4 +99,6 @@ class Socialorgization extends Controller
         return view('socialorg/nearlocation')->with('nearclub', $distance);
     }
 
+   
+
 }

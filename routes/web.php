@@ -231,4 +231,5 @@ Route::post("/upload-image", [UserController::class, 'ImageControlleruploadImage
 Route::post("/regsiter-socialorganization", [Socialorgization::class, 'registerorg'])->name('registerorg')->middleware('auth');
 Route::get("/superadmin/clubmanagment", [Socialorgization::class, 'clubmanagment'])->name('clubmanagment')->middleware('super-admin-check');
 Route::Post("/approve-org/{id}", [Socialorgization::class, 'approveorg'])->name('approveorg')->middleware('super-admin-check');
-Route::get("/socialorganizations", [Socialorgization::class, 'getdistance'])->name('getdistance');
+Route::get("/socialorganizations-nearby", [Socialorgization::class, 'getdistance'])->name('getdistance');
+Route::get("/superadmin/donationdata", [Postcontroller::class, 'donationinfo'])->name('donationinfo')->middleware('super-admin-check');

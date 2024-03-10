@@ -173,7 +173,7 @@
                         type="file" accept="image/png, image/gif, image/jpeg" multiple>
 
                 </div>
-                <div class="video_container my-5">
+                {{-- <div class="video_container my-5">
 
                     <label class="block mb-2 text-sm font-medium text-blue">Upload
                         Videos</label>
@@ -181,7 +181,7 @@
                         class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white  focus:outline-none"
                         id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*"  multiple>
 
-                </div>
+                </div> --}}
             </div>
             <div style="overflow:auto;">
                 <div style="float:right;">

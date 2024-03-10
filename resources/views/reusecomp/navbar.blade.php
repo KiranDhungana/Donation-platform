@@ -126,29 +126,21 @@
   <div class="divide-y divide-gray-100" id="notification_box">
     <div class="flex px-4 py-3 hover:bg-gray-100">
       <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5 ">New message from <span
-            class="font-semibold text-gray-900">Ram</span>: "You have a new Notification"</div>
-        <div class="text-xs text-blue-600 cursor-pointer" id="readed">Mark as read</div>
+      
+        <div class="text-gray-500 text-sm mb-1.5 ">Welcome <span
+            class="font-bold text-red">
+              @if (Auth::user())
+             {{Auth::user()->fname}} {{Auth::user()->lname}}
+        @else
+            
+        @endif
+           </span></div>
+        {{-- <div class="text-xs text-blue-600 cursor-pointer" id="readed">Mark as read</div> --}}
       </div>
 
     </div>
-    <div class="flex px-4 py-3 hover:bg-gray-100 ">
-      <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5">New message from <span
-            class="font-semibold text-gray-900">Hari Ram</span>: "You have a new Notification
-        "</div>
-        <div class="text-xs text-blue-60 cursor-pointer" id="readed">Mark as read</div>
-      </div>
-
-    </div>
-    <div class="flex px-4 py-3 hover:bg-gray-100 ">
-      <div class="w-full ps-3">
-        <div class="text-gray-500 text-sm mb-1.5">New message from <span
-            class="font-semibold text-gray-900">Samir</span>: "You have a new Notification"</div>
-        <div class="text-xs text-blue-600 cursor-pointer" id="readed">Mark as read</div>
-      </div>
-
-    </div>
+   
+   
    
    
    
