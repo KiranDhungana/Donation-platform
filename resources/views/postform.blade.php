@@ -19,14 +19,15 @@
 
 
     <div class="post_form_container pt-[5rem] bg-yellow flex flex-col h-[100vh]">
-        <form id="campaign_form" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data" class="mt-5 w-4/5 mx-auto">
+        <form id="campaign_form" method="POST" action="{{ route('helpform') }}" enctype="multipart/form-data"
+            class="mt-5 w-4/5 mx-auto">
             @csrf
             <h1 class="text-2xl text-blue">Fill the form with correct details</h1>
             <!-- One "tab" for each step in the form: -->
             <div class="tab">
                 <div class="relative z-0 w-full mb-5 group">
                     <input type="text" name="title" id="post_title"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="check block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " required />
                     <label for="post_title"
                         class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -35,7 +36,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="fname" id="floating_first_name"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="check block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_first_name"
                             class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -44,7 +45,7 @@
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="mname" id="middlename"
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" "/>
+                            placeholder=" " />
                         <label for="middlename"
                             class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                             Needy's middle name</label>
@@ -53,7 +54,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="lname" id="lname"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="check block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_last_name"
                             class="peer-focus:font-medium absolute text-sm text-blue  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Needy's
@@ -61,7 +62,7 @@
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="text" name="relation" id="relation"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="check block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="relation"
                             class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Relation
@@ -71,7 +72,7 @@
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
                         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phonenumber" id="floating_phone"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="check block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " required />
                         <label for="floating_phone"
                             class="peer-focus:font-medium absolute text-sm text-blue duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone
@@ -146,18 +147,18 @@
             <div class="tab">
                 <div class="citizenship_container my-5 flex justify-around">
                     <div class="w-1/2">
-                        <label class="block mb-2 text-sm font-medium text-blue" >Upload
+                        <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Citizenship</label>
-                        <input accept = "application/pdf"
+                        <input accept="application/pdf"
                             class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
                             type="file" name="citizenship[]" multiple>
                     </div>
                     <div class="w-1/2 ml-3">
                         <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Official Document</label>
-                        <input  type="file" name="officialdocs[]"
+                        <input type="file" name="officialdocs[]"
                             class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
-                            id="file_input" accept = "application/pdf">
+                            id="file_input" accept="application/pdf">
                     </div>
 
 
@@ -179,7 +180,7 @@
                         Videos</label>
                     <input name="video"
                         class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white  focus:outline-none"
-                        id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*"  multiple>
+                        id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*" multiple>
 
                 </div>
             </div>
@@ -229,14 +230,14 @@
 
 
 <script>
-    var currentTab = 0; 
+    var currentTab = 0;
     showTab(currentTab);
 
     function showTab(n) {
-       
+
         var x = document.getElementsByClassName("tab");
         x[n].style.display = "block";
-       
+
         if (n == 0) {
             document.getElementById("prevBtn").style.display = "none";
         } else {
@@ -247,27 +248,27 @@
         } else {
             document.getElementById("nextBtn").innerHTML = "Next";
         }
-       
+
         fixStepIndicator(n)
     }
 
     function nextPrev(n) {
-      
-        
+
+
         var x = document.getElementsByClassName("tab");
-        
+
         if (n == 1 && !validateForm()) return false;
-        
+
         x[currentTab].style.display = "none";
-        
+
         currentTab = currentTab + n;
-        
+
         if (currentTab >= x.length) {
-           
+
             document.getElementById("regForm").submit();
             return false;
         }
-        
+
         showTab(currentTab);
 
     }
@@ -275,30 +276,31 @@
     function validateForm() {
         var x, y, i, valid = true;
         x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
+        y = x[currentTab].getElementsByClassName("check");
+        //  y = x[currentTab].getElementsByTagName("input");
         for (i = 0; i < y.length; i++) {
-           
+
             if (y[i].value == "") {
-           
+
                 y[i].className += " invalid";
-           
+
                 valid = false;
             }
         }
-       
+
         if (valid) {
             document.getElementsByClassName("step")[currentTab].className += " finish";
         }
-        return valid; 
+        return valid;
     }
 
     function fixStepIndicator(n) {
-       
+
         var i, x = document.getElementsByClassName("step");
         for (i = 0; i < x.length; i++) {
             x[i].className = x[i].className.replace(" active", "");
         }
-       
+
         x[n].className += " active";
     }
 </script>

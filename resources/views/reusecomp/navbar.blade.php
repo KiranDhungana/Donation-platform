@@ -104,9 +104,9 @@
         <li>
           <a href="/about" class="block py-2 px-3  rounded  md:p-0 text-blue">About</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="/contact" class="block py-2 px-3  rounded  md:p-0 text-blue">Contact</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
