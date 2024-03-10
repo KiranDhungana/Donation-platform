@@ -149,16 +149,16 @@
                     <div class="w-1/2">
                         <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Citizenship</label>
-                        <input accept="application/pdf"
+                        <input 
                             class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
-                            type="file" name="citizenship[]" multiple>
+                            type="file" name="citizenship[]"accept="image/png, image/gif, image/jpeg"  multiple>
                     </div>
                     <div class="w-1/2 ml-3">
                         <label class="block mb-2 text-sm font-medium text-blue">Upload
                             Official Document</label>
                         <input type="file" name="officialdocs[]"
                             class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none"
-                            id="file_input" accept="application/pdf">
+                            id="file_input" accept="image/png, image/gif, image/jpeg">
                     </div>
 
 
@@ -180,7 +180,7 @@
                         Videos</label>
                     <input name="video"
                         class="block w-full text-sm text-blue border border-gray-300 rounded-lg cursor-pointer bg-white  focus:outline-none"
-                        id="multiple_files" type="file" accept="video/mp4,video/x-m4v,video/*" multiple>
+                        id="multiple_files" type="file"  multiple>
 
                 </div> --}}
             </div>
@@ -263,46 +263,47 @@
 
         currentTab = currentTab + n;
 
-        // if (currentTab >= x.length) {
-
-        //     document.getElementById("regForm").submit();
-        //     return false;
-        // }
+        if (currentTab >= x.length) {
+        // if (currentTab == 3) {
+            console.log("submitted......"+currentTab)
+            document.getElementById("campaign_form").submit();
+            return false;
+        }
 
         showTab(currentTab);
 
     }
 
-    // function validateForm() {
-    //     var x, y, i, valid = true;
-    //     x = document.getElementsByClassName("tab");
-    //     y = x[currentTab].getElementsByClassName("check");
-    //     //  y = x[currentTab].getElementsByTagName("input");
-    //     for (i = 0; i < y.length; i++) {
+    function validateForm() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        // y = x[currentTab].getElementsByClassName("check");
+         y = x[currentTab].getElementsByTagName("input");
+        for (i = 0; i < y.length; i++) {
 
-    //         if (y[i].value == "") {
+            if (y[i].value == "") {
 
-    //             y[i].className += " invalid";
+                y[i].className += " invalid";
 
-    //             valid = false;
-    //         }
-    //     }
+                valid = false;
+            }
+        }
 
-    //     if (valid) {
-    //         document.getElementsByClassName("step")[currentTab].className += " finish";
-    //     }
-    //     return valid;
-    // }
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid;
+    }
 
-    // function fixStepIndicator(n) {
+    function fixStepIndicator(n) {
 
-    //     var i, x = document.getElementsByClassName("step");
-    //     for (i = 0; i < x.length; i++) {
-    //         x[i].className = x[i].className.replace(" active", "");
-    //     }
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
 
-    //     x[n].className += " active";
-    // }
+        x[n].className += " active";
+    }
 </script>
 
 

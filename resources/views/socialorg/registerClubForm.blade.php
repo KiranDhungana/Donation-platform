@@ -126,7 +126,7 @@
                             Official Document</label>
                         <input type="file" name="officialdocs[]"
                             class="block w-full text-sm text-blue border border-gray-500 rounded-lg cursor-pointer bg-white"
-                            id="file_input" accept="application/pdf">
+                            id="file_input" accept="image/png, image/gif, image/jpeg">
                     </div>
                     <div class="images_container w-1/2 ml-3">
 

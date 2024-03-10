@@ -75,7 +75,7 @@
                     <div class="post_container w-full flex flex-col" id="default_data">
 
 
-                        <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center"
+                        <div class="campaigns_card_container flex flex-wrap my-3 items-center"
                             id="campaigns">
                             @foreach ($socialorg as $item)
                                 @if ($item['approvedstatus'] == 1)
@@ -109,7 +109,7 @@
                                                             d="M1 5h12m0 0L9 1m4 4L9 9" />
                                                     </svg>
                                                 </a>
-                                                <div class="views border-t py-2 mt-2 border-gray-500">
+                                                <!-- <div class="views border-t py-2 mt-2 border-gray-500">
                                                     <div class="total_views w-1/2 flex">
                                                         <i class="fa-regular fa-eye mr-3"
                                                             style="font-size: 12px; color: [#13476f];"><span
@@ -118,7 +118,7 @@
                                                             style="font-size: 12px; color: [#13476f];"><span
                                                                 class="text-sm ml-1"></span></i>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
                                             </div>
                                         </div>
