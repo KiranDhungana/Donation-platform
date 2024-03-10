@@ -275,10 +275,11 @@ class PostController extends Controller
     }
     public function donationinfo()
     {
+        $post = post::all();
         $totalAmounts = Payment::groupBy('postid')
             ->select('postid', DB::raw('sum(amount) as total_amount'))
             ->get();
-        return view('superadmin/donationinfo')->with('donationamount', $totalAmounts);
+        return view('superadmin/donationinfo')->with('donationamount', $totalAmounts)->with('post', $post);
 
 
     }

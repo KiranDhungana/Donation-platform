@@ -6,8 +6,15 @@
     @include('globallink') 
 </head>
 <body>
-    @foreach ($donationamount as $i)
-    <div class="flex flex-row " >
+  @foreach ($post as $io)
+  
+   @foreach ($donationamount as $i)
+
+   @if ($io['id']==$i['postid'])
+     {{ 
+     $io['title']
+    }}
+   <div class="flex flex-row " >
         <div class="border-[2px]" >
             {{
     $i['postid']
@@ -15,7 +22,12 @@
             {{
     $i['total_amount']
   }}
-           
+        
+       
+   @else
+       
+   @endif
+       
            
 
 
@@ -25,6 +37,10 @@
   
         
     @endforeach
+      
+  @endforeach
+
+   
     
 </body>
 </html>
