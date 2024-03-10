@@ -263,46 +263,46 @@
 
         currentTab = currentTab + n;
 
-        if (currentTab >= x.length) {
+        // if (currentTab >= x.length) {
 
-            document.getElementById("regForm").submit();
-            return false;
-        }
+        //     document.getElementById("regForm").submit();
+        //     return false;
+        // }
 
         showTab(currentTab);
 
     }
 
-    function validateForm() {
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByClassName("check");
-        //  y = x[currentTab].getElementsByTagName("input");
-        for (i = 0; i < y.length; i++) {
+    // function validateForm() {
+    //     var x, y, i, valid = true;
+    //     x = document.getElementsByClassName("tab");
+    //     y = x[currentTab].getElementsByClassName("check");
+    //     //  y = x[currentTab].getElementsByTagName("input");
+    //     for (i = 0; i < y.length; i++) {
 
-            if (y[i].value == "") {
+    //         if (y[i].value == "") {
 
-                y[i].className += " invalid";
+    //             y[i].className += " invalid";
 
-                valid = false;
-            }
-        }
+    //             valid = false;
+    //         }
+    //     }
 
-        if (valid) {
-            document.getElementsByClassName("step")[currentTab].className += " finish";
-        }
-        return valid;
-    }
+    //     if (valid) {
+    //         document.getElementsByClassName("step")[currentTab].className += " finish";
+    //     }
+    //     return valid;
+    // }
 
-    function fixStepIndicator(n) {
+    // function fixStepIndicator(n) {
 
-        var i, x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
-        }
+    //     var i, x = document.getElementsByClassName("step");
+    //     for (i = 0; i < x.length; i++) {
+    //         x[i].className = x[i].className.replace(" active", "");
+    //     }
 
-        x[n].className += " active";
-    }
+    //     x[n].className += " active";
+    // }
 </script>
 
 
