@@ -32,7 +32,7 @@
                     $decodedData = json_decode($json, true);
                     @endphp
 
-                    <div class="club_card m-5  rounded-lg " style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                    <div class="club_card m-5  rounded-lg w-[30%] h-[350px]" >
                         <div class="max-w-sm bg-white  rounded-lg shadow ">
                             <a href="#">
                                 <img class="rounded-t-lg"
@@ -64,16 +64,10 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
+                    @endforeach
+                    @endforeach
                 </div>
-
-
             </div>
-            @endforeach
-            @endforeach
 
 
         </div>
