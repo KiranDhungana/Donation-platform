@@ -99,6 +99,11 @@ class Socialorgization extends Controller
         return view('socialorg/nearlocation')->with('nearclub', $distance);
     }
 
-   
 
+    public function vieworg($id)
+    {
+        $org = socialorg::find(($id));
+
+        return view('socialorg/clubDetails')->with('data', $org);
+    }
 }

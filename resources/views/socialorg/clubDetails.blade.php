@@ -53,9 +53,24 @@
                   <div class="profile-picture">
                     <img src="https://cinnepal.org.np/storage/207/logo-header.png" alt="Profile Picture" class="my-2">
                   </div>
-                  <h2 class="name">Club President: Roshan Pokhrel</h2>
-                  <h3 class="phonenumber">Phone number: 9862722281</h3>
-                  <p class="email">Email:   imroshan224@gmail.com</p>
+                  <h2 class="name">Club President: {{$data['name']}}</h2>
+                  <h3 class="phonenumber">Catagory:{{$data['catagory']}} </h3>
+                  <p class="email">District:{{$data['district']}} </p>
+
+                </div>
+            </div>
+                  <p class="email">Direction </p>
+
+               <div class="container">
+                <div class="card">
+                    <iframe
+    width="600"
+    height="450"
+    frameborder="0"
+    style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q={{$data['latitude']}},{{$data['longitude']}}&key=AIzaSyDqRk8ooQjKQgueGWQ485IjEO9t0-Y0CSQ"
+    allowfullscreen
+></iframe>  <div id="map"></div>
 
                 </div>
             </div>
@@ -65,7 +80,7 @@
             <div class="postdetail_wrapper">
 
                 <div>
-                    <h1 class="text-3xl text-[#13476f] py-3">Creative Institute Nepal</h1>
+                    <h1 class="text-3xl text-[#13476f] py-3">{{$data['name']}}</h1>
                     
                 </div>
 
@@ -136,20 +151,11 @@
                     </button>
                 </div>
                 <div class="mt-3 text-[#13476f] text-justify">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi at harum exercitationem
-                        consequuntur
-                        reprehenderit, provident pariatur nulla, autem dolorum sint, amet magni vero cumque ratione?
-                        Eius,
-                        praesentium magnam voluptatem similique sint et, unde reprehenderit sunt aut cupiditate eligendi
-                        deleniti neque dolore nam est sit inventore animi consequatur quod ratione maxime aliquid
-                        excepturi.
-                        Odit officia nobis ad perferendis deserunt earum autem dolorum totam, velit ipsum atque
-                        consequuntur. Unde dolorem voluptas libero inventore maiores velit laudantium, eligendi delectus
-                        reprehenderit? Incidunt assumenda aperiam esse et ratione sunt quasi odio enim perspiciatis
-                        deserunt
-                        repellat molestiae nisi consequatur distinctio non magni iusto, rem, ut officiis. Aliquam rerum
-                        dolorem numquam atque, in delectus quis debitis pariatur dolorum iste fugiat illo accusamus
-                        veritatis nisi sequi laboriosam eveniet.</p>
+                    <p>
+                        {{
+                            $data['description']
+                        }}
+                    </p>
                 </div>
               
             </div>
@@ -164,5 +170,21 @@
 
 
 </body>
+ <script>
+        function initMap() {
+            const latitude = {{$data['latitude']}}, ;
+            const longitude = {{$data['longitude']}};
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: latitude, lng: longitude },
+                zoom: 8,
+            });
+            new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map,
+                title: "Your Location",
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqRk8ooQjKQgueGWQ485IjEO9t0-Y0CSQ&callback=initMap" async defer></script>
 
 </html>

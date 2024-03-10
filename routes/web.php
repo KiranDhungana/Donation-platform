@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\socialorg;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -31,7 +32,8 @@ Route::get('/register', [UserController::class, 'loadRegister']);
 Route::post('/singups', [UserController::class, 'studentRegister'])->name('studentRegister');
 // Route::get('/', [UserController::class, 'loadLogin']);
 Route::get('/', function () {
-    return view('homepage.landingpage');
+    $socialorg = socialorg::all();
+    return view('homepage.landingpage')->with('socialorg', $socialorg);
 });
 Route::get('/contact', function () {
     return view('contact');
@@ -81,7 +83,8 @@ Route::get('/post-campaign', function () {
 });
 
 Route::get('/home', function () {
-    return view('homepage.landingpage');
+    $socialorg = socialorg::all();
+    return view('homepage.landingpage')->with('socialorg', $socialorg);
 });
 
 Route::get('/campaigns', function () {
@@ -101,7 +104,8 @@ Route::get('/pay/{id}', [Postcontroller::class, 'gotopay']);
 // Auth::route();
 
 Route::get('/homepage', function () {
-    return view('homepage.landingpage');
+    $socialorg = socialorg::all();
+    return view('homepage.landingpage')->with('socialorg', $socialorg);
 })->name('login');
 
 
@@ -233,3 +237,4 @@ Route::get("/superadmin/clubmanagment", [Socialorgization::class, 'clubmanagment
 Route::Post("/approve-org/{id}", [Socialorgization::class, 'approveorg'])->name('approveorg')->middleware('super-admin-check');
 Route::get("/socialorganizations-nearby", [Socialorgization::class, 'getdistance'])->name('getdistance');
 Route::get("/superadmin/donationdata", [Postcontroller::class, 'donationinfo'])->name('donationinfo')->middleware('super-admin-check');
+Route::get("/social-organization/{id}", [Socialorgization::class, 'vieworg'])->name('vieworg');
