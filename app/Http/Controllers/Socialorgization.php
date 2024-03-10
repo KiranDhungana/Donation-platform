@@ -72,5 +72,31 @@ class Socialorgization extends Controller
         return view('socialorg.clubs')->with('socialorg', $socialorgs);
 
     }
+    public function getdistance($lat1 = 27, $lon1 = 85.32464382422472, $unit = 'K')
+    {
+        $distance = [];
+        $socialclub = socialorg::all();
+
+        foreach ($socialclub as $k) {
+            if ($k['approvedstatus'] == 1) {
+                $lat2 = $k['latitude'];
+                $lon2 = $k['longitude'];
+                $theta = $lon1 - $lon2;
+                $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+                $dist = acos($dist);
+                $dist = rad2deg($dist);
+                $miles = $dist * 60 * 1.1515;
+                $unit = strtoupper($unit);
+                $distance[] = ["$k" => $miles * 1.609344];
+
+
+
+            }
+            # code...
+        }
+        sort($distance);
+        // dd($distance);
+        return view('socialorg/nearlocation')->with('nearclub', $distance);
+    }
 
 }

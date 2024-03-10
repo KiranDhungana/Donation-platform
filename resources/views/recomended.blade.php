@@ -10,24 +10,26 @@
 @include('reusecomp/navbar')
 
 <body>
-    <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center mt-[50px]">
-        @foreach ($allpost as $item)
-        @foreach ($recpost as $i)
-        @if ($item->id==$i)
-        <div class="campaign_card m-5">
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg"
-                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
-                        alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue">
-                            Help Needed !
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-blue">
+     <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center mt-[50px]">
+                        @foreach ($allpost as $item)
+                        @foreach ($post as $i)
+                            @if ($item->id==$i)
+                                 <div class="campaign_card m-5">
+                            <div
+                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700">
+                                <a href="#">
+                                    <img class="rounded-t-lg"
+                                        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
+                                        alt="" />
+                                </a>
+                                <div class="p-5">
+                                    <a href="#">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-blue">
+                                            Help Needed !
+                                        </h5>
+                                    </a>
+                                    <p class="mb-3 font-normal text-blue">
 
                         {{ \Illuminate\Support\Str::limit($item->description, $limit = 100, $end =
                         '...') }}
@@ -50,6 +52,18 @@
                             <i class="fa-regular fa-heart" style="font-size: 12px; color: [#13476f];"><span
                                     class="text-sm ml-1"></span></i>
                         </div>
+                            }
+                                
+                            @else
+                                
+                            @endif
+                        }
+                            
+                        @endforeach
+                       
+                        @endforeach
+
+
                     </div>
 
                 </div>
