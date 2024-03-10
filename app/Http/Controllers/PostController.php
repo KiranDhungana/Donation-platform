@@ -23,7 +23,7 @@ class PostController extends Controller
     }
     public function helpform(Request $req)
     {
-        // dd($req);
+        dd($req);
         $uid = Auth::user()->id;
         $Post = new Post();
         $citizenNames = [];
@@ -268,6 +268,15 @@ class PostController extends Controller
             $new_data = Post::all();
             return view('recomended')->with('allpost',$new_data)->with('recpost',$posts);
             // dd($posts);
+
+
+    }
+    public function donationinfo()
+    {
+        $totalAmounts = Payment::groupBy('postid')
+            ->select('postid', DB::raw('sum(amount) as total_amount'))
+            ->get();
+        return view('superadmin/donationinfo')->with('donationamount', $totalAmounts);
 
 
     }
