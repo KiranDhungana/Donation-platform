@@ -120,7 +120,8 @@
                     <div class="campaigns_card_container flex flex-wrap my-3 justify-center items-center" id="campaigns">
                         @foreach ($post as $item)
                         <div class="campaign_card m-5">
-                            <div
+                            @if ($item['approvedstatus']==1)
+                                 <div
                                 class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
                                 <a href="#">
                                     <img class="rounded-t-lg"
@@ -131,7 +132,7 @@
                                     <a href="#">
                                         <h5
                                             class="mb-2 text-2xl font-bold tracking-tight text-blue">
-                                            Help Needed !
+                                         {{  $item['title']}}   
                                         </h5>
                                     </a>
                                     <p class="mb-3 font-normal text-blue min-h-[5rem]">
@@ -161,7 +162,11 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            </div>  
+                            @else
+                                
+                            @endif
+                         
                         </div>
                         @endforeach
 

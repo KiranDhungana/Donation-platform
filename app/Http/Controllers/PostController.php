@@ -23,7 +23,7 @@ class PostController extends Controller
     }
     public function helpform(Request $req)
     {
-        dd($req);
+        // dd($req);
         $uid = Auth::user()->id;
         $Post = new Post();
         $citizenNames = [];
@@ -57,6 +57,7 @@ class PostController extends Controller
 
 
         $des = $req->description;
+        $title = $req->title;
         $fname = $req->fname;
         $lname = $req->lname;
         $mname = $req->mname;
@@ -70,6 +71,7 @@ class PostController extends Controller
         $Post->fname = $fname;
         $Post->uid = $uid;
         $Post->mname = $mname;
+        $Post->title = $title;
         $Post->lname = $lname;
         $Post->relation = $rel;
         $Post->pnumber = $pn;
@@ -80,7 +82,7 @@ class PostController extends Controller
         $Post->targetamount = $tar;
         $Post->save();
 
-        dd("Saved");
+        dd("Post submited successfully ! Wait for admin approval");
 
 
 
@@ -243,7 +245,7 @@ class PostController extends Controller
         //     $fire = $post::where('catagory', 'fire')->count();
 
         // }
-        
+
         // dd($flood > $landslide > $cancer);
         // $values = ['flood' => $flood, 'landslide' => $landslide, 'cancer' => $cancer, 'tb' => $tb, 'physicalinjuries' => $physicalinjuries, 'fire' => $fire];
         // $maxValue = max($values); // Find the highest value
@@ -258,16 +260,16 @@ class PostController extends Controller
         // $client = new \GuzzleHttp\Client();
         // $response = $client->get('https://jsonplaceholder.typicode.com/posts'); 
         // return $response;
-        
+
         // $data = Http::get('http://127.0.0.1:7000/campaigns/', [
         //     'pk' => $id,
         //     // $data = Http::get()
         // ]);
-            $data = Http::get('http://127.0.0.1:7000/campaigns/'.$id);
-            $posts = json_decode($data->getBody()->getContents());
-            $new_data = Post::all();
-            return view('recomended')->with('allpost',$new_data)->with('recpost',$posts);
-            // dd($posts);
+        $data = Http::get('http://127.0.0.1:7000/campaigns/' . $id);
+        $posts = json_decode($data->getBody()->getContents());
+        $new_data = Post::all();
+        return view('recomended')->with('allpost', $new_data)->with('recpost', $posts);
+        // dd($posts);
 
 
     }
