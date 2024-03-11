@@ -51,7 +51,7 @@
             <div class="postdetail_wrapper">
 
                 <div>
-                    <h1 class="text-3xl text-[#13476f] py-3">Cancer Patient</h1>
+                    <h1 class="text-3xl text-[#13476f] py-3">{{ $campaindata->title}}</h1>
                     <div class=" flex space-x-1.5 pb-3">
 
                         <div>
@@ -130,20 +130,7 @@
                     </button>
                 </div>
                 <div class="mt-3 text-[#13476f] text-justify">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi at harum exercitationem
-                        consequuntur
-                        reprehenderit, provident pariatur nulla, autem dolorum sint, amet magni vero cumque ratione?
-                        Eius,
-                        praesentium magnam voluptatem similique sint et, unde reprehenderit sunt aut cupiditate eligendi
-                        deleniti neque dolore nam est sit inventore animi consequatur quod ratione maxime aliquid
-                        excepturi.
-                        Odit officia nobis ad perferendis deserunt earum autem dolorum totam, velit ipsum atque
-                        consequuntur. Unde dolorem voluptas libero inventore maiores velit laudantium, eligendi delectus
-                        reprehenderit? Incidunt assumenda aperiam esse et ratione sunt quasi odio enim perspiciatis
-                        deserunt
-                        repellat molestiae nisi consequatur distinctio non magni iusto, rem, ut officiis. Aliquam rerum
-                        dolorem numquam atque, in delectus quis debitis pariatur dolorum iste fugiat illo accusamus
-                        veritatis nisi sequi laboriosam eveniet.</p>
+                    <p>{{ $campaindata->description}}</p>
                 </div>
                 <div class="flex space-x-2 ">
                     <div class="mt-1">
