@@ -72,8 +72,10 @@ class Socialorgization extends Controller
         return view('socialorg.clubs')->with('socialorg', $socialorgs);
 
     }
-    public function getdistance($lat1 = 27, $lon1 = 85.32464382422472, $unit = 'K')
+    public function getdistance($unit = 'K', Request $req)
     {
+        $lat1 = $req['latitude'];
+        $lon1 = $req['longitude'];
         $distance = [];
         $socialclub = socialorg::all();
 

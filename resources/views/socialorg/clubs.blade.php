@@ -59,8 +59,16 @@
                             <p class="text-xl text-blue font-bold my-2">Types</p>
                         </div>
                         <div class="search_items flex flex-col ">
+                            <form action="/socialorganizations-nearby" method="post">
+    @csrf
+    <input id="lat" hidden type="text" name="latitude" value="">
+    <input id="long" hidden type="text" name="longitude" value="">
+    {{-- <label for="passwords">Password</label> --}}
+    {{-- <input type="password"  name=""><br><br> --}}
+    <input style="border:none;color:blue" type="submit" value="Nearby">
+</form>
                             {{-- <a href="/recomended/{{Auth::id()}}" class="text-blue text-sm my-1">Recomended</a> --}}
-                            <a href="/socialorganizations-nearby" class="text-blue text-sm my-1">Near by</a>
+                            {{-- <a href="/socialorganizations-nearby" class="text-blue text-sm my-1">Near by</a> --}}
 
                         </div>
                     </div>
@@ -141,5 +149,25 @@
 
 
 </body>
+<script>
+    
+
+  const successCallback = (position) => {
+
+var lat   =document.getElementById("lat");
+var long   =document.getElementById("long");
+lat.value =position.coords.latitude;
+long.value=position.coords.longitude;
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+};
+
+const errorCallback = (error) => {
+  console.log(error);
+};
+
+navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+
+</script>
 
 </html>
