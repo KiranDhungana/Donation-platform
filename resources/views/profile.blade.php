@@ -67,14 +67,14 @@
                     <div class="hidden p-4 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                         @foreach ($userpost as $i)
                         @if ($i['approvedstatus']==1)
-                        <a href="#"
+                        <a href="/view-post/{{$i['id']}}"
                             class="my-2 flex flex-col items-center bg-white rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4QtaKMX_5hfLnj5l7Kiykjhla3G44iYYJkw&usqp=CAU"
                                 alt="">
                             <div class="flex flex-col justify-between p-4 leading-normal">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
+                                    {{$i['title']}}</h5>
                             </div>
                         </a>
                         @endif
@@ -92,7 +92,7 @@
                                 alt="">
                             <div class="flex flex-col justify-between p-4 leading-normal">
                                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                    Noteworthy technology acquisitions 2021</h5>
+                                    {{$i['title']}}</h5>
                             </div>
                         </a>
                         @endif
@@ -110,7 +110,7 @@
 
 
                             <div>
-                                You paid Rs. {{$i['amount'] }} on {{$i['paidtime']}} to <span> <a href="#"> This </a>
+                                You paid Rs. {{$i['amount'] }} on {{$i['paidtime']}} to <span style="color: blue" > <a href="/view-post/{{$i['postid']}}" > This </a>
                                 </span> Campaign .
 
                             </div>

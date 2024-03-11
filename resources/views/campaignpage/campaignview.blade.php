@@ -175,16 +175,24 @@
             </div>
             <div class="flex felx-col justify-evenly ">
                 <div>
+                    <a href="www.facebook.com">
                     <button type="button"><i style="color:#316FF6"
                             class="fa-brands fa-facebook text-3xl m-3 colorf"></i></button>
+
+                    </a>
                 </div>
                 <div>
+                    <a href="www.instagram.com" >
+
                     <button type="button"><i style="color: #962fbf;"
                             class="fa-brands fa-instagram text-3xl m-3"></i></button>
+                    </a>
                 </div>
                 <div>
+                    <a class="www.twiter.com" >
                     <button type="button"><i style="color: #1DA1F2"
                             class="fa-brands fa-twitter text-3xl m-3 colorf"></i></button>
+                    </a>
                 </div>
             </div>
         </div>

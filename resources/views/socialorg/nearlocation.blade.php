@@ -34,7 +34,7 @@
 
                     <div class="club_card m-5  rounded-lg w-[30%] h-[350px]" >
                         <div class="max-w-sm bg-white  rounded-lg shadow ">
-                            <a href="#">
+                            <a href="/social-organization/{{$decodedData['id']}}">
                                 <img class="rounded-t-lg"
                                     src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202401/japan-earthquake-044751828-16x9_0.jpg?VersionId=RBM6I1Flkjgb8On.fmy3IlKcXUMLAhNG&size=690:388"
                                     alt="" />
@@ -50,7 +50,7 @@
                                 <p>Distance: {{ number_format($value, 2) }} km</p>
 
                                 </p>
-                                <a href=""
+                                <a href="/social-organization/{{$decodedData['id']}}"
                                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                                     Details
                                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
